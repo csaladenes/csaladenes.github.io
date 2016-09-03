@@ -1,0 +1,247 @@
+/* DEFAULT THEME */
+html{
+	font-family: "Open Sans", Segoe UI light, Verdana, Tahoma,Helvetica,sans-serif;
+	font-size:13px;
+	color: #111; /* MAIN color for site things, but not for CONTENT!! */
+	background-color:#DDD; /* Main background color */
+	text-decoration:none;
+	
+}
+/* NAVIGATION */
+nav>a{ /* main nav on top */
+	color:#FFF;
+	font-size:11.5px;
+	text-align:center;
+	text-decoration:none;
+	/*opacity:0.8;*/
+}
+nav>a:hover{
+	color:#FFF;
+	background-color:#666;
+	/*opacity:1;*/
+	text-decoration:none;
+}
+nav img{
+	height:32px;
+}
+nav>a>div{
+	padding-top:2px;
+	margin-bottom:-1px;
+}
+.navActive{
+	/*opacity:0.8;*/
+}
+.navActive:hover{
+	/*opacity:1;*/
+	text-decoration:none;
+}
+.menu{
+	background-color:#666;
+	text-decoration:none;
+	color:#FFF;
+	font-size:14px;
+	text-align:center;
+}
+.menu:hover{
+	background-color:#888;
+	text-decoration:none;
+	cursor:pointer;
+	color:#FFF;	
+}
+/* BODY PARTS */
+
+#headerWrapper{
+	background-color:#444;
+	border-bottom:1px #999 solid;
+	/*box-shadow:0 0 5px #555;*/
+}
+#headerTitles>h1>a{/*the big header text */
+	color:#FFF;
+	font-size:38px;
+	text-decoration:none;
+	font-weight:300;
+	line-height:40px;
+}
+#headerTitles>h1>a:hover{
+	color:#F90;
+	text-decoration:none;
+}
+#headerTitles>h2{/*the smaller title */
+	font-size:15px;
+	color:#CCC;
+}
+#headerTitles>h2>div.hu{/*the smaller title */
+	font-size:13.5px;
+	color:#CCC;
+}
+.groupTitle>h3{ /* The tilegroup title on the homepage*/
+	font-size: 24px;
+	color:#444;
+}
+.groupTitle>h3:hover{ /* The tilegroup title on the homepage*/
+	color:#FF8000;
+	text-decoration:none;
+}
+.groupTitle:hover{ /* The tilegroup title on the homepage*/
+	color:#FF8000;
+	text-decoration:none;
+}
+#content{ /* the content */
+	color:#111;
+}
+#contentWrapper{
+	background-color:#D4D4D4;
+	background-color:rgba(180,180,180,0.2);
+	-webkit-box-shadow: 0 0 7px #777;
+	-moz-box-shadow: 0 0 7px #777;
+	box-shadow: 0 0 7px #777;
+}
+footer{
+	color:#DDD;
+	font-size:10px;
+	font-family:"Trebuchet MS";
+	background-color:rgba(70,70,70,0.5);
+	border-top:1px solid #999;
+	border-left:1px solid #999;
+}
+/*Tiles */
+.tile:hover{
+	outline:1px solid #FFF;
+	-moz-box-shadow: 0 0 15px #333;
+	-webkit-box-shadow: 0 0 15px #333;
+	box-shadow:  0 0 15px #333;
+}
+@-moz-document url-prefix() { /* Firefox renders outlines wrong, so fix it */
+   .tile:hover{
+		outline:none;
+		-moz-box-shadow: 0 0 15px #333, 0 0 1px 1px #FFF;
+		box-shadow:  0 0 15px #333, 0 0 1px 1px #FFF;
+	}	
+}
+.tileFlip:hover .flipContainer{
+	outline: 1px solid #FFF;
+	-moz-box-shadow: 0 0 15px #333 !important;
+	-webkit-box-shadow: 0 0 15px #333 !important;
+	box-shadow: 0 0 15px #333 !important;
+}
+@-moz-document url-prefix() { /* Firefox renders outlines wrong, so fix it */
+   .tileFlip:hover .flipContainer{
+		outline: none;
+		-moz-box-shadow: 0 0 15px #333, 0 0 1px 1px #FFF !important;
+		box-shadow: 0 0 15px #333, 0 0 1px 1px #FFF !important;
+	}	
+}
+
+/*More */
+a{	/* links */
+	color:#fff; /* Main color for links */
+	text-decoration:none;
+}
+a:hover{
+	color: #fff; /*Main color for hovered links */
+	text-decoration:underline;
+}
+a:active, a:selected, a:visited, a:focus {
+ 	outline: none;
+	border:none;
+}
+em{
+	margin-right:2px;
+}
+/* GROUPS */
+
+.group0{
+	 background:#007ab3;
+}
+.group0:hover{
+	 color:#111;
+}
+.group1{
+	 background:#128966;
+}
+.group2{
+	 background:#e73;
+}
+
+.group2 a:hover{
+	 color:#111;
+}
+.group2:hover{
+	 color:#111;
+}
+.group3{
+	 background:#fc1;
+	 color:#000;
+}
+.group3 a{
+	 color:#000;
+}
+.group3:hover{
+	 color:#008;
+}
+.group3 a:hover{
+	 color:#008;
+}
+.group6{
+	 background:#909;
+}
+.group7{
+	 background:#008198;
+}
+.group6 a:hover{
+	 color:#111;
+}
+.group6:hover{
+	 color:#111;
+}
+.group7 a:hover{
+	 color:#111;
+}
+.group7:hover{
+	 color:#111;
+}
+.group4{
+	 background:#de2d26;
+}
+.group5{
+	 background:#dd1c77;
+}
+/* HEADINGS */
+h1{
+	font-size:40px;
+	font-weight:300;
+	margin:20px 0 5px 0;
+	color:#222;
+}
+h2{
+	font-size:32px;
+	font-weight:300;
+	margin:20px 0 5px 0;
+	color:#222;
+}
+h3{
+	font-size:24px;
+	font-weight:normal;
+	margin:20px 0 5px 0;
+	color:#fff;
+}
+h4{
+	font-size:21px;
+	font-weight:300;
+	margin:15px 0 5px 0;
+	color:#444;
+	text-transform:uppercase;
+}
+h5{
+	font-size:20px;
+	font-weight:normal;
+	margin:13px 0 5px 0;
+	color:#555;
+}
+h6{
+	font-size:18px;
+	font-weight:normal;
+	margin:10px 0 5px 0;
+	color:#555;
+	text-transform:uppercase;
+}

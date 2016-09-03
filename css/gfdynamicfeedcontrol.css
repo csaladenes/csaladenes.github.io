@@ -1,0 +1,118 @@
+.gfg-root {
+  width : 300px;
+  height : 145px;
+  position : relative;
+  overflow : hidden;
+  text-align : center;
+  font-size: 11px;
+  padding:5px;
+  text-decoration:none;
+  border: 0px;
+  color : #585858;
+}
+
+.gfg-title {
+  font-size: 14px;
+  font-weight : bold;
+  color : #585858;
+  line-height : 1.4em;
+  overflow : hidden;
+  white-space : nowrap;
+}
+
+.gfg-title a {
+  color : #585858;
+}
+
+.gfg-subtitle {
+  font-size: 12px;
+  font-weight : bold;
+  color : #585858;
+  background-color: none;
+  line-height : 1.4em;
+  overflow : hidden;
+  white-space : nowrap;
+  margin-bottom : 5px;
+}
+
+.gfg-subtitle a {
+  color : #585858;
+}
+
+.gfg-entry {
+  background-color : none;
+  width : 100%;
+  height : 5.9em;
+  position : relative;
+  overflow : hidden;
+  text-align : left;
+  margin-top : 3px;
+}
+
+/* To allow correct behavior for overlay */
+.gfg-root .gfg-entry .gf-result {
+  position : relative;
+  background-color : none;
+  width : auto;
+  height : 100%;
+  padding-left : 10px;
+  padding-right : 5px;
+}
+
+.gfg-list {
+  position : relative;
+  overflow : hidden;
+  text-align : left;
+  margin-bottom : 5px;
+}
+
+.gfg-listentry {
+  line-height : 1.5em;
+  overflow : hidden;
+  white-space : nowrap;
+  text-overflow : ellipsis;
+  -o-text-overflow : ellipsis;
+  padding-left : 5px;
+  padding-right : 5px;
+  margin-left : 5px;
+  margin-right : 5px;
+  color : #585858;
+}
+
+.gfg-listentry-odd {
+  background-color : none;
+}
+
+.gfg-listentry-even {
+}
+
+.gfg-listentry-highlight { 
+  background-image : url('garrow.gif');
+  background-repeat: no-repeat;
+  background-position : center left;
+}
+
+/*
+ * FeedControl customizations.
+ */
+
+.gfg-root .gfg-entry .gf-result .gf-title {
+  font-size: 14px;
+  line-height : 1.2em;
+  overflow : hidden;
+  font-weight : bold;
+  white-space : nowrap;
+  text-overflow : ellipsis;
+  -o-text-overflow : ellipsis;
+  margin-bottom : 2px;
+}
+
+.gfg-root .gfg-entry .gf-result .gf-snippet {
+  height : 3.8em;
+  color: #585858;
+  margin-top : 3px;
+}
+
+/*
+ * Easy way to get horizontal mode, applicable via js options to gadget.
+ */
