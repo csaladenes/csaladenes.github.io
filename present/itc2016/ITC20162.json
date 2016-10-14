@@ -1,0 +1,605 @@
+{
+  "slides": [
+    {
+      "components": [
+        {
+          "src": "http://i.imgur.com/NQ8pS1J.png",
+          "type": "Image",
+          "x": -116,
+          "y": -4,
+          "scale": {
+            "x": 1.3750000000000004,
+            "y": 1.3750000000000004,
+            "width": 1243.0000000000005,
+            "height": 774.1250000000002
+          },
+          "imageType": "PNG",
+          "selected": false,
+          "skewX": 0
+        },
+        {
+          "src": "http://i.imgur.com/JrwkSn4.png",
+          "type": "Image",
+          "x": 579,
+          "y": 16,
+          "scale": {
+            "x": 0.5379310344827586,
+            "y": 0.5379310344827586,
+            "width": 78,
+            "height": 78
+          },
+          "imageType": "PNG",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": -64,
+          "y": 661,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font color=\"#eeeeee\"><font target=\"_blank\"><a href=\"http://null\">live stream: &nbsp; &nbsp;</a><a href=\"http://csaladen.es/present\" target=\"_blank\"> http://csaladen.es/present</a><a href=\"http://null\"><br></a></font><a href=\"http://null\">prezentáció: &nbsp; </a><a href=\"http://csaladen.es/present/itc2016\" target=\"_blank\">http://csaladen.es/present/itc2016</a><a href=\"http://null\">&nbsp;</a></font><br>",
+          "size": 34,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 683,
+          "y": 11,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font color=\"#eeeeee\" face=\"Lato\">#szekelydata</font>",
+          "size": 71,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 684,
+          "y": 99,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font color=\"#eeeeee\" face=\"Lato\">@csaladenes</font>",
+          "size": 72,
+          "selected": false
+        },
+        {
+          "src": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/12592458_1123331514367070_4980252381539409907_n.jpg?oh=f5c163d346b586bb026f72c2079f9209&oe=58AB0ECA&__gda__=1482831270_73312e4736274f5a3a22a3d1da00645c",
+          "type": "Image",
+          "x": 579,
+          "y": 110,
+          "scale": {
+            "x": 0.48749999999999993,
+            "y": 0.48749999999999993,
+            "width": 77.99999999999999,
+            "height": 77.99999999999999
+          },
+          "imageType": "JPG",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 70,
+          "y": 40,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font color=\"#eeeeee\" face=\"Lato\">@ITPlusCluster</font>",
+          "size": 61,
+          "selected": false
+        },
+        {
+          "src": "http://i.imgur.com/4mUkXUH.png",
+          "type": "Image",
+          "x": -80,
+          "y": 9,
+          "scale": {
+            "x": 0.7470588235294118,
+            "y": 0.7470588235294118,
+            "width": 127,
+            "height": 129.24117647058824
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 0,
+      "selected": true,
+      "active": true,
+      "x": 143,
+      "y": 121
+    },
+    {
+      "components": [
+        {
+          "src": "https://snazzymaps.com/style/2/midnight-commander",
+          "type": "WebFrame",
+          "x": -60,
+          "y": -60,
+          "scale": {
+            "x": 1.2281250000000001,
+            "y": 1.2281250000000001,
+            "width": 1179.0000000000002,
+            "height": 943.2
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 1,
+      "selected": false,
+      "active": false,
+      "x": 460,
+      "y": 180
+    },
+    {
+      "components": [
+        {
+          "src": "http://i.imgur.com/SznZKbK.png",
+          "type": "Image",
+          "x": -14,
+          "y": -1,
+          "scale": {
+            "x": 1.341055341055341,
+            "y": 1.341055341055341,
+            "width": 1042,
+            "height": 765.7425997425997
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 2,
+      "selected": false,
+      "active": false,
+      "x": 804,
+      "y": 174
+    },
+    {
+      "components": [
+        {
+          "src": "http://i.imgur.com/huu7Bk4.png",
+          "type": "Image",
+          "x": 58,
+          "y": 4,
+          "scale": {
+            "x": 1.3338257016248154,
+            "y": 1.3338257016248154,
+            "width": 903,
+            "height": 761.6144756277696
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 3,
+      "selected": false,
+      "active": false,
+      "x": 805,
+      "y": 361
+    },
+    {
+      "components": [
+        {
+          "src": "http://i.imgur.com/N8tjuwo.png",
+          "type": "Image",
+          "x": -65,
+          "y": 14,
+          "scale": {
+            "x": 1.6068493150684933,
+            "y": 1.6068493150684933,
+            "width": 1173,
+            "height": 743.9712328767124
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 4,
+      "selected": false,
+      "active": false,
+      "x": 1135,
+      "y": 359
+    },
+    {
+      "components": [
+        {
+          "src": "http://i.imgur.com/x7ytJeM.png",
+          "type": "Image",
+          "x": -152,
+          "y": 106,
+          "scale": {
+            "x": 1.1666666666666667,
+            "y": 1.1666666666666667,
+            "width": 1337,
+            "height": 576.3333333333334
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 5,
+      "selected": false,
+      "active": false,
+      "x": 1142,
+      "y": 174
+    },
+    {
+      "components": [
+        {
+          "src": "http://blog.csaladen.es/szekelyfold%20lakossag%202/index.html",
+          "type": "WebFrame",
+          "x": -150,
+          "y": 18,
+          "scale": {
+            "x": 1.3764128066118286,
+            "y": 1.3764128066118286,
+            "width": 1878.803481025146,
+            "height": 1503.0427848201168
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 6,
+      "selected": false,
+      "active": false,
+      "x": 154,
+      "y": 334
+    },
+    {
+      "components": [
+        {
+          "src": "http://csaladenes.egologo.ro/wp-content/uploads/2015/08/12765800_10154506921931124_937505717_o-1024x959.jpg",
+          "type": "Image",
+          "x": 100,
+          "y": 10,
+          "scale": {
+            "x": 0.7734375,
+            "y": 0.7734375,
+            "width": 792,
+            "height": 741.7265625
+          },
+          "imageType": "JPG",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": -304,
+          "y": 363,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<div style=\"text-align: center;\"><span style=\"color: rgb(238, 238, 238); font-family: Lato;\">Platon Arnold |&nbsp;</span><span style=\"color: rgb(238, 238, 238); font-family: Lato;\">http://arnoldplaton.wordpress.com</span></div>",
+          "size": 34,
+          "selected": false,
+          "rotate": -1.58
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 7,
+      "selected": false,
+      "active": false,
+      "x": 479,
+      "y": 384
+    },
+    {
+      "components": [
+        {
+          "src": "http://csaladenes.egologo.ro/wp-content/uploads/2015/08/szekelyfold-rangsor-meret-szabaly2-1024x415.png",
+          "type": "Image",
+          "x": -155,
+          "y": 107,
+          "scale": {
+            "x": 1.2880859374999998,
+            "y": 1.2880859374999998,
+            "width": 1318.9999999999998,
+            "height": 534.5556640624999
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 8,
+      "selected": false,
+      "active": false,
+      "x": 1135,
+      "y": 530
+    },
+    {
+      "components": [
+        {
+          "src": "http://csaladenes.egologo.ro/wp-content/uploads/2015/08/szekelyfold-rangsor-meret-szabaly3-1024x415.png",
+          "type": "Image",
+          "x": -142,
+          "y": 114,
+          "scale": {
+            "x": 1.2861328125,
+            "y": 1.2861328125,
+            "width": 1317,
+            "height": 533.7451171875
+          },
+          "imageType": "PNG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 9,
+      "selected": false,
+      "active": false,
+      "x": 1136,
+      "y": 689
+    },
+    {
+      "components": [
+        {
+          "src": "http://blog.csaladen.es/szekelyfold%20lakossag%202/index3.html",
+          "type": "WebFrame",
+          "x": -145,
+          "y": 14,
+          "scale": {
+            "x": 1.3677109206081552,
+            "y": 1.3677109206081552,
+            "width": 1875.1316721537808,
+            "height": 1500.3788799071463
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 10,
+      "selected": false,
+      "active": false,
+      "x": 774,
+      "y": 619
+    },
+    {
+      "components": [
+        {
+          "src": "http://szekely.land/",
+          "type": "WebFrame",
+          "x": -309,
+          "y": -264,
+          "scale": {
+            "x": 1.679166666666667,
+            "y": 1.679166666666667,
+            "width": 1612.0000000000002,
+            "height": 1289.6000000000001
+          },
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 11,
+      "selected": false,
+      "active": false,
+      "x": 189,
+      "y": 585
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 112,
+          "y": 611,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<font color=\"#eeeeee\" face=\"Lato\">http://szekely.land</font>",
+          "size": 103,
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 12,
+      "selected": false,
+      "active": false,
+      "background": "bg-transparent",
+      "x": 187,
+      "y": 612
+    }
+  ],
+  "background": "bg-transparent",
+  "activeSlide": {
+    "components": [
+      {
+        "src": "http://i.imgur.com/NQ8pS1J.png",
+        "type": "Image",
+        "x": -116,
+        "y": -4,
+        "scale": {
+          "x": 1.3750000000000004,
+          "y": 1.3750000000000004,
+          "width": 1243.0000000000005,
+          "height": 774.1250000000002
+        },
+        "imageType": "PNG",
+        "selected": false,
+        "skewX": 0
+      },
+      {
+        "src": "http://i.imgur.com/JrwkSn4.png",
+        "type": "Image",
+        "x": 579,
+        "y": 16,
+        "scale": {
+          "x": 0.5379310344827586,
+          "y": 0.5379310344827586,
+          "width": 78,
+          "height": 78
+        },
+        "imageType": "PNG",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": -64,
+        "y": 661,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "text": "<font color=\"#eeeeee\"><font target=\"_blank\"><a href=\"http://null\">live stream: &nbsp; &nbsp;</a><a href=\"http://csaladen.es/present\" target=\"_blank\"> http://csaladen.es/present</a><a href=\"http://null\"><br></a></font><a href=\"http://null\">prezentáció: &nbsp; </a><a href=\"http://csaladen.es/present/itc2016\" target=\"_blank\">http://csaladen.es/present/itc2016</a><a href=\"http://null\">&nbsp;</a></font><br>",
+        "size": 34,
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 683,
+        "y": 11,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "text": "<font color=\"#eeeeee\" face=\"Lato\">#szekelydata</font>",
+        "size": 71,
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 684,
+        "y": 99,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "text": "<font color=\"#eeeeee\" face=\"Lato\">@csaladenes</font>",
+        "size": 72,
+        "selected": false
+      },
+      {
+        "src": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/12592458_1123331514367070_4980252381539409907_n.jpg?oh=f5c163d346b586bb026f72c2079f9209&oe=58AB0ECA&__gda__=1482831270_73312e4736274f5a3a22a3d1da00645c",
+        "type": "Image",
+        "x": 579,
+        "y": 110,
+        "scale": {
+          "x": 0.48749999999999993,
+          "y": 0.48749999999999993,
+          "width": 77.99999999999999,
+          "height": 77.99999999999999
+        },
+        "imageType": "JPG",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 70,
+        "y": 40,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "text": "<font color=\"#eeeeee\" face=\"Lato\">@ITPlusCluster</font>",
+        "size": 61,
+        "selected": false
+      },
+      {
+        "src": "http://i.imgur.com/4mUkXUH.png",
+        "type": "Image",
+        "x": -80,
+        "y": 9,
+        "scale": {
+          "x": 0.7470588235294118,
+          "y": 0.7470588235294118,
+          "width": 127,
+          "height": 129.24117647058824
+        },
+        "imageType": "PNG",
+        "selected": false
+      }
+    ],
+    "z": 0,
+    "impScale": 3,
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "index": 0,
+    "selected": true,
+    "active": true,
+    "x": 143,
+    "y": 121
+  },
+  "fileName": "ITC20162",
+  "surface": "bg-surf-grad-black",
+  "customStylesheet": "/*.example {\n\tborder: 4px groove orange;\n}*/\n.strut-surface a {\n    color: #ddd;\n  text-decoration:none;\n}\n.strut-surface .r1 {\n\tfill:red;\n}",
+  "deckVersion": "1.0",
+  "cannedTransition": "coverflow",
+  "customBackgrounds": {
+    "bgs": []
+  }
+}

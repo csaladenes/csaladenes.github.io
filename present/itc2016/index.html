@@ -1,5 +1,480 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Refresh" content="0.1; URL=https://dl.dropboxusercontent.com/u/531697/present/itc2016/index.html">
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Székelyföldi diaszpóra - Hargita, Kovászna és Maros megye városaiból elszármazottak szerte a világban #szekelydata  #d3js @csaladenes" />
+    <meta name="keywords" content="csaladenes, d3.js, data visualization, infographic, szekelyland, székelyföld, adatvizualizáció, diaszpóra, diaspora, d3" />
+    <meta property="og:image" content="http://csaladenes.egologo.ro/wp-content/uploads/2015/08/szekely_diaszpora1.jpg" />
+    <meta property="og:description" content="Székelyföldi diaszpóra - Hargita, Kovászna és Maros megye városaiból elszármazottak szerte a világban #szekelydata  #d3js @csaladenes" />
+    <meta property="og:title" content="Székelyföldi diaszpóra" />
+    <meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+	<meta property="og:url" content="http://csaladenes.egologo.ro/?p=773"/>
+    <meta property="og:site_name" content="SZÉKELYDATA" />
+    <meta property="fb:admins" content="100943737036023614165" />
+	<link rel="shortcut icon" href="szekelydata.png" />
+	<link rel="publisher" href="https://plus.google.com/106181965793093327960" />
+    <title>Sz&eacute;kelyf&ouml;ldi diaszp&oacute;ra | ITC 2016 prezentáció</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="./index_files/default-reset.css">
+	<link rel="stylesheet" type="text/css" href="./index_files/main.css">
+	<link rel="stylesheet" href="./index_files/default.css" id="theme">
+	<link href="./index_files/web-fonts.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./index_files/demo.css">
+	<link rel="stylesheet" type="text/css" href="./index_files/themes.css">
+	<link href="./index_files/backgroundClasses.css" rel="stylesheet" type="text/css">
+	<link href="./index_files/surfaceClasses.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+	<style type="text/css">
+	.componentContainer {
+	    position: absolute;
+	    line-height: normal;
+	    /*-webkit-transform-origin: 135% 135%;
+	    -moz-transform-origin: 135% 135%;
+	    transform-origin: 135% 135%;*/
+	}
+
+	.transformContainer {
+	    -webkit-transform-origin: 0 0;
+	    -moz-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	}
+
+	.bg {
+	    width: 100%;
+	    height: 100%;
+	}
+
+	#themeChooser {
+		position: absolute;
+		z-index: 1;
+		background-color: #EEE;
+		border-radius: 5px;
+		padding: 10px;
+	}
+
+	#main, body {
+		overflow: hidden;
+	}
+
+	.reveal.themedArea {
+	    display: block;
+	    position: absolute;
+	    top: 0px;
+	    left: 0px;
+	    z-index: 0;
+	    width: 100%;
+	    height: 100%;
+	}
+	</style><style type="text/css">#maxthon-1eec22d4-0232-4212-8283-6f2ac8f967-iframe{display:block!important;position:absolute!important;visibility:visible!important;z-index:2147483647!important;border-style:none!important;opacity:1!important;margin:0!important;padding:0!important;box-shadow:0 0 5px rgba(0,0,0,.3)!important;border:1px solid #b3b3b3!important}</style>
+
+	<script src="./index_files/bespoke.js"></script><style type="text/css">#maxthon-1eec22d4-0232-4212-8283-6f2ac8f967-iframe{display:block!important;position:absolute!important;visibility:visible!important;z-index:2147483647!important;border-style:none!important;opacity:1!important;margin:0!important;padding:0!important;box-shadow:0 0 5px rgba(0,0,0,.3)!important;border:1px solid #b3b3b3!important}</style><style type="text/css" style="display: none !important;">object:not([type]),object[classid$=":D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid$=":d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid$="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid$="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[codebase$="swflash.cab"],embed[type$="application/x-shockwave-flash"],embed[src*=".swf"],object[type$="application/x-shockwave-flash"],object[src*=".swf"],object[codetype$="application/x-shockwave-flash"],object[classid$=":22d6f312-b0f6-11d0-94ab-0080c74c7e95"],object[classid$=":02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"],object[classid$=":CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA"]{display: none !important;}</style><style type="text/css" style="display: none !important;">object:not([type]),object[classid$=":D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid$=":d27cdb6e-ae6d-11cf-96b8-444553540000"],object[classid$="D27CDB6E-AE6D-11cf-96B8-444553540000"],object[classid$="d27cdb6e-ae6d-11cf-96b8-444553540000"],object[codebase$="swflash.cab"],embed[type$="application/x-shockwave-flash"],embed[src*=".swf"],object[type$="application/x-shockwave-flash"],object[src*=".swf"],object[codetype$="application/x-shockwave-flash"],object[classid$=":22d6f312-b0f6-11d0-94ab-0080c74c7e95"],object[classid$=":02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"],object[classid$=":CFCDAA03-8BE4-11cf-B84B-0020AFBBCCFA"]{display: none !important;}</style>
+	<script src="./index_files/bespoke-plugins.js"></script>
+	<script src="./index_files/onready.js"></script>
+	<script src="./index_files/loadPresentation.js"></script>
+	<script>
+	ready(function() {
+		if (document.getElementById('launched-placeholder'))
+        	loadPresentation();
+		if (!window.presStarted) {
+    		bespoke.horizontal.from('article', {
+    			hash: true,
+    			state: true
+    		});
+		}
+	});
+	</script>
+	
+</head>
 <body>
+	<style>
+	/*.example {
+	border: 4px groove orange;
+}*/
+.strut-surface a {
+    color: #ddd;
+  text-decoration:none;
+}
+.strut-surface .r1 {
+	fill:red;
+}
+	</style>
+	<style>
+	
+	</style>
+	<style>
+
+
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+	
+		
+		
+	
+
+</style>
+	<div id="main" class="bg-surf-grad-black strut-surface coverflow">
+		<article class="innerBg bespoke-parent strut-slide-7 bg-surf-grad-black">
+			
+				
+					<section class="slideContainer strut-slide-0 bespoke-slide bespoke-inactive bespoke-before bespoke-before-7" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-0 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: -4px; left: -116px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1243px; height: 774.13px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.38, 1.38);
+-moz-transform: scale(1.38, 1.38);
+transform: scale(1.38, 1.38)">
+<img src="http://i.imgur.com/NQ8pS1J.png">
+</div>
+</div>
+						
+							<div class="componentContainer " style="top: 16px; left: 579px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 78px; height: 78px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.54, 0.54);
+-moz-transform: scale(0.54, 0.54);
+transform: scale(0.54, 0.54)">
+<img src="http://i.imgur.com/JrwkSn4.png">
+</div>
+</div>
+						
+							<div class="componentContainer " style="top: 661px; left: -64px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 34px;" class="antialias">
+<font color="#eeeeee"><font target="_blank"><a href="http://null/">live stream: &nbsp; &nbsp;</a><a href="http://csaladen.es/present" target="_blank"> http://csaladen.es/present</a><a href="http://null/"><br></a></font><a href="http://null/">prezent&aacute;ci&oacute;: &nbsp; </a><a href="http://csaladen.es/present/itc2016" target="_blank">http://csaladen.es/present/itc2016</a><a href="http://null/">&nbsp;</a></font><br>
+</div>
+</div>
+</div>
+						
+							<div class="componentContainer " style="top: 11px; left: 683px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 71px;" class="antialias">
+<font color="#eeeeee" face="Lato">#szekelydata</font>
+</div>
+</div>
+</div>
+						
+							<div class="componentContainer " style="top: 99px; left: 684px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 72px;" class="antialias">
+<font color="#eeeeee" face="Lato">@csaladenes</font>
+</div>
+</div>
+</div>
+						
+							<div class="componentContainer " style="top: 110px; left: 579px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 78px; height: 78px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.49, 0.49);
+-moz-transform: scale(0.49, 0.49);
+transform: scale(0.49, 0.49)">
+<img src="./index_files/12592458_1123331514367070_4980252381539409907_n.jpg">
+</div>
+</div>
+						
+							<div class="componentContainer " style="top: 40px; left: 70px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 61px;" class="antialias">
+<font color="#eeeeee" face="Lato">@ITPlusCluster</font>
+</div>
+</div>
+</div>
+						
+							<div class="componentContainer " style="top: 9px; left: -80px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 127px; height: 129.24px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.75, 0.75);
+-moz-transform: scale(0.75, 0.75);
+transform: scale(0.75, 0.75)">
+<img src="http://i.imgur.com/4mUkXUH.png">
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-1 bespoke-slide bespoke-inactive bespoke-before bespoke-before-6" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-1 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: -60px; left: -60px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1179px; height: 943.2px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.23, 1.23);
+-moz-transform: scale(1.23, 1.23);
+transform: scale(1.23, 1.23)">
+<iframe width="960" height="768" src="https://snazzymaps.com/style/2/midnight-commander"></iframe>
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-2 bespoke-slide bespoke-inactive bespoke-before bespoke-before-5" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-2 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: -1px; left: -14px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1042px; height: 765.74px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.34, 1.34);
+-moz-transform: scale(1.34, 1.34);
+transform: scale(1.34, 1.34)">
+<img src="http://i.imgur.com/SznZKbK.png">
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-3 bespoke-slide bespoke-inactive bespoke-before bespoke-before-4" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-3 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 4px; left: 58px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 903px; height: 761.61px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.33, 1.33);
+-moz-transform: scale(1.33, 1.33);
+transform: scale(1.33, 1.33)">
+<img src="http://i.imgur.com/huu7Bk4.png">
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-4 bespoke-slide bespoke-inactive bespoke-before bespoke-before-3" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-4 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 14px; left: -65px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1173px; height: 743.97px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.61, 1.61);
+-moz-transform: scale(1.61, 1.61);
+transform: scale(1.61, 1.61)">
+<img src="http://i.imgur.com/N8tjuwo.png">
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-5 bespoke-slide bespoke-inactive bespoke-before bespoke-before-2" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-5 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 106px; left: -152px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1337px; height: 576.33px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.17, 1.17);
+-moz-transform: scale(1.17, 1.17);
+transform: scale(1.17, 1.17)">
+<img src="http://i.imgur.com/x7ytJeM.png">
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-6 bespoke-slide bespoke-inactive bespoke-before bespoke-before-1" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-6 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 18px; left: -150px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1878.8px; height: 1503.04px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.38, 1.38);
+-moz-transform: scale(1.38, 1.38);
+transform: scale(1.38, 1.38)">
+<iframe width="960" height="768" src="http://blog.csaladen.es/szekelyfold%20lakossag%202/index.html"></iframe>
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-7 bespoke-slide bespoke-active" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-7 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 10px; left: 100px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 792px; height: 741.73px;">
+<div class="transformContainer" style="-webkit-transform: scale(0.77, 0.77);
+-moz-transform: scale(0.77, 0.77);
+transform: scale(0.77, 0.77)">
+<img src="./index_files/12765800_10154506921931124_937505717_o-1024x959.jpg">
+</div>
+</div>
+						
+							<div class="componentContainer " style="top: 363px; left: -290px; -webkit-transform: rotate(-1.58rad)  ; -moz-transform: rotate(-1.58rad)  ; transform: rotate(-1.58rad)  ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 32px;" class="antialias">
+<div style="text-align: center;"><span style="color: rgb(238, 238, 238); font-family: Lato;">Platon Arnold |&nbsp;</span><span style="color: rgb(238, 238, 238); font-family: Lato;">http://arnoldplaton.wordpress.com</span></div>
+</div>
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-8 bespoke-slide bespoke-inactive bespoke-after bespoke-after-1" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-8 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 107px; left: -155px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1319px; height: 534.56px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.29, 1.29);
+-moz-transform: scale(1.29, 1.29);
+transform: scale(1.29, 1.29)">
+<img src="./index_files/szekelyfold-rangsor-meret-szabaly2-1024x415.png">
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-9 bespoke-slide bespoke-inactive bespoke-after bespoke-after-2" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-9 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 114px; left: -142px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1317px; height: 533.75px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.29, 1.29);
+-moz-transform: scale(1.29, 1.29);
+transform: scale(1.29, 1.29)">
+<img src="./index_files/szekelyfold-rangsor-meret-szabaly3-1024x415.png">
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-10 bespoke-slide bespoke-inactive bespoke-after bespoke-after-3" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-10 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 14px; left: -145px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1875.13px; height: 1500.38px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.37, 1.37);
+-moz-transform: scale(1.37, 1.37);
+transform: scale(1.37, 1.37)">
+<iframe width="960" height="768" src="http://blog.csaladen.es/szekelyfold%20lakossag%202/index3.html"></iframe>
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-11 bespoke-slide bespoke-inactive bespoke-after bespoke-after-4" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-11 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: -264px; left: -309px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: 1612px; height: 1289.6px;">
+<div class="transformContainer" style="-webkit-transform: scale(1.68, 1.68);
+-moz-transform: scale(1.68, 1.68);
+transform: scale(1.68, 1.68)">
+<iframe width="960" height="768" src="http://szekely.land"></iframe>
+</div>
+</div>
+						
+					</section>
+				
+			
+				
+					<section class="slideContainer strut-slide-12 bespoke-slide bespoke-inactive bespoke-after bespoke-after-5" style="width: 1024px; height: 768px;" data-bespoke-state="strut-slide-12 bg-surf-grad-black ">
+						<div class="themedArea">
+              			
+              			</div>
+						
+							<div class="componentContainer " style="top: 611px; left: 112px; -webkit-transform:   ; -moz-transform:   ; transform:   ; width: px; height: px;">
+<div class="transformContainer" style="-webkit-transform: scale(1, 1);
+-moz-transform: scale(1, 1);
+transform: scale(1, 1)">
+<div style="font-size: 103px;" class="antialias">
+<font color="#eeeeee" face="Lato">http://szekely.land</font>
+</div>
+</div>
+</div>
+						
+					</section>
+				
+			
+		</article>
+	</div>
+
 </body>
+</html>
