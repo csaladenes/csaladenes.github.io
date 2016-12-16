@@ -9,33 +9,22 @@
 <script>
 
   var data = [
-    {"year": 1991, "name":"alpha", "value": 15},
-    {"year": 1991, "name":"beta", "value": 10},
-    {"year": 1991, "name":"gamma", "value": 5},
-    {"year": 1991, "name":"delta", "value": 50},
-    {"year": 1992, "name":"alpha", "value": 20},
-    {"year": 1992, "name":"beta", "value": 10},
-    {"year": 1992, "name":"gamma", "value": 10},
-    {"year": 1992, "name":"delta", "value": 43},
-    {"year": 1993, "name":"alpha", "value": 30},
-    {"year": 1993, "name":"beta", "value": 40},
-    {"year": 1993, "name":"gamma", "value": 20},
-    {"year": 1993, "name":"delta", "value": 17},
-    {"year": 1994, "name":"alpha", "value": 60},
-    {"year": 1994, "name":"beta", "value": 60},
-    {"year": 1994, "name":"gamma", "value": 25},
-    {"year": 1994, "name":"delta", "value": 32}
+    {"teknoc": "Rafaello", "bot":"0", "penge": 6 ,"cool":7,"szin":"red"},
+    {"teknoc": "Donatello", "bot":"1", "penge": 0 ,"cool":2,"szin":"blue"},
+    {"teknoc": "Leonardo", "bot":"0", "penge": 2, "cool":5,"szin":"purple"},
+    {"teknoc": "Michelangelo", "bot":"4", "value": 0,"cool":10, "szin":"orange"}
   ]
 
   var visualization = d3plus.viz()
     .container("#viz")
     .data(data)
     .type("bar")
-    .id("name")
+    .id("teknoc")
 	.background("none")
-    .x("year")
-    .y("value")
+    .x("teknoc")
+    .y("cool")
 	.axes({"background":{"color":"none"}})
+	.font({"family":"Trebuchet MS","size":32})
     .draw()
 
 </script>
