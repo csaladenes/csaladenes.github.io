@@ -1,0 +1,43 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat')
+</style>
+<script src="http://d3plus.org/js/d3.js"></script>
+<script src="http://d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+
+   var nodes = [
+    {"id": "alpha"},
+    {"id": "beta"},
+    {"id": "gamma"}
+  ];
+  var edges = [
+    {"strength": 2, "source": 0, "target": 2},
+    {"strength": 1, "source": 1, "target": 2},
+    {"strength": 1, "source": 2, "target": 0},
+    {"strength": 3, "source": 2, "target": 1}
+  ];
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .edges({
+      "strength": "strength",
+      "value": edges
+    })
+    .focus({
+      "tooltip": false,
+      "value": "gamma"
+    })
+    .id("id")
+    .nodes(nodes)
+    .size(100)
+    .type("sankey")
+	.background("none")
+    .axes({"background":{"color":"none","stroke":"none"}})
+	.font({"family":"Montserrat","size":22,"color":"white"})
+    .draw()
+
+</script>
