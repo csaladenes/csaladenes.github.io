@@ -11,16 +11,17 @@
 <script>
 
   var data = [
-    {"teknoc": "Rafaello", "bot":"0", "penge": 6 ,"cool":7,"szin":"red"},
-    {"teknoc": "Donatello", "bot":"1", "penge": 0 ,"cool":2,"szin":"blue"},
-    {"teknoc": "Leonardo", "bot":"0", "penge": 2, "cool":5,"szin":"purple"},
-    {"teknoc": "Michelangelo", "bot":"4", "value": 0,"cool":10, "szin":"orange"}
+    {"teknoc": "Rafaello", "bot":"0", "penge": 6 ,"cool":7,"szin":"#c00"},
+    {"teknoc": "Donatello", "bot":"1", "penge": 0 ,"cool":2,"szin":"#06c"},
+    {"teknoc": "Leonardo", "bot":"0", "penge": 2, "cool":5,"szin":"#606"},
+    {"teknoc": "Michelangelo", "bot":"4", "value": 0,"cool":10, "szin":"#f60"}
   ]
 
   var visualization = d3plus.viz()
     .container("#viz")
     .data(data)
     .type("bar")
+	.color("szin")
     .id("teknoc")
 	.background("none")
     .x({"value":"teknoc","grid":false})
