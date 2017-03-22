@@ -72,6 +72,7 @@
    <script src="http://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
    <script>
     var url = 'http://rssmix.com/u/8230405/rss.xml'
+    feednami.setPublicApiKey('53e4882f89687ed51179bc182d37e25edcc237d441946bcf78953e764720b8b8')
      feednami.loadGoogleFormat(url,function(result){
        if(result.error){
          console.log(result.error)
