@@ -1,0 +1,53 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat')
+</style>
+<script src="http://d3plus.org/js/d3.js"></script>
+<script src="http://d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+
+  var data = [
+    {"date": "01.20", "k":1, "r":145, "s": 140},
+    {"date": "01.22", "k":1, "r":40, "s": 40},
+    {"date": "01.27", "k":1, "r":192, "s": 192},
+    {"date": "01.31", "k":1, "r":97, "s": 97},
+    {"date": "02.02", "k":1, "r":40, "s": 40},
+    {"date": "02.04", "k":1, "r":118, "s": 118},
+    {"date": "02.09", "k":1, "r":96, "s": 96},
+    {"date": "02.12", "k":1, "r":129, "s": 129},
+    {"date": "02.17", "k":1, "r":635, "s": 235}
+  ]
+
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("bar")
+    .id("date")
+	.background("none")
+    .x({"value":"date","grid":false,"label":false})
+    .y({"value":"r","grid":false,"label":"Határon átkelést megkísérlők száma [fő/nap]"})
+  .time("k")
+	.axes({"background":{"color":"none","stroke":"none"}})
+  .color(function(d){return "mediumOrchid"})
+	.font({"family":"Montserrat","size":22,"color":"purple"})
+  .ui({"value":[
+      {
+      "method" : "y",
+      "value"  :[{"TV":"r"}, {"Igazi":"s"} ],
+      "label" : " "
+      },
+      {
+      "method" : "time",
+      "value"  :[{"Időrendben":"date"}, {"Nem":"k"} ],
+      "label" : " "
+      },
+      ]})
+    .timeline(false)
+    .legend(false)
+    .draw()
+
+</script>
