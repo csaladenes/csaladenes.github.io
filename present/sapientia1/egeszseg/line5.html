@@ -182,14 +182,14 @@ a:visited{
 	  
 	  var visualization = d3plus.viz()
 		.container("#viz1")  // container DIV to hold the visualization
-		.type("line")    // visualization type
+		.type("tree_map")    // visualization type
 		.data(data)
-		.id({"value":["g","group","c"]})         // key for which our data is unique on
-		.aggs({"a": "mean"})
-		.depth(1)
-		.y({"value":"s","label":"Eloszlás","scale":"linear"})         // key to use for y-axis
-		.x({"value":"a","label":"Életkor"})          // key to use for x-axis
-		.time({"value":"t","solo":[2012]}) 
+		.id({"value":["group","g","c"]})         // key for which our data is unique on
+		.aggs({"a": "mean","t": "mean"})
+		.depth(0)
+		.size({"value":"s","label":"Eloszlás"})         // key to use for y-axis
+		.x({"value":"g","label":"Év"})          // key to use for x-axis
+		.time({"value":"t","solo":[2012]})
 		.color("group")       // color legend
 		.order("group")
 		.font(font)

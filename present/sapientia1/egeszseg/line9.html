@@ -90,6 +90,7 @@ a:visited{
 		  
 		  data.forEach(function(d) {
 			d["icon"]="img/"+hierarchy[d["c"]]["group"]+".png";
+			d["sgroup"]="Esetek";
 			d["group"]=icd[hierarchy[d["c"]]["group"]];
 			//d["cause2"]=icd[hierarchy[d["c"]]["cause2"]];
 			//d["parent"]=icd[hierarchy[d["c"]]["parent"]];
@@ -182,14 +183,15 @@ a:visited{
 	  
 	  var visualization = d3plus.viz()
 		.container("#viz1")  // container DIV to hold the visualization
-		.type("line")    // visualization type
+		.type("stacked")    // visualization type
 		.data(data)
 		.id({"value":["g","group","c"]})         // key for which our data is unique on
 		.aggs({"a": "mean"})
 		.depth(1)
+		//.size({"value":"s","label":"Eloszlás"})         // key to use for y-axis
 		.y({"value":"s","label":"Eloszlás","scale":"linear"})         // key to use for y-axis
-		.x({"value":"a","label":"Életkor"})          // key to use for x-axis
-		.time({"value":"t","solo":[2012]}) 
+		.x({"value":"a","label":"Év"})          // key to use for x-axis
+		.time({"value":"t","solo":[2012]})
 		.color("group")       // color legend
 		.order("group")
 		.font(font)
