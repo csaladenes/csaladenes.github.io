@@ -21,6 +21,9 @@
 	font-family: "Righteous";
 	src: url(Righteous-Regular.ttf) format("truetype");
 }
+html {
+	background-color: blue;
+}
 .logo, .viz {
  	-webkit-transition: opacity 0.5s;
 	  -moz-transition: opacity 0.5s;
@@ -79,6 +82,10 @@ a:visited{
     left: 5;
     top: 5;
     z-index: 100;" id="viz1" class="viz"></div>
+<div style="position: fixed; opacity:0;
+    left: 5;
+    top: 5;
+    z-index: 99;" id="viz2" class="viz"></div>
 
 <script>
   // sample data array
@@ -197,7 +204,7 @@ a:visited{
 	  var gen2="s";
 	  var sub={"m":"Férfiak","f":"Nők"};
 	  var title={"font":{"size":20}};
-	  var font = {"family":"Righteous","size":15, "color":"white"};
+	  var font = {"family":"Righteous","size":15, "color":"purple"};
 	  
 	  var visualization = d3plus.viz()
 		.container("#viz1")  // container DIV to hold the visualization
@@ -216,12 +223,10 @@ a:visited{
 		.legend({"filters":true})
 		.messages({"style":false,"branding":false})
 		.legend({"size":30})
-		//.axes({"background": {"color": "#eee"}}) 
-		.axes({"background":{"color":"none","stroke":"none"}})
+		.axes({"background": {"color": "#eee"}}) 
 		.shape({"interpolate": "basis"})
 		.title({"value":hnames[cnames[initcountry]],"sub":{"value":"Mitől halunk meg? - Globális Elhalálozási Időfolyam"}})
 		.title(title)
-		.background("none")
 		.ui({"font":{"size":12},"value":[
 		  {
 			"method" : "depth",
@@ -288,6 +293,7 @@ a:visited{
 			  return numberformatter(number, params);
           }
 		  })
+		.axes({"background":{"color":"none","stroke":"none"}})
 		.draw()             // finally, draw the visualization!
 
 		function load(country) {
@@ -300,6 +306,10 @@ a:visited{
 			  data=extend(rawdata);
 			  
 			  visualization
+			  .data(data)
+			  .title(hnames[cnames[country]])
+			  .draw();
+			  visualization2
 			  .data(data)
 			  .title(hnames[cnames[country]])
 			  .draw();
