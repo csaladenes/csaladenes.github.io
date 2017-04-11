@@ -55,15 +55,6 @@ a:visited{
 <script src="JSZipUtils.min.js"></script>
 <body link="#444">
 <!-- create container element for visualization -->
-<img style="position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 50;
-    height: 150px;
-    margin-top: -75px;
-
-    width: 150px;
-    margin-left: -75px; border:1px solid #b8371d;border-left:2px solid #b8371d;" class="loading" src="szekelydata.png"/>
 	
 <div style="position: fixed; opacity:1;
     left: 5;
@@ -278,6 +269,7 @@ a:visited{
 			  return numberformatter(number, params);
           }
 		  })
+		.messages(false)
 		.draw()             // finally, draw the visualization!
 
 		function load(country) {
