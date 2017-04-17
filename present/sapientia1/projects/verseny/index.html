@@ -1,0 +1,46 @@
+
+<meta charset="utf-8">
+
+<script src="http://d3plus.org/js/d3.js"></script>
+<script src="http://d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+<div id="viz2"></div>
+<div id="viz3"></div>
+
+<script>
+ d3.json("jelentkezok2.json", function(data)
+{
+//console.log(data)
+
+ 
+ var visualization = d3plus.viz()
+    .container("#viz")    
+    .type("bubbles")     
+	.data(data.filter(function(d) { return d.Jegy>0; }) )    
+	.id(["Ev","Kategoria", "Megye", "Helyseg", "Iskola"])
+    .depth(0)           
+	.time("Ev")
+	.size(function(d) { return d.d3plus.total;})
+	.aggs({"Jegy":"mean"})
+    .color("Jegy")  
+    .draw()  
+	
+	
+	 var visualization = d3plus.viz()
+    .container("#viz2")    
+    .type("tree_map")     
+	.data(data.filter(function(d) { return d.Jegy>0; }) )    
+	.id(["Ev","Kategoria", "Megye", "Helyseg", "Iskola"])
+    .depth(0)           
+	//.time("Ev")
+	.size(function(d) { return d.d3plus.total;})
+	.aggs({"Jegy":"mean"})
+    .color("Jegy")  
+    .draw() 
+
+})
+
+ 
+</script>
+

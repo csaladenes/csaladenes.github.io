@@ -1,0 +1,38 @@
+<!doctype html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <!-- load D3js -->
+        <script src="http://d3plus.org/js/d3.js"></script>
+
+        <!-- load D3plus after D3js -->
+        <script src="http://d3plus.org/js/d3plus.js"></script>
+
+        <!-- create container element for visualization -->
+        <div id="viz"></div>
+
+        <script>
+        // sample data array
+        d3.json('projekt.json', function(sample_data)
+        {
+            // instantiate d3plus
+            var visualization = d3plus.viz()
+                .container("#viz")
+                .data(sample_data)
+                .type("bar")
+                .type("line")       
+                .id("country_name")         
+                .text("Country")       
+                .y("val")         
+                .x("year")
+                .shape({
+                    "interpolate": "basis"  // takes accepted values to change interpolation type
+                })
+                .draw()   
+        });
+        
+        </script>
+</body>
+</html>

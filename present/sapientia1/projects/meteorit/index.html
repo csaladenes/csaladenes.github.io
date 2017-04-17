@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<script src="http://d3plus.org/js/d3.js"></script>
+<script src="http://d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+  d3.json("Meteorite_Landings.json",function(data){
+    console.log(data)
+    data2=[]
+    data.forEach(function(d){
+
+        data2.push({"name":d.name, "index":parseFloat(d.index), "recclass":d.recclass, "reclat":parseFloat(d.reclat), "reclong":parseFloat(d.reclong), "mass":parseFloat(d.mass), "GeoLocation":d.GeoLocation, "year":d.year})
+        console.log(parseFloat(d.index), d.index)
+    })
+    console.log(data2)
+
+    d3plus.viz()
+        .container("#viz")
+        .type("scatter")
+        .data(data2)
+        .id("name")
+        .color("mass")
+        .size("mass")
+        .text("name")
+        .title("Meteoritbecsapódások világszerte")
+        .x({"label":"Hosszúság",
+            "value":"reclong",
+            "range":[-180,180]})
+        .y({"label":"Szélesség",
+            "value":"reclat",
+            "range":[-90,90]})
+        //.depth(0)
+        .draw()
+  })
+</script>

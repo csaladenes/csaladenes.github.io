@@ -1,24 +1,104 @@
-<script src="http://d3plus.org/js/d3.js"></script>
-<script src="http://d3plus.org/js/d3plus.js"></script>
+<!doctype html>
+<meta charset="utf-8">
 
-<div id="viz"></div>
-
-<script>
-  d3.json("uj.json",function(data){
-  d3plus.viz()
-    .container("#viz")
-    .type("bar")
-    .data(data)
-    .id("honap")
-  	.y("ujmax")
-    .x("honap2")
-    .draw()
-    .ui([{"method" : "y",
-      "value"  :[{"Min":"ujmin"},{"Max":"ujmax"}],
-      "label" : " "
-    },{"method" : "x",
-      "value"  :[{"Nev":"honap"},{"Szam":"honap2"}],
-      "label" : " "
-    }])
-  })
-</script>
+<style>
+html { 
+  background: url('g.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.70);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+}
+a {
+  color:#ccc;
+  text-decoration:none;
+}
+a:hover {
+  color:#ccc;
+  text-decoration:underline;
+}
+</style>
+<div style="position:fixed;top:50px;left:50px;color:#ccc;font-family:Arial;font-weight:bold;font-size:18px;">
+  <div>SAPIENTIA adattudomány képzéssorozat</div>
+  <div>&nbsp;</div>
+  <div>Első rész: bevezetés az adatok világába | Adatvizualizáció</div>
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div>Kurzus:</div>
+  <ul>
+  <li><a href="http://nbviewer.jupyter.org/url/www.csaladen.es/present/sapientia1/test.ipynb" target="_blank">Jupyter munkafüzet</a></li>
+  <li><a href="http://www.csaladen.es/present/sapientia1/example" target="_blank">D3plus példa</a></li>
+  <li><a href="http://www.csaladen.es/present/sapientia1/temp" target="_blank">Csíkszereda hőmérséklet példa</a></li>
+  <li><a href="http://www.csaladen.es/present/sapientia1/mtv.html" target="_blank">MTV vizualizáció</a></li>
+  </ul>
+  <div>A résztvevők projektjei:</div>
+  <ul>
+    <li>
+      <a href="http://www.csaladen.es/present/sapientia1/projects/arfolyam" target="_blank">Árfolyam</a>
+    </li>
+    <li>
+      <a href="http://www.csaladen.es/present/sapientia1/projects/co2" target="_blank">Széndioxid-kibocsátás</a>
+    </li>
+    <li>
+      <a href="http://www.csaladen.es/present/sapientia1/projects/meteorit" target="_blank">Meteorit-becsapódások</a>
+    </li>
+    <li>
+      <a href="http://nbviewer.jupyter.org/url/www.csaladen.es/present/sapientia1/projects/verseny" target="_blank">Tanulmányi versenyek</a>
+    </li>
+    <li>
+      <a href="http://nbviewer.jupyter.org/url/www.csaladen.es/present/sapientia1/projects/verseny2" target="_blank">Tanulmányi versenyek 2</a>
+    </li>
+  </ul>
+  <div>Prezentáció:</div>
+  <ul>
+    <li>
+      <a href="http://www.csaladen.es/present/sapientia1/slides" target="_blank">Interaktív bemutató</a>
+    </li>
+    <li>
+      <a href="http://www.csaladen.es/present/sapientia1/stream" target="_blank">Stream felvétel</a>
+    </li>
+  </ul>
+  </div>
+  <div style="position:fixed;top:50px;left:450px;color:#ccc;font-family:Arial;font-weight:bold;font-size:18px;">
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div>&nbsp;</div>
+  <div>Források:</div>
+  <ul>
+    <li>
+      <a href="http://courses.cs.washington.edu/courses/cse512/16sp/" target="_blank">Jeffrey Heer - University of Washington Interactive Data Lab</a>
+    </li>
+    <li>
+      Alexander Simoes, Dave Landry - MIT Media Lab, Datawheel, D3plus
+    </li>
+    <li>
+      Mike Bostock - számtalan D3 példa az internetről
+    </li>
+    <li>
+      David McCandless - Knowledge is Beautiful
+    </li>
+  </ul>
+  <div>Előrhetőség:</div>
+  <ul>
+    <li>
+      <a href="http://www.csaladen.es" target="_blank">Csala Dénes személyes weboldala</a>
+    </li>
+    <li>
+      <a href="http://csik.sapientia.ro/hu" target="_blank">Sapientia Csíkszereda</a>
+    </li>
+    <li>
+      <a href="http://szekelydata.csaladen.es" target="_blank">SZÉKELYDATA</a>
+    </li>
+  </ul>
+</div>
