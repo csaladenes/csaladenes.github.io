@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+
+    	body {
+    		background-color: #222;
+    	}
+
+        h1 {
+            font: 35px sans-serif;
+            color: #ccc;
+            text-align: center;
+        }
+        
+        #chart {
+        	margin: auto;
+            background-color: #222;
+            width:1450px;
+        }
+
+        circle {
+            opacity: 0.2;
+        }
+
+        path {
+            stroke: white;
+            stroke-width: 0.15px;
+            fill: #333;
+        }
+
+        #tooltip {   
+            position: absolute;
+            text-align: center;
+            width: auto;
+            height: auto;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: rgba(255,255,255,0.8);
+            border: 0px;
+            border-radius: 2px;
+            pointer-events: none;
+        }
+
+        #legend circle {
+        	opacity: 0.8;
+        }
+
+        #legend text {
+        	font: 14px sans-serif;
+        	font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v0.min.js"></script>
+    <div id = "title"><h1>Meteorite landings</h1></div>
+    <div id="chart"></div>
+    <script>
+
+        var width = 1450,
+            height = 725;
+
+        var projection = d3.geo.equirectangular()
+        .scale(230)
+        .translate([width/2,height/2])
+
+        var svg = d3.select("#chart").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        var path = d3.geo.path()
+            .projection(projection);
+
+        var g = svg.append("g");
+
+        var tooltip = d3.select("#chart").append("div")
+            .attr("id", "tooltip")
+            .style("opacity", 0);
+
+        d3.json("https://gist.githubusercontent.com/abenrob/787723ca91772591b47e/raw/8a7f176072d508218e120773943b595c998991be/world-50m.json", function(error, topology) {
+
+            d3.json("Meteorite_Landings.json",function(data){
+                data2=[]
+                points=[]
+                data.forEach(function(d){
+                    data2.push({"Name":d.name, "Index":parseFloat(d.index), "Class":d.recclass, "Lat":parseFloat(d.reclat), "Long":parseFloat(d.reclong), "GeoLocation":d.GeoLocation, "Date": d.year.slice(0,10), "Mass":parseFloat(d.mass), "Fall":d.fall, "Type":d.type, "Country": d.country})
+                })
+        			g.selectAll("circle")
+                	.data(data2)
+                	.enter().append("circle")
+                	.attr("cx", function(d){return projection([d.Long, d.Lat])[0]})
+                	.attr("cy", function(d){return projection([d.Long, d.Lat])[1]})
+                	.attr("r", function(d){return Math.pow(d.Mass, 1/4)/3})
+                	.attr("class", function(d) {return "meteorite "+d.Type+" "+d.Fall})
+                	.attr("fill",function(d){
+                	    if(d.Type=="Iron") {
+                	        return color[0];
+                	    }
+                	    else if(d.Type=="Stony-Iron") {
+                	        return color[1];
+                	    }
+                	    else {
+                	        return color[2];
+                	    }
+                	})
+                	.on("mouseover", function(d) {      
+                	    tooltip.transition()        
+                	    .duration(400)      
+                	    .style("opacity", 1);
+                	    //.attr("r", function(d){return Math.cbrt(d.Mass)/9.5});  
+                    	tooltip.html('<table><tr><td>Name: </td><td style="font-size: 13px;font-weight:bold;">' + d.Name + "</td></tr><tr><tr><td>Type: </td><td>" + d.Type + "</td></tr><tr><td>Class: </td><td>" + d.Class + "</td></tr><tr><td>Mass: </td><td>" + d.Mass.toLocaleString() + " g</td></tr><tr><td>Country: </td><td>" + d.Country + "</td></tr><tr><td>Latitude: </td><td>" + d.Lat.toFixed(2) + "</td></tr><tr><td>Longitude: </td><td>" + d.Long.toFixed(2) + "</td></tr></table>")
+
+                    	.style("left", (d3.event.pageX + 10) + "px")     
+                    	.style("top", (d3.event.pageY + 10) + "px");    
+                	})                  
+                	.on("mouseout", function(d) {       
+                    	tooltip.transition()        
+                    	.duration(400)      
+                    	.style("opacity", 0);
+                	});
+            })
+
+            g.selectAll("path")
+            	.data(topojson.object(topology, topology.objects.countries).geometries)
+            	.enter().append("path")
+            	.attr("d", path);
+        });
+
+         var legend = d3.select("svg").append("g")
+        	.attr("id", "legend");
+
+        var reset = d3.select("svg").append("g")
+        	.attr("id", "reset");
+
+       	var color = ["#e41a1c", "#377eb8", "#4daf4a"];
+        var types = ["Iron", "Stony-Iron", "Stony"];
+        var tipusok = [true, true, true];
+
+        var fall = ["Fell", "Found"];
+        var leesett = [true, true]
+
+        var filter = function() {
+        	for (i =0; i<3; i++)
+        	{
+        		if(tipusok[i]){
+        			d3.selectAll(".meteorite")
+        			.filter("."+types[i])
+        			.style("visibility", "visible");
+        		}
+        		else
+        		{
+        			d3.selectAll(".meteorite")
+        			.filter("."+types[i])
+        			.style("visibility", "hidden");
+        		}
+        	}
+        }
+
+        for(var i = 0; i < 3; i++){
+        			
+        	legend
+        		.append("circle")
+        		.attr("cx", 30)
+        		.attr("cy", height - 3 * 65 + i * 35 + 30)
+        		.attr("r", 15)
+        		.attr("class", types[i])
+        		.attr("fill", color[i])
+        		.on({
+      				"mouseover": function(d) {
+        			d3.select(this).style("cursor", "pointer");
+      				},
+      				"mouseout": function(d) {
+        			d3.select(this).style("cursor", "default");
+      				}
+    			});
+
+        	legend
+        		.append("text")
+        		.attr("x", 60)
+        		.attr("y", height - 3 * 65 + i * 35 + 35)
+        		.attr("class", types[i])
+	    		.text(types[i])
+	    		.attr("fill", color[i])
+	    		.on({
+      				"mouseover": function(d) {
+        			d3.select(this).style("cursor", "pointer");
+      				},
+      				"mouseout": function(d) {
+        			d3.select(this).style("cursor", "default");
+      				}
+    			});
+        }
+
+        legend.selectAll(".Iron")
+        	.on("click",function(){
+        			if (tipusok[0]){
+						legend.selectAll(".Iron").style("fill", "#444")
+					}
+					else{
+						legend.selectAll(".Iron").style("fill", color[0]);
+					}
+					if (tipusok[0]) {
+						tipusok[0]=false;
+					}
+					else {
+						tipusok[0]=true;
+					}
+					filter();
+				});
+
+        legend.selectAll(".Stony-Iron")
+        	.on("click",function(){
+        			if (tipusok[1]){
+						legend.selectAll(".Stony-Iron").style("fill", "#444")
+					}
+					else{
+						legend.selectAll(".Stony-Iron").style("fill", color[1]);
+					}
+					if (tipusok[1]) {
+						tipusok[1]=false;
+					}
+					else {
+						tipusok[1]=true;
+					}
+					filter();
+					
+				});
+
+        legend.selectAll(".Stony")
+        	.on("click",function(){
+        		if (tipusok[2]){
+					legend.selectAll(".Stony").style("fill", "#444")
+				}
+				else{
+					legend.selectAll(".Stony").style("fill", color[2]);
+				}
+				if (tipusok[2]) {
+					tipusok[2]=false;
+				}
+				else {
+					tipusok[2]=true;
+				}
+				filter();
+			});
+
+        var zoom = d3.behavior.zoom()
+            .on("zoom",function() {
+                g.attr("transform","translate("+ 
+                    d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+                g.selectAll("circle")
+                    .attr("r", function(d){
+                        return ((Math.pow(d.Mass, 1/4))/(3*(d3.event.scale)))
+                    });
+                g.selectAll("path")  
+                    .attr("d", path.projection(projection)); 
+            });
+
+        reset
+            .append("svg:image")
+            .attr('x',10)
+   			.attr('y',10)
+   			.attr('width', 50)
+   			.attr('height', 50)
+   			.attr("xlink:href","reset.png")
+   			.on({
+      				"mouseover": function(d) {
+        			d3.select(this).style("cursor", "pointer");
+      				},
+      				"mouseout": function(d) {
+        			d3.select(this).style("cursor", "default");
+      				},
+      				"click": function() {
+      					zoom.scale(1);
+        				zoom.translate([0, 0]);
+						g
+							.transition()
+              				.duration(2500)
+							.attr("transform", "translate(0,0)")
+							.attr("scale", "1");
+						g.selectAll("circle")
+							.transition()
+              				.duration(3000)
+                    		.attr("r", function(d){
+                        		return ((Math.pow(d.Mass, 1/4))/3)
+                    		});
+               			g.selectAll("path")  
+               				.transition()
+             				.duration(2500)
+                  	  		.attr("d", path.projection(projection)); 
+
+                  	  	tipusok=[true, true, true];
+                  	  	filter();
+                  	  	legend.selectAll(".Iron").style("fill", color[0]);
+                  	  	legend.selectAll(".Stony-Iron").style("fill", color[1]);
+                  	  	legend.selectAll(".Stony").style("fill", color[2]);
+    				}
+    			});
+        svg.call(zoom);
+
+    </script>
+</body>
+</html>
