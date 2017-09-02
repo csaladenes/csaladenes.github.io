@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>TopoJSON data</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+<!-- load D3js -->
+<script src="http://d3plus.org/js/d3.js"></script>
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+
+<div id='map'></div>
+
+<script>
+d3.json("campus.geojson",function(campus){
+d3.json("data.json",function(data){
+	
+	var campus2={"features":campus["features"]
+	.filter(function(d){return (Object.keys(d["properties"]["tags"]).indexOf("building")>-1)})
+	.filter(function(d){return (Object.keys(d["properties"]["tags"]).indexOf("name")>-1)})
+	,
+	"type":"FeatureCollection"};
+
+	for (i in campus2["features"]) {
+		var d=campus2["features"][i]["properties"]["tags"]["name"]
+		campus2["features"][i]["properties"]["name"]=d
+		campus2["features"][i]["properties"]["value"]=data[d]
+	}
+	//console.log(campus2)
+	
+	mapboxgl.accessToken = 'pk.eyJ1IjoiY3NhbGFkZW5lcyIsImEiOiJjajQ0YzFmcjkxOHlzMzNtZ3A0ZDlyZnZsIn0.iDOBmJibZ81VFxQvkOmS8A';
+	var map = new mapboxgl.Map({
+	    container: 'map', // container id
+	    style: 'mapbox://styles/mapbox/basic-v9', //stylesheet location
+	    center: [-2.787,54.009], // starting position
+	    zoom: 14 // starting zoom
+	});
+
+	map.on('load', function() {
+
+	    // Add a new source from our GeoJSON data and set the
+	    // 'cluster' option to true.
+	    map.addSource("buildings", {
+	        type: "geojson",
+	        // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
+	        // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+	        data: campus2,
+	    });
+	
+
+	map.addLayer({
+        "id": "polys",
+        "type": "fill",
+        "source": "buildings",
+        "paint": {
+            "fill-color": {
+            	property: 'value',
+                stops: [
+                    [0, '#1a9850'],
+                    [50, '#91cf60'],
+                    [100, '#d9ef8b'],
+                    [500, '#ffffbf'],
+                    [1000, '#fee08b'],
+                    [5000, '#fc8d59'],
+                    [10000, '#d73027']
+                ]
+            },
+            'fill-opacity': 0.85,
+        },
+        //"filter": ["==", "$type", "Polygon"]
+    });
+
+    map.addLayer({
+        "id": "icons",
+        "type": "symbol",
+        "source": "buildings",
+        //"filter": ["==", "$ty-pe", "Polygon"],
+		 "layout": {
+	            "text-field": "{name}",
+	            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+	            "text-offset": [0, 0.6],
+	            "text-anchor": "top",
+	      },
+	      
+});
+	})
+	})
+})
+</script>
+
+
+</body>
+</html>
