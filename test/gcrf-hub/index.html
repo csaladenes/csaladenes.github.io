@@ -1,0 +1,132 @@
+
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+
+  var nodes=[
+  {"name":"Denes Csala","type":"academic1"},
+  {"name":"Alastair Martin","type":"academic1"},
+  {"name":"David Cheneler","type":"academic1"},
+  {"name":"Harry Hoster","type":"academic1"},
+  {"name":"Roger Pickup","type":"academic1"},
+  {"name":"David Tyfield","type":"academic2"},
+  {"name":"Liu Lingxuan","type":"academic2"},
+  {"name":"Stefanos Mouzas","type":"academic2"},
+  {"name":"David Hutchison","type":"academic2"},
+  {"name":"James Sweeney","type":"academic1"},
+  {"name":"Monika Büscher","type":"academic2"},
+  {"name":"Amanda Cahill-Ripley","type":"academic2"},
+  {"name":"Simon Mabon","type":"academic3"},
+  {"name":"Adam Fish","type":"academic2"},
+  {"name":"Nigel Davies","type":"academic3"},
+  {"name":"Konstantinos Zografos","type":"academic2"},
+  {"name":"Suzana Ilic","type":"academic3"},
+  {"name":"Alison Browne","type":"academic2"},
+  {"name":"Elena Semino","type":"academic3"},
+  {"name":"energy","type":"topic"},
+  {"name":"waste","type":"topic"},
+  {"name":"water","type":"topic"},
+  {"name":"transportation","type":"topic"},
+  {"name":"health","type":"topic"},
+  {"name":"infrastructures","type":"hypertopic"},
+  {"name":"communication","type":"topic"},
+  {"name":"emergency","type":"topic"},
+  {"name":"networks","type":"topic"},
+  {"name":"governance","type":"topic"},
+  {"name":"supply chains","type":"topic"},
+  {"name":"language","type":"topic"},
+  {"name":"law","type":"topic"},
+  {"name":"ecosystems","type":"topic"},
+  {"name":"economy","type":"topic"},
+  {"name":"religion","type":"topic"},
+  {"name":"resilience","type":"topic"},
+  {"name":"society","type":"topic"},
+  ]
+
+  var connections = [
+    
+    {"source":"energy","target":"infrastructures"},
+      {"source":"waste","target":"infrastructures"},
+      {"source":"water","target":"infrastructures"},
+      {"source":"transportation","target":"infrastructures"},
+      {"source":"language","target":"infrastructures"},
+      {"source":"health","target":"infrastructures"},
+      {"source":"communication","target":"infrastructures"},
+      {"source":"emergency","target":"infrastructures"},
+      {"source":"networks","target":"infrastructures"},
+      {"source":"governance","target":"infrastructures"},
+      {"source":"supply chains","target":"infrastructures"},
+      {"source":"law","target":"infrastructures"},
+      {"source":"ecosystems","target":"infrastructures"},
+      {"source":"economy","target":"infrastructures"},
+      {"source":"religion","target":"infrastructures"},
+      {"source":"resilience","target":"infrastructures"},
+      {"source":"society","target":"infrastructures"},
+
+      {"source":"Denes Csala","target":"energy"},
+      {"source":"Denes Csala","target":"networks"},
+  {"source":"Alastair Martin","target":"water"},
+  {"source":"Alastair Martin","target":"waste"},
+  {"source":"David Cheneler","target":"water"},
+  {"source":"Harry Hoster","target":"energy"},
+  {"source":"Roger Pickup","target":"health"},
+  {"source":"David Tyfield","target":"governance"},
+  {"source":"David Tyfield","target":"networks"},
+  {"source":"Liu Lingxuan","target":"supply chains"},
+  {"source":"Liu Lingxuan","target":"networks"},
+  {"source":"Stefanos Mouzas","target":"economy"},
+  {"source":"Stefanos Mouzas","target":"networks"},
+  //{"source":"Stefanos Mouzas","target":"law"},
+  {"source":"David Hutchison","target":"communication"},
+  {"source":"David Hutchison","target":"resilience"},
+  {"source":"James Sweeney","target":"law"},
+  {"source":"James Sweeney","target":"governance"},
+  {"source":"Monika Büscher","target":"society"},
+  {"source":"Monika Büscher","target":"communication"},
+  {"source":"Amanda Cahill-Ripley","target":"society"},
+  {"source":"Amanda Cahill-Ripley","target":"law"},
+  {"source":"Simon Mabon","target":"governance"},
+  {"source":"Simon Mabon","target":"religion"},
+  {"source":"Adam Fish","target":"communication"},
+  {"source":"Adam Fish","target":"society"},
+  {"source":"Nigel Davies","target":"transportation"},
+  {"source":"Konstantinos Zografos","target":"resilience"},
+  {"source":"Konstantinos Zografos","target":"emergency"},
+  {"source":"Konstantinos Zografos","target":"networks"},
+  {"source":"Konstantinos Zografos","target":"supply chains"},
+  {"source":"Konstantinos Zografos","target":"transportation"},
+  {"source":"Suzana Ilic","target":"water"},
+  {"source":"Suzana Ilic","target":"energy"},
+  {"source":"Alison Browne","target":"governance"},
+  {"source":"Alison Browne","target":"society"},
+  {"source":"Alison Browne","target":"economy"},
+  {"source":"Elena Semino","target":"language"}
+  
+  ]
+
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .type("rings")
+    .data(nodes)
+    .edges(connections)
+    .edges({"size":3})
+    .color(function(d){
+        if (d['type']=='academic1') return "#01665e"
+        if (d['type']=='academic2') return "#5ab4ac"
+        if (d['type']=='academic3') return "#c7eae5"
+        if (d['type']=='topic') return "#d8b365"
+        if (d['type']=='hypertopic') return "#8c510a"
+    })
+    .id("name")
+    .legend(false)
+    .focus("infrastructures")
+    .draw()
+
+</script>
+    
