@@ -1,0 +1,101 @@
+
+<!doctype html>
+<meta charset="utf-8">
+
+<!-- load D3js -->
+<script src="//d3plus.org/js/d3.js"></script>
+
+<!-- load D3plus after D3js -->
+<script src="//d3plus.org/js/d3plus.js"></script>
+
+<!-- create container element for visualization -->
+<div id="viz"></div>
+
+<style>
+  @font-face {
+    font-family: "Righteous";
+    src: url(Righteous-Regular.ttf) format("truetype");
+  }
+</style>
+<script>
+  // sample data array
+  var font={"family":"Righteous","size":15,"align":"center","secondary":{"family":"Righteous"}};
+  var dep=1;
+  var ibs=["Challenge Area","Research Council","Country of Focus","Research Organization"];
+  var country="../data/CountriesofFocusandChallengeAreasonRCUKAwardedGCRFProjects.csv";  
+
+  var visualization = d3plus.viz()
+    .container("#viz")     // container DIV to hold the visualization
+    .type("tree_map")       // visualization type
+    .size("grant")         // key name to size bubbles
+    .font(font)
+    .legend(false)
+    .labels({"align": "left", "valign": "top"})
+    .ui({"font":{"size":12},"value":[
+      {"method" : function(v){
+      dep=v;
+      load(country);
+    },
+    "value"  :[{"Normal":1}, {"Detailed":2} ],
+    "label" : " "
+  },
+  {"method" : function(v){
+    var k=ibs.indexOf(v);
+    var c=ibs[0];
+    ibs[0]=v;
+    ibs[k]=c;
+    load(country);
+  },
+  "value"  :ibs,
+  "label" : "Hierarchy: 1",
+  "focus" : ibs[0],
+  "type" : "drop"
+},
+{"method" : function(v){
+  var k=ibs.indexOf(v);
+  var c=ibs[1];
+  ibs[1]=v;
+  ibs[k]=c;
+  load(country);
+},
+"value"  :ibs,
+"label" : "2",
+"focus" : ibs[1],
+"type" : "drop"
+},
+{"method" : function(v){
+  var k=ibs.indexOf(v);
+  var c=ibs[2];
+  ibs[2]=v;
+  ibs[k]=c;
+  load(country);
+},
+"value"  :ibs,
+"label" : "3",
+"focus" : ibs[2],
+"type" : "drop"
+}]})
+
+    function load(file){
+      d3.csv(file, function(error, data) {
+      	//console.log(data)
+      	data.forEach(function(d){d["grant"]=1})
+        function viz(ids){
+         visualization
+        .data(data)     // data to use with the visualization
+        .id(ids) // nesting keys
+        .depth(dep)
+        .color(function(d){
+          return d[ids[d.d3plus.depth]];
+        })
+        .draw()
+      }
+
+      viz(["Grant"].concat(ibs,["Full Name","Project Title","Grant Reference"]));
+
+    })
+    }
+
+    load(country);
+
+  </script>
