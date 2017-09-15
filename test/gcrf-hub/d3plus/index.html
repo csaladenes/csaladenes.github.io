@@ -21,7 +21,7 @@
   // sample data array
   var font={"family":"Righteous","size":15,"align":"center","secondary":{"family":"Righteous"}};
   var dep=1;
-  var ibs=["Challenge Area","Research Council","Country of Focus","Research Organization"];
+  var ibs=["Challenge Area","Research Council","Country of Focus","Research Organisation","Full Name","Project Title"];
   var country="../data/CountriesofFocusandChallengeAreasonRCUKAwardedGCRFProjects.csv";  
 
   var visualization = d3plus.viz()
@@ -78,9 +78,20 @@
 
     function load(file){
       d3.csv(file, function(error, data) {
-      	//console.log(data)
-      	data.forEach(function(d){d["grant"]=1})
-        function viz(ids){
+      	grants=[];
+      	data.forEach(function(d){
+      		k=d["Grant Reference"];
+      		if (Object.keys(grants).indexOf(k)<0)
+      			grants[d["Grant Reference"]]=1;
+      		else
+      			grants[d["Grant Reference"]]=grants[d["Grant Reference"]]+1;
+      	})
+        
+      	data.forEach(function(d){
+      		d["grant"]=1/grants[d["Grant Reference"]];
+      	})
+        //console.log(data)
+      	function viz(ids){
          visualization
         .data(data)     // data to use with the visualization
         .id(ids) // nesting keys
@@ -91,7 +102,7 @@
         .draw()
       }
 
-      viz(["Grant"].concat(ibs,["Full Name","Project Title","Grant Reference"]));
+      viz(["Grant"].concat(ibs,["Grant Reference"]));
 
     })
     }
