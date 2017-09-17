@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Word Cloud Generator</title>
+<style>
+body {
+  position: relative;
+  font-family: "Helvetica Neue", sans-serif;
+  width: 960px;
+  margin: auto;
+  margin-bottom: 1em;
+  margin-top: 20px;
+}
+#presets a { border-left: solid #666 1px; padding: 0 10px; }
+#presets a.first { border-left: none; }
+#keyword { width: 300px; }
+#fetcher { width: 500px; }
+#keyword, #go { font-size: 1.5em; }
+#text { width: 100%; height: 100px; }
+p.copy { font-size: small; }
+#form { font-size: small; position: relative; }
+hr { border: none; border-bottom: solid #ccc 1px; }
+a.active { text-decoration: none; color: #000; font-weight: bold; cursor: text; }
+#angles line, #angles path, #angles circle { stroke: #666; }
+#angles text { fill: #333; }
+#angles path.drag { fill: #666; cursor: move; }
+#angles { text-align: center; margin: 0 auto; width: 350px; }
+#angles input, #max { width: 42px; }
+#sel {position:relative;float:left;margin-left:620px;margin-top:-34px;width:170px;}
+</style>
+
+<div id="vis"></div>
+
+<form id="form">
+
+<p style="position: absolute; right: 0; top: 0" id="status"></p>
+
+<div style="text-align: center">
+  <div id="presets"></div>
+  <div id="custom-area">
+    <p><label for="text">Paste your text below!</label>
+    <p><textarea id="text">
+      please please please wait wait wait loading loading drawing drawing wordcloud wordcloud awesome
+    </textarea>
+    <button id="go" type="submit">Go!</button>
+  </div>
+</div>
+
+<hr>
+
+<div style="float: right; text-align: right">
+  <p><label for="max">Number of words:</label> <input type="number" value="500" min="1" id="max">
+  <p><label for="per-line"><input type="checkbox" id="per-line"> One word per line</label>
+  <!--<p><label for="colours">Colours:</label> <a href="#" id="random-palette">get random palette</a>-->
+  <p><label>Download:</label>
+    <button id="download-svg">SVG</button><!-- |
+    <a id="download-png" href="#">PNG</a>-->
+</div>
+
+<div style="float: left">
+  <p><label>Spiral:</label>
+    <label for="archimedean"><input type="radio" name="spiral" id="archimedean" value="archimedean" checked="checked"> Archimedean</label>
+    <label for="rectangular"><input type="radio" name="spiral" id="rectangular" value="rectangular"> Rectangular</label>
+  <p><label for="scale">Scale:</label>
+    <label for="scale-log"><input type="radio" name="scale" id="scale-log" value="log"> log n</label>
+    <label for="scale-sqrt"><input type="radio" name="scale" id="scale-sqrt" value="sqrt"> √n</label>
+    <label for="scale-linear"><input type="radio" name="scale" id="scale-linear" value="linear" checked="checked"> n</label>
+  <p><label for="font">Font:</label> <input type="text" id="font" value="Impact">
+</div>
+
+<div id="angles">
+  <p><input type="number" id="angle-count" value="7" min="1"> <label for="angle-count">orientations</label>
+    <label for="angle-from">from</label> <input type="number" id="angle-from" value="-60" min="-90" max="90"> °
+    <label for="angle-to">to</label> <input type="number" id="angle-to" value="60" min="-90" max="90"> °
+</div>
+
+<select id="sel">
+  <option value="keywords">Keywords</option>
+  <option value="titles">Titles</option>
+  <option value="abstracts">Abstracts</option>
+  <option value="kt">Keywords + Titles</option>
+  <option value="kta">Keywords + Titles + Abstracts</option>
+  <option value="kt_nlp">Keywords + Titles [NLP]</option>
+  <option value="kta_nlp">Keywords + Titles + Abstracts [NLP]</option>
+  <option value="kc">Keywords [Normalized]</option>
+  <option value="ks">Keywords [Normalized | Split]</option>
+  <option value="ktc_nlp">Keywords + Titles [NLP | Normalized]</option>
+  <option value="ktac_nlp">Keywords + Titles + Abstracts [NLP | Normalized]</option>
+  <option value="kts_nlp">Keywords + Titles [NLP Normalized | Split]</option>
+  <option value="ktas_nlp" selected>Keywords + Titles + Abstracts [NLP | Normalized | Split]</option>
+</select>
+
+</form>
+
+<script src="d3.js"></script>
+<script src="wordcloud.js"></script>
+<script>
+  function load(json){
+    d3.json(json+'.json',function(d){
+      console.log(d)
+      d3.select('#text').text(String(d).replace(/,/g,', '))
+      parseText(d3.select("#text").property("value"))
+      generate()
+    })
+  }
+  d3.select('#sel').on('change',function(){
+    load(d3.select('#sel').node().value)
+  })
+  load('b') //init
+</script>
