@@ -1,0 +1,297 @@
+Building Code,Building Name,Space,Asset Code,Description,Classification Group,Make,Model,Logger Serial Number,Logger Mac Address,Logger Ip Address,Logger Modem Serial Number,Logger Sim,Network Point Id,Logger Upstream Comms Target,Additional Location Info
+MC202,Charles Carter Building,E02,MC202-L01,Data logger: Charles Carter,Data logger,Enercom,Multilog G2,0501E388CE00,,10.23.15.103,,,,,
+MC046,Bowland Main,,MC046-L19,Data logger: Bowland Main,Data logger,Synetica,DS800-M-32,59D30588-2758-4967-B6EB-2AB38C0E773C,,,,,,,
+AP000,Alexandra Park,A0,AP000-L01,Data logger: Alexandra Park,Data logger,Enercom,Multilog G2,050157C7ED00,00-50-C2-2C-3E-43,10.23.9.39,,,,,Graduatae 1-11 Plant Room
+AP000,Alexandra Park,A0,AP000-L02,Data logger: Alexandra Park,Data logger,Enercom,Multilog G2,37475126,,,,,,,External Gas Meter Building
+AP000,Alexandra Park,A0,AP000-L03,Data logger: Alexandra Park,Data logger,Enercom,Multilog G2,48015355,,,,,,,External Water Meter Chamber
+AP001,"House 01 - Bassenthwaite, Graduate College",A104,AP001-L01,Data logger: Graduate College - House 1,Data logger,Enercom,Multilog G2,0501E3E97100,00-50-C2-2C-3D-DE,10.23.12.36,,,,,A017
+AP009,"House 09 - Devoke, Graduate College",A124,AP009-L01,Data logger: Graduate College - House 9,Data logger,Enercom,Multilog G2,0501E38A6300,00-50-C2-2C-3D-CB,,,,,,"Devoke House, Room A124"
+AP010,"House 10 - Elterwater, Graduate College",A109,AP010-L01,Data logger: Graduate College - House 10,Data logger,Enercom,Multilog G2,0501E3D07500,00-50-C2-2C-3D-D1,10.23.12.37,,,,,"Elderwater House, Room A109"
+AP011,"House 11 - Ennerdale, Graduate College",A102,AP011-L01,Data logger: Graduate College - House 11,Data logger,Enercom,Multilog G2,0501E3839500,00-50-C2-2C-3D-A7,10.23.12.38,,,,,Ennerdale House - Room A102
+AP057,Alexandra Park Laundrette,A0,AP057-L01,Data logger: Alexandra Park Laundrette,Data logger,Enercom,Multilog G2,050157C16100,,80.93.175.91:40455,,,,,Cartmel Laundrette
+AP080,Lonsdale House (Block 12),A13,AP080-L01,Data logger: Lonsdale House - Laundrette,Data logger,Enercom,Multilog G2,050157AB6700,00-50-C2-2C-3D-1B,10.23.9.40,,,,,Plant Room MCC
+AP081,Barker House Farm,A64,AP081-L01,Data logger: Barker House Farm,Data logger,Enercom,Multilog G2,050157C09600,00-50-C2-2C-3D-17,10.23.9.41,,,,,Plant Room
+MC033,John Creed,,MC033-L03,Data logger: John Creed,Data logger,Enercom,Multilog G2,050157C4A800,,10.23.12.11,,,,,A017
+MC062,Bowland Tower,,MC062-L03,Data logger: Bowland Tower,Data logger,Enercom,Multilog G2,050157BBFD00,,,,,,,Switch Room
+MC071,Furness College,,MC071-L14,Data logger: Furness College - The Venue,Data logger,Enercom,Multilog G2,050157C16200,,,,,,,Mains Room
+MC001,The Croft,Boiler/Utility,MC001-L01,Data logger: The Croft,Data logger,Enercom,Multilog G2,0501987F4400,00-50-C2-2C-3D-1C,10.23.15.5,,,,,Pantry
+MC001,The Croft,Boiler/Utility,MC001-L02,Data logger: The Croft,Data logger,Enercom,Multilog G2,050157B35300,,,,,,,Mains Cupboard
+MC003,Bailrigg House,LG5,MC003-L01,Data logger: Bailrigg House,Data logger,Enercom,Multilog G2,050157C0F200,,,,,,,A017
+MC003,Bailrigg House,LG5,MC003-L02,Data logger: Bailrigg House,Data logger,Enercom,Multilog G2,050157C99B00,00-50-C2-2C-3E-5D,10.23.14.130,,,,,A017
+MC007,Bigforth Farm,A0,MC007-L01,Data logger: Bigforth Barn,Data logger,Enercom,Multilog G3,050157C13D00,00-50-C2-2C-3F-01,10.23.14.101,,,,,Bigforth Barn
+MC008,LEC Remote Workshops,A0,MC008-L01,Data logger: LEC Workshops,Data logger,Enercom,Multilog G2,050157B96E00,,80.93.175.91:40453,,,,,BMS Panel
+MC010,County Main,A007,MC010-L01,Data logger: County Main,Data logger,Enercom,Multilog G2,050157B8E000,00-50-C2-2C-3D-16,10.23.14.8,,,,,Plant Room A007
+MC011,The Roundhouse,A01a,MC011-L01,Data logger: The Roundhouse,Data logger,Enercom,Multilog G2,050157B2F300,00-50-C2-2C-3E-FE,10.23.14.5,,,,,A10 (WC)
+MC013,Music Building,A009,MC013-L01,Data logger: Music Extension,Data logger,Enercom,Multilog G2,050159F5B000,00-50-C2-2C-3E-3F,10.23.14.6,,,,,
+MC014,Bowland Hall,A0,MC014-L01,Data logger: Bowland Hall,Data logger,Enercom,Multilog G2,050137C89C00,00-50-C2-2C-3E-38,10.23.12.9,,,,,House 2 SR1 / House 4 SR1
+MC014,Bowland Hall,A0,MC014-L02,Data logger: Bowland Hall,Data logger,Enercom,Multilog G2,05012DE37B00,00-50-C2-2C-3F-19,10.23.12.10,,,,,House 8 SR1
+MC030,Bowland Annexe,A001,MC030-L01,Data logger: Bowland Annexe,Data logger,Enercom,Multilog G2,050157C97800,00-50-C2-2C-3F-0F,10.23.11.40,,,,,A10 (WC)
+MC030,Bowland Annexe,A017,MC030-L02,Data logger: Bowland Annexe,Data logger,Enercom,Multilog G2,050157B28000,,,,,,,A017
+MC031,Great Hall,A032,MC031-L01,Data logger: Great Hall,Data logger,Enercom,Multilog G2,050157C84000,00-50-C2-2C-3E-4B,10.23.14.7,,,,,A017
+MC031,Great Hall,A013b,MC031-L02,Data logger: Great Hall,Data logger,Enercom,Multilog G2,050157A77B00,,,,,,,Plant Room
+MC032,County South,A106x,MC032-L01,Data logger: County South Kitchen,Data logger,Enercom,Multilog G2,,,10.23.14.6,,,,,
+MC032,County South,A026,MC032-L02,Data logger: County South,Data logger,Enercom,Multilog G2,050157AD9C00,,,,,,,BMS Panel
+MC032,County South,A026,MC032-L03,Data logger: County South,Data logger,Enercom,Multilog G2,,,,,,,,A017
+MC032,County South,C020r1,MC032-L04,Data logger: County South,Data logger,Enercom,Multilog G2,050198367E00,00-50-C2-2C-3D-E4,10.23.9.140,,,,,BMS Panel
+MC032,County South,C088,MC032-L05,Data logger: County South,Data logger,Enercom,Multilog G2,050157C58400,00-50-C2-2C-3D-B3,10.23.9.141,,,,,C88
+MC032,County South,A71r3,MC032-L06,Data logger: County South,Data logger,Enercom,Multilog G2,0501E41D8C00,,,,,,,
+MC032,County South,A71r3,MC032-L07,Data logger: County South,Data logger,Enercom,Multilog G2,0501E4353A00,,,,,,,A71/R3
+MC032,County South,A71r3,MC032-L08,Data logger: County South,Data logger,Enercom,Multilog G2,0501E4347800,,,,,,,A71/R3
+MC032,County South,A106x,MC032-L09,Data logger: County South Kitchen,Data logger,Enercom,Multilog G2,0501F8807000,00-50-C2-2C-3B-28,10.23.??.??,,,,,Plant Room
+MC032,County South,A106x,MC032-L10,Data logger: County South Kitchen,Data logger,Enercom,Multilog G2,0501F8779500,00-50-C2-2C-3B-28,10.23.15.76,,,,,Plant Room
+MC032,County South,A025,MC032-L11,Data logger: County South Laundrette,Data logger,Enercom,Multilog G2,050198812D00,00-50-C2-2C-3D-E2,10.23.9.133,,,,,Plant Room
+MC032,County South,A025,MC032-L12,Data logger: County South Laundrette,Data logger,Enercom,Multilog G2,0501F5AECA00,,,,,,,Plant Room
+MC033,County John Creed,A0,MC033-L01,Data logger: County John Creed,Data logger,Enercom,Multilog G2,050157B6DA00,00-50-C2-2C-3E-FC,10.23.12.11,,,,,Fairsnape Mains Room / K2A
+MC033,County John Creed,A0,MC033-L02,Data logger: County John Creed,Data logger,Enercom,Multilog G2,050157BEEE00,,,,,,,Fairsnape Kitchen 8 Store / K2A
+MC043,Bowland North,B062,MC043/DL01,Data logger: Bowland North,Data logger,Enercom,Multilog G2,050157B3C100,00-50-C2-2C-3F-05,10.23.10.74,,,,,
+MC044,Faraday Building,RF1,MC044-L01,Data logger: Faraday Building,Data logger,Enercom,Multilog G2,050157C2DF00,,,,,,,Faraday Building - Plant Room
+MC044,Faraday Building,,MC044-L02,Data logger: Faraday Building,Data logger,Synapsys,SIPe/MODM/EMT,,,,,,,,A62 Water Services Plant Room
+MC044,Faraday Building,,MC044-L03,Data logger: Faraday Building,Data logger,Synapsys,SIPe/MODM/EMT,,,,,,,,A23r1 West Riser Level A
+MC044,Faraday Building,,MC044-L04,Data logger: Faraday Building,Data logger,Synapsys,SIPe/MODM/EMT,,,,,,,,A62 Water Services Plant Room
+MC044,Faraday Building,,MC044-L05,Data logger: Faraday Building,Data logger,Synapsys,SIPe/MODM/EMT,,,,,,,,B16r1 East Riser Level B
+MC045,Physics Building,PL3,MC045-L01,Data logger: Physics/Farady,Data logger,Enercom,Multilog G2,050157B23900,00-50-C2-2C-3E-29,10.23.13.6,,,,,
+MC045,Physics Building,PL1,MC045-L02,Data logger: Physics,Data logger,Enercom,Multilog G2,0501983BA700,00-50-C2-2C-3D-E1,10.23.10.168,,,,,Service Riser AR1
+MC045,Physics Building,A045,MC045-L03,Data logger: Physics - Quantum Lab,Data logger,Enercom,Multilog G2,050200C9CC00,,,,,,,A017
+MC046,Bowland Main,Bt6,MC046-L01,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,,,,,,,,
+MC046,Bowland Main,A0,MC046-L02,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,050200C7E200,,,,,,,Communal Areas
+MC046,Bowland Main,A0,MC046-L03,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,,,,,,,,Bowland Plant Room
+MC046,Bowland Main,Bt6,MC046-L04,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,,00-50-C2-2C-3D-19,10.23.13.103,,,,,Mains Room
+MC046,Bowland Main,Bt6,MC046-L05,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,050198895300,,,,,,,Basement Plant Room
+MC046,Bowland Main,Bt6,MC046-L06,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,050200C41100,,,,,,,Switch Room
+MC046,Bowland Main,D86,MC046-L07,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,0501E3889900,,,,,,,Flat 16
+MC046,Bowland Main,D86,MC046-L08,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,0501FD5E5F00,,,,,,,Flat 16
+MC046,Bowland Main,D64,MC046-L09,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,050200BAC300,,,,,,,Flat 13
+MC046,Bowland Main,D64,MC046-L10,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,050200DF6400,,,,,,,Flat 13
+MC046,Bowland Main,D17,MC046-L11,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,0501FD96E700,,,,,,,Flat 5
+MC046,Bowland Main,D44,MC046-L12,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,0501E3E79300,,,,,,,Flat 8
+MC046,Bowland Main,D44,MC046-L13,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,0501FD568500,,,,,,,Flat 8
+MC046,Bowland Main,D04,MC046-L14,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,0501FD9AFB00,,,,,,,Flat 1
+MC046,Bowland Main,Lift,MC046-L15,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,0501F8662900,,,,,,,Lift
+MC046,Bowland Main,D04,MC046-L16,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,0501F83E0700,,,,,,,Flat 1
+MC046,Bowland Main,A019,MC046-L17,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,050157BF8A00,,,,,,,Learning Zone Switch Room
+MC046,Bowland Main,A010r,MC046-L18,Data logger: Bowland Main,Data logger,Enercom,Multilog G2,050200C7E200,,,,,,,Communal Areas
+MC047,Conference Centre,A13a,MC047-L01,Data logger: Conference Centre,Data logger,Enercom,Multilog G2,05015794BC00,00-50-C2-2C-3E-21,10.23.14.37,,,,,A13a
+MC048,Chaplaincy Centre,A15r,MC048-L01,Data logger: Chaplaincy Centre,Data logger,Enercom,Multilog G2,050137C72900,00-50-C2-2C-3E-44,10.23.14.69,,,,,Electrical Riser - Male WC
+MC050,Security Lodge,A08,MC050-L01,Data logger: Security Lodge,Data logger,Enercom,Multilog G2,050157BB0800,00-50-C2-2C-3E-59,10.23.11.166,,,,,A18d
+MC051,University House,A31,MC051-L01,Data logger: University House,Data logger,Enercom,Multilog G2,050198367D00,00-50-C2-2C-3E-40,10.23.9.232,,,,,
+MC053,Central Workshops,A10/14,MC053-L01,Data logger: Central Workshops,Data logger,Enercom,Multilog G2,050157AD8600,00-50-C2-2C-3F-15,10.23.11.100,,,,,A017
+MC060,"Furness Residences, Bardsea",PL1,MC060-L01,Data logger: Furness Residences,Data logger,Enercom,Multilog G2,0501988FCB00,00-50-C2-2C-3E-32,10.23.12.13,,,,,
+MC061,Energy Centre,A0,MC061-L01,Data logger: Energy Centre,Data logger,Enercom,Multilog G2,,,,,,,,
+MC061,Energy Centre,A3/4,MC061-L02,Data logger: Energy Centre,Data logger,Enercom,Multilog G2,0501E3CFE100,,,,,,,Main Energy Centre LHS
+MC061,Energy Centre,A3/4,MC061-L03,Data logger: Energy Centre,Data logger,Enercom,Multilog G2,050157C1EF00,00-50-C2-2C-3D-DD,10.23.11.106,,,,,Main Energy Centre RHS
+MC061,Energy Centre,A01,MC061-L04,Data logger: Energy Centre,Data logger,Enercom,Multilog G2,050157C5EE00,00-50-C2-2C-3D-99,10.23.11.102,,,,,Sub Station No.1: Boiler House Control Room
+MC061,Energy Centre,A5/6,MC061-L05,Data logger: Energy Centre,Data logger,Enercom,Multilog G2,48015350,,,,,,,Main Water Meter
+MC062,Bowland Tower,A014a,MC062-L01,Data logger: Bowland Tower,Data logger,Enercom,Multilog G2,050157C3C000,,,,,,,Switch Room
+MC062,Bowland Tower,A014a,MC062-L02,Data logger: Bowland Tower,Data logger,Enercom,Multilog G2,050157C69800,00-50-C2-2C-3D-C6,10.23.11.103,,,,,Switch Room
+MC063,Slaidburn House,Plant Room,MC063-L01,Data logger: Slaidburn House,Data logger,Enercom,Multilog G2,050198829500,00-50-C2-2C-3E-53,10.23.11.101,,,,,Plant Room
+MC063,Slaidburn House,Plant Room,MC063-L02,Data logger: Slaidburn House,Data logger,Enercom,Multilog G2,0501E4369600,,,,,,,Plant Room
+MC064,Bowland South,A0,MC064-L01,Data logger: Bowland South - Costa,Data logger,Enercom,Multilog G2,050157A65900,,,,,,,Costa - top of basement stairs
+MC064,Bowland South,A1,MC064-L02,Data logger: Bowland South - Uni Travel,Data logger,Enercom,Multilog G2,050157AF8200,,,,,,,Travel Agent
+MC064,Bowland South,A2,MC064-L03,Data logger: Bowland South - Barclays Bank,Data logger,Enercom,Multilog G2,050198872600,,,,,,,A017
+MC064,Bowland South,A6,MC064-L04,Data logger: Bowland South - Post Office,Data logger,Enercom,Multilog G2,050157C4B500,,,,,,,
+MC064,Bowland South,LG1,MC064-L05,Data logger: Bowland South - Charity Shop,Data logger,Enercom,Multilog G2,050157B58B00,,,,,,,Charity Shop
+MC064,Bowland South,LG,MC064-L06,Data logger: Bowland South - Sultan Restaurant,Data logger,Enercom,Multilog G2,0501988FC000,,,,,,,Sultan Restaurant
+MC064,Bowland South,A6,MC064-L07,Data logger: Bowland South - Post Office,Data logger,Enercom,Multilog G2,0501987DFA00,00-50-C2-2C-3D-9A,10.23.9.233,,,,,Post Office - back office
+MC065,Library,BT20,MC065-L01,Data logger: Library,Data logger,Enercom,Multilog G2,050157BAE700,00-50-C2-2C-3F-00,10.23.14.197,,,,,Extension Plant Room
+MC065,Library,BT13,MC065-L02,Data logger: Library,Data logger,Enercom,Multilog G2,050157C62700,00-50-C2-2C-3D-9D,10.23.14.198,,,,,Phase III BT13 Plant Room
+MC065,Library,BT06a,MC065-L03,Data logger: Library,Data logger,Enercom,Multilog G2,0501983B8300,00-50-C2-2C-3E-31,10.23.14.193,,,,,Main Entrance Mains Room
+MC066,Ruskin Library,LG13/LG14,MC066-L01,Data logger: Ruskin Library,Data logger,Enercom,Multilog G2,05022878FF00,00-50-C2-2C-3E-4C,10.23.11.227,,,,,Mains Room LG14
+MC067,Pre-School Centre,A31,MC067-L01,Data logger: Pre-School Centre,Data logger,Enercom,Multilog G2,05019836F200,00-50-C2-2C-3F-03,10.23.14.162,,,,,
+MC068,LEC 3,D26,MC068-L01,Data logger: LEC 3,Data logger,Enercom,Multilog G2,0501987F4E00,00-50-C2-2C-3E-23,10.23.9.199,,,,,Roof Top Plant Room
+MC069,CEH,A040a,MC069-L01,Data logger: CEH,Data logger,Enercom,Multilog G2,050157AB9B00,,,,,,,Mains Cupboard Corridor Near Reception
+MC069,CEH,C089a,MC069-L02,Data logger: CEH,Data logger,Enercom,Multilog G2,0501988C7A00,00-50-C2-2C-3F-1B,10.23.9.104,,,,,Plant Room on Roof
+MC070,LEC 1 & 2,LG519,MC070-L01,Data logger: LEC I & II,Data logger,Enercom,Multilog G2,050157A79200,00-50-C2-2C-3E-1C,10.23.9.103,,,,,A017
+MC070,LEC 1 & 2,LG519,MC070-L02,Data logger: LEC 1 & 2,Data logger,Enercom,Multilog G2,050137CA2600,00-50-C2-2C-3D-DF,10.23.9.105,,,,,Phase 2 Basement Plant Room
+MC071,Furness College,A0,MC071-L01,Data logger: Furness College,Data logger,Enercom,Multilog G2,05020136CE00,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A0,MC071-L02,Data logger: Furness College,Data logger,Enercom,Multilog G2,050201286300,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A0,MC071-L03,Data logger: Furness College,Data logger,Enercom,Multilog G2,05020125CA00,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A036,MC071-L04,Data logger: Furness College,Data logger,Enercom,Multilog G2,050157C09400,00-50-C2-2C-3D-D8,10.23.10.201,,,,,Switch Room PR4
+MC071,Furness College,A0,MC071-L05,Data logger: Furness College,Data logger,Enercom,Multilog G2,050201221E00,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A0,MC071-L06,Data logger: Furness College,Data logger,Enercom,Multilog G2,050201428B00,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A0,MC071-L07,Data logger: Furness College,Data logger,Enercom,Multilog G2,050201255B00,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A0,MC071-L08,Data logger: Furness College,Data logger,Enercom,Multilog G2,0502012BA000,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A0,MC071-L09,Data logger: Furness College,Data logger,Enercom,Multilog G2,0501F883F600,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A0,MC071-L10,Data logger: Furness College,Data logger,Enercom,Multilog G2,0501F9058600,,10.23.10.207,,,,,Ground Floor
+MC071,Furness College,A0,MC071-L11,Data logger: Furness College,Data logger,Enercom,Multilog G2,0501F9076200,,10.23.??.??,,,,,A017
+MC071,Furness College,LG11,MC071-L12,Data logger: Furness College,Data logger,Enercom,Multilog G2,050157B41C00,,,,,,,Pizza Republic
+MC071,Furness College,LG11,MC071-L13,Data logger: Furness College,Data logger,Enercom,Multilog G2,05019891F000,,,,,,,Pizza Republic
+MC071,Furness College,PL2,MC071-L15,Data logger: Furness College - Sub Station No.4,Data logger,Enercom,Multilog G2,050157AE6600,,,,,,,PR3
+MC071,Furness College,A048,MC071-L16,Data logger: Furness College - LUVU Office,Data logger,Enercom,Multilog G2,050198904000,00-50-C2-2C-3D-15,10.23.9.71,,,,,LUVU Office
+MC071,Furness College,PL1,MC071-L17,Data logger: Furness College - Green Room,Data logger,Enercom,Multilog G2,050157AF8400,00-50-C2-2C-3D-BF,10.23.10.202,,,,,A017
+MC072,Fylde College,A19,MC072-L01,Data logger: Fylde College,Data logger,Enercom,Multilog G2,050157A9C300,00-50-C2-2C-3F-08,10.23.11.70,,,,,A017
+MC075,Management School,RF1,MC075-L01,Data logger: Management School,Data logger,Enercom,Multilog G2,050157A7B900,00-50-C2-2C-3E-FF,10.23.9.168,,,,,A017
+MC075,Management School,RF2,MC075-L02,Data logger: Management School,Data logger,Enercom,Multilog G2,050157BEA900,00-50-C2-2C-3E-22,10.23.9.169,,,,,A017
+MC075,Management School,A219,MC075-L03,Data logger: Management School,Data logger,Enercom,Multilog G2,050157B56900,,,,,,,Phase 1
+MC076,Science and Technology,A078,MC076-L01,Data logger: Engineering,Data logger,Enercom,Multilog G2,050157B24800,00-50-C2-2C-3D-1A,10.23.10.150,,,,,Engineering Building
+MC077,Whewell Building,A03,MC077-L01,Data logger: Whewell Building,Data logger,Enercom,Multilog G2,0501983B4300,00-50-C2-2C-3F-1C,10.23.10.149,,,,,Whewell A3
+MC078,George Fox Building,A0,MC078-L01,Data logger: George Fox,Data logger,Enercom,Multilog G2,05019884CF00,,10.23.14.229,,,,,Chinese Kitchen Store
+MC078,George Fox Building,A65,MC078-L02,Data logger: George Fox,Data logger,Enercom,Multilog G2,050157C7D800,00-50-C2-2C-3E-1F,10.23.14.229,,,,,A017
+MC078,George Fox Building,B27,MC078-L03,Data logger: George Fox,Data logger,Enercom,Multilog G2,050198864300,,,,,,,A017
+MC095,"Pendle College, Kelbrook (12)",L1,MC095-L01,Data logger: Pendle Laundry,Data logger,Enercom,Multilog G2,050157A5E400,00-50-C2-2C-3E-2D,10.23.11.9,,,,,Mains Room
+MC099,"Grizedale College, Roughlee (16)",PL1,MC099-L01,Data logger: Pendle/Grizedale,Data logger,Enercom,Multilog G2,050157C7B900,00-50-C2-2C-3F-0B,10.23.10.236,,,,,A017
+MC099,"Grizedale College, Roughlee (16)",PL1,MC099-L02,Data logger: Pendle/Grizedale,Data logger,Enercom,Multilog G2,050157ACB400,,,,,,,
+MC102,InfoLab21,A29,MC102-L01,Data logger: Infolab,Data logger,Enercom,Multilog G2,050157909800,,,,,,,A29 MCC Plant Room
+MC103,Lancaster House Hotel,PL,MC103-L01,Data logger: Lancaster House Courses,Data logger,Enercom,Multilog G2,0501988B3100,00-50-C2-2C-3E-5B,10.23.13.67,,,,,Centre Plant Room
+MC125,"Fylde Residences, House 68 - Lytham",E34,MC125-L01,Data logger: Fylde Residences - Lytham House,Data logger,Enercom,Multilog G2,050157AE7A00,00-50-C2-2C-3D-D0,10.23.12.22,,,,,Loft Plant Room BMS Panel
+MC126,"Fylde Residences, House 69 - Pilling",F38,MC126-L01,Data logger: Fylde Residences - Pilling House,Data logger,Enercom,Multilog G2,050157CAD800,00-50-C2-2C-3D-D7,10.23.12.24,,,,,
+MC128,"Furness Residences, House 71 - Pennington",E35,MC128-L01,Data logger: Furness Residences - Pennington House,Data logger,Enercom,Multilog G2,050157BBC800,00-50-C2-2C-3D-18,10.23.12.20,,,,,Loft Plant Room BMS Panel
+MC129,"Furness Residences, House 72 - Colton",F35,MC129-L01,Data logger: Furness Residences - Colton House,Data logger,Enercom,Multilog G2,050157CA0E00,00-50-C2-2C-3D-BD,10.23.12.19,,,,,Loft Plant Room BMS Panel
+MC131,"Furness Residences, House 74 - Hawkshead",E34,MC131-L01,Data logger: Furness College - Hawkshead House,Data logger,Enercom,Multilog G2,050157B4B800,00-50-C2-2C-3D-D4,10.23.12.21,,,,,Loft Plant Room BMS Panel
+MC134,"County South Residences, House 76 - Belmont",A04,MC134-L01,Data logger: County South Residences - Block 76,Data logger,Enercom,Multilog G2,0501E41C3C00,00-50-C2-2C-3D-C1,10.23.12.31,,,,,County South Residences
+MC138,Sub Station 7,SS,MC138-L01,Data logger: Substation No.7,Data logger,Enercom,Multilog G2,05019838EB00,,,,,,,A017
+MC139,Sub Station 9,A0,MC139-L01,Data logger: Sub Station 9,Data logger,Enercom,Multilog G2,050157AC6600,,80.93.175.91:40455,,,,,Graduate Field
+MC140,Satellite Sub Station,A0,MC140-L01,Data logger: Satellite Sub Station,Data logger,Enercom,Multilog G2,0501987F4700,,80.93.175.91:40455,,,,,Satellite Sub Station
+MC141,County Field,A0,MC141-L01,Data logger: County Town Houses,Data logger,Enercom,Multilog G2,0501983CDA00,00-50-C2-2C-3D-A4,10.23.12.25,,,,,ULEX Kitchen Store
+MC171,PSC,RF1,MC171-L01,Data logger: Post Graduate Statistics,Data logger,Enercom,Multilog G2,050157AD8100,00-50-C2-2C-3E-45,10.23.11.69,,,,,Roof Plant Room
+MC181,"Grizedale College, House 116 - Nibthwaite",D88,MC181-L01,Data logger: Grizedale College - Nibthwaite House,Data logger,Enercom,Multilog G2,050157C0C300,00-50-C2-2C-3D-CE,10.23.12.27,,,,,Plant Room above Flat No.8
+MC197,ISS Building,A0,MC000-L01,Data logger: Sub Station No.6,Data logger,Enercom,Multilog G2,050157A6F100,,80.93.175.91:40455,,,,,Near Infolab
+MC197,ISS Building,D05,MC197-L01,Data logger: ISS Building,Data logger,Enercom,Multilog G2,05012DFC1300,,,,,,,D05 Plant Room
+MC197,ISS Building,D05,MC197-L02,Data logger: ISS Building,Data logger,Enercom,Multilog G2,050137F53200,,,,,,,Plant Room D05
+MC197,ISS Building,D05,MC197-L03,Data logger: ISS Building,Data logger,Enercom,Multilog G2,050198872F00,00-50-C2-2C-3D-BB,10.23.13.137,,,,,Plant Room D05
+MC197,ISS Building,D05,MC197-L04,Data logger: ISS Building,Data logger,Enercom,Multilog G2,0501F5B73700,,,,,,,Plant Room D05
+MC198,"Grizedale College - Offices, Bar & Social Space",B11,MC198-L01,Data logger: Grizedale Bar,Data logger,Enercom,Multilog G2,0501988C0B00,00-50-C2-2C-3D-97,10.23.10.238,,,,,B11 Plant Room
+MC199,Sub Station 11,A01,MC199-L01,Data logger: Sub Station 11,Data logger,Enercom,Multilog G2,050157B2F000,,80.93.175.91:40455,,,,,
+MC199,Sub Station 11,A01,MC199-L02,Data logger: Sub Station 11,Data logger,Enercom,Multilog G2,050157BEAB00,,,,,,,
+MC200,LICA,A12,MC200-L01,Data logger: LICA,Data logger,Enercom,Multilog G2,0501F26EB900,,10.23.15.76,,,,,Plant Room
+MC200,LICA,A12,MC200-L02,Data logger: LICA,Data logger,Enercom,Multilog G2,0501E3E63200,,10.23.15.76,,,,,Plant Room
+MC202,Charles Carter Building,E02,MC202-L02,Data logger: Charles Carter,Data logger,Enercom,Multilog G2,0501E3E77B00,,,,,,,
+MC202,Charles Carter Building,E02,MC202-L03,Data logger: Charles Carter,Data logger,Enercom,Multilog G2,0501E389FE00,,,,,,,
+MC203,Sub Station 5,A01,MC203-L01,Data logger: Sub Station 5,Data logger,Enercom,Multilog G2,050157A87E00,,,,,,,"Sub Station 5, near Pendle"
+MC204,Sports Centre,A43,MC204-L01,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,050157B3B000,00-50-C2-2C-3D-13,10.23.11.71,,,,,Pool Plant Room
+MC204,Sports Centre,B08,MC204-L02,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,0501988894C00,00-50-C2-2C-3E-25,10.23.11.72,,,,,Cleaners Cupboard
+MC204,Sports Centre,RF04,MC204-L03,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,,,,,,,,Plant Top Room
+MC204,Sports Centre,A43,MC204-L04,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,,,,,,,,Plant Room
+MC204,Sports Centre,RF04,MC204-L05,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,0501F26DBC00,,,,,,,
+MC204,Sports Centre,RF04,MC204-L06,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,050200C3E800,,,,,,,Plant Top Room
+MC204,Sports Centre,RF04,MC204-L07,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,,,,,,,,Plant Top Room
+MC204,Sports Centre,RF04,MC204-L08,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,,,,,,,,Plant Top Room
+MC204,Sports Centre,RF04,MC204-L09,Data logger: Sports Centre,Data logger,Enercom,Multilog G2,,,,,,,,Plant Top Room
+MC207,HR Building,A35,MC207-L01,Data logger: HR Building,Data logger,Enercom,Multilog G2,0502285A8700,00-50-C2-2C-3F-3B,10.23.10.106,,,,,HR Building Plant Room
+,,,,,,,,48015350,,,,,,,
+MC067,Pre-School Centre,,MC067-B01,BMS Controller: Pre-School Centre,BMS controller,Trend,IQ3xcite16,{9C4F6326-A965-43B7-8257-7C349D06E1BD},,10.23.14.163,,,,,
+MC042,Bowland Ash House,,MC042-L01,Data logger: Bowland Ash House,Data logger,Synetica,DS800-M-32,7a5f5ad4-588e-490d-a3c5-8446b944ca8d,,ah-bms02-plant.bms.local,,,,,
+MC003,Bailrigg House,,MC003-B01,BMS Controller: Bailrigg House,BMS controller,Trend,IQ3xact12,{B2D69F4A-1757-43A5-BCA1-F9724D6E5ACF},,bh-bms02-plant.bms.local,,,,,
+MC043,Bowland North,,MC043-B01,BMS Controller: Bowland North,BMS controller,Trend,IQ4E128,{A7B8544A-F5AF-40B3-BBBB-46E7C72A6D4D},,bn-bms01-plant.bms.local,,,,,
+MC046,Bowland Main,,MC046-B01,BMS Controller: Bowland Main,BMS controller,Trend,IQ3xcite96,{8AE84AB9-0098-468B-81FC-C5EDD0B0C0A2},,bo-bms01-bt6a.bms.local,,,,,
+MC070,LEC 1 & 2,,MC070-B01,BMS Controller: LEC 1 & 2,BMS controller,Trend,IQ3xcite96,{A229AC80-8ADE-409D-B049-780D6D85E914},,bs-ahu01-lg516.bms.local,,,,,
+MC070,LEC 1 & 2,,MC070-B02,BMS Controller: LEC 1 & 2,BMS controller,Trend,IQ3xcite96,{1A8B51BF-BB38-4214-AF02-9CCE94F0FDAA},,bs-bms01-a3.bms.local,,,,,
+MC070,LEC 1 & 2,,MC070-B03,BMS Controller: LEC 1 & 2,BMS controller,Trend,IQ3xcite96,{7696707E-0C2C-4843-83E7-30D0DFA4D6DE},,bs-bms01-b5a.bms.local,,,,,
+MC211,Life Sciences & Environment Laboratories,,MC211-B01,BMS Controller: Life Sciences & Environment Laboratories,BMS controller,Trend,IQ3xcite96,{C587E3F2-E604-4C9B-827D-80797E53FC58},,bs-bms01-bslplant.bms.local,,,,,
+MC070,LEC 1 & 2,,MC070-B05,BMS Controller: LEC 1 & 2,BMS controller,Trend,IQ3xcite96,{BA69E012-D54F-4098-A143-25D0F14E2E56},,bs-bms02-b51.bms.local,,,,,
+MC070,LEC 1 & 2,,MC070-B06,BMS Controller: LEC 1 & 2,BMS controller,Trend,IQ3xcite96,{DB122CC0-3CE2-43F9-9B3C-2D0FF0775353},,bs-bms-lg519.bms.local,,,,,
+MC061,Energy Centre,,MC061-B01,BMS Controller: Energy Centre,BMS controller,Trend,IQ3xcite128,{A856AC2B-8250-45D4-A262-ECF0BBBE07D1},,bt-bms02-boiler.bms.local,,,,,
+MC061,Energy Centre,,MC061-B02,BMS Controller: Energy Centre,BMS controller,Trend,IQ3xcite96,{0BEEE3D4-D44C-4994-BE98-60DA2E175092},,bt-bms03-boiler.bms.local,,,,,
+MC061,Energy Centre,,MC061-B03,BMS Controller: Energy Centre,BMS controller,Trend,IQ3xcite96,{6B359D99-C693-49A3-9874-3A4510BBCC35},,bt-bms04-boiler.bms.local,,,,,
+MC032,County South,,MC032-B01,BMS Controller: County South,BMS controller,Trend,IQ4E64,{131547E0-B362-4369-9E79-624CBB248F57},,caaplant0001.bms.local,,,,,Lec Phase 1 Plantroom
+MC032,County South,,MC032-B02,BMS Controller: County South,BMS controller,Trend,IQ3xcite96,{15455034-3E75-43E9-81D5-72D6A6472F2A},,ca-bms01-a106x,,,,,
+MC032,County South,,MC032-B03,BMS Controller: County South,BMS controller,Trend,IQ3xcite96,{CBC1FE4D-3BBD-41D8-B625-DA1942AEC6CE},,ca-bms01-a26.lancs.ac.uk,,,,,
+MC032,County South,,MC032-B04,BMS Controller: County South,BMS controller,Trend,IQ3xcite96,{FE268915-218E-47DA-92F0-4E718E3A4E56},,ca-bms01-a70c.lancs.ac.uk,,,,,
+MC032,County South,,MC032-B05,BMS Controller: County South,BMS controller,Trend,IQ3xcite96,{D1267E04-0691-4514-BE32-DDEA77C90FC5},,ca-bms01-c20.lancs.ac.uk,,,,,
+MC032,County South,,MC032-B06,BMS Controller: County South,BMS controller,Trend,IQ3xcite16,{0855C976-3432-4FF3-A9BE-9DC2153BF3D4},,ca-bms01-c56.lancs.ac.uk,,,,,Biology Basement Plantroom
+MC032,County South,,MC032-B07,BMS Controller: County South,BMS controller,Trend,IQ3xcite96,{1C455FEF-25BA-46EC-BABB-6148EA4B3B4F},,ca-bms02-a26.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B01,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{E005F3A3-AF5C-4B90-BC0F-80968EE3BB91},,cc-ahu01-a18.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B02,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{12C7BEEE-7518-42B3-883D-9519578B26E2},,cc-ahu02-a17.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B03,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{DEEA835B-34A0-4FB9-8A35-2F0B40D6608D},,cc-ahu03-a16.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B04,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{B8C7EAD4-70EF-4C0D-8309-AE001535EA37},,cc-ahu04-a15.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B05,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{7687621A-78C8-4D4E-A3F4-EC9E02B8E848},,cc-ahu05-a15.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B06,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{C8004C1F-C326-49E6-B7D9-71A6E8D2AC9B},,cc-ahu06-b02.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B07,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{907C02B5-F146-489E-9F13-0FDAE906885F},,cc-ahu07-b02.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B08,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{D3627F7E-A55D-4555-AC89-0B56B5268911},,cc-ahu08-b35.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B09,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{B4FF0FAC-56D8-4F05-8A3D-297CBB76B70D},,cc-ahu09-c02.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B10,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{D99DCE40-8245-46C1-9247-89E0CCE71E8F},,cc-ahu10-c02.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B11,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{5DC6DA44-0B71-4691-9570-B6779B702E56},,cc-ahu11-c41.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B12,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{2E84B259-DB7E-4828-9600-6894F43214B1},,cc-ahu12-c02.bms.local,,,,,Bowland North main plant
+MC202,Charles Carter Building,,MC202-B13,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{3A0BE3D4-E0FA-4C1F-9BA8-C322A69365F0},,cc-ahu13-d02.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B14,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{9F75D3D2-1142-45A2-91F1-7DF2F6A4135F},,cc-ahu14-d02.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B15,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{05937EE0-58E6-42F3-B6BD-A180D9634B6C},,cc-ahu15-d42.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B16,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xact12,{0CD2E41C-8BF1-406E-A0E5-35FDE4D48448},,cc-ahu16-d02.bms.local,,,,,
+MC202,Charles Carter Building,,,Data logger: Charles Carter Building,Data logger,Synetica,DS800-M-32,47e22ca9-a8f8-4781-963d-31382df0d5c6,,cc-meter01-plant.bms.local,,,,,
+MC047,Conference Centre,,MC047-L02,Data logger: Conference Centre,Data logger,Synetica,DS800-M-32,17b914b6-51c2-47dc-8f04-36ca4c41206d,00:40:9D:7D:80:9A,cf-meter02-sw.bms.local,,,,,
+MC047,Conference Centre,,MC047-B02,BMS Controller: Conference Centre,BMS controller,Trend,IQ3xact12,{1CC5E9F6-31C4-4086-95B0-65A99027AC43},,cf-mystery01.bms.local,,,,,
+MC033,County John Creed,,MC033-B01,BMS Controller: County John Creed,BMS controller,Trend,IQ3xcite96,{7B8B2B33-1180-4EE3-9AE5-6693ED1371F8},,co-meter01-fairsnap.bms.local,,,,,
+OC006,Chancellors Wharf,,OC006-B01,BMS Controller: Chancellors Wharf,BMS controller,Trend,IQ3xact12,{BBD3685B-B0DC-417F-A0E8-20139B1074E1},,cw-meter01-plant.bms.local,,,,,
+OC005,Chancellors Wharf,,OC005-B01,BMS Controller: Chancellors Wharf,BMS controller,Trend,IQ3xact12,{281682DC-5479-4064-8290-E873933872B0},,cw-meter02-plant.bms.local,,,,,
+OC004,Chancellors Wharf,,OC004-B01,BMS Controller: Chancellors Wharf,BMS controller,Trend,IQ3xact12,{48352BB4-4B1B-4013-AB9F-14E143E83948},,cw-meter03-plant.bms.local,,,,,
+MC048,Chaplaincy Centre,,MC048-B01,BMS Controller: Chaplaincy Centre,BMS controller,Trend,IQ3xcite96,{F67CD63F-50B4-41F8-8AFF-5CCC63BC6455},,cy-vms01-a34.bms.local,,,,,
+MC076,Science and Technology,,MC076-B01,BMS Controller: Science and Technology,BMS controller,Trend,IQ3xcite96,{06FD88B4-61AC-4CCE-9FE5-0516D3FD869B},,eg-bms01-a77.bms.local,,,,,
+MC076,Science and Technology,,MC076-B02,BMS Controller: Science and Technology,BMS controller,Trend,IQ3xcite96,{30E0D98F-8D83-46BC-8B13-9D416F17FB02},,eg-bms01-c19.bms.local,,,,,
+MC076,Science and Technology,,MC076-B03,BMS Controller: Science and Technology,BMS controller,Trend,IQ4E32,,,eg-bms02-a77.bms.local,,,,,
+MC076,Science and Technology,,MC076-B04,BMS Controller: Science and Technology,BMS controller,Trend,IQ3xact12,{0704EFA6-F9E9-4D4D-AC3E-7529152A21D7},,eg-bms03-plant.bms.local,,,,,Engineering B floor AHU
+MC044,Faraday Building,,MC044-B01,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite128,{8D4FA836-F494-4786-8E63-9F8703176D78},,fa-bms01-plant.bms.local,,,,,
+MC044,Faraday Building,,MC044-B02,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite128,{1E104EF6-9E59-4C77-92B4-084A4A5ACE65},,fa-bms01-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B03,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite96,{29FF7BB8-DFDA-45EA-A5FD-2F01A2F61FC8},,fa-bms02-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B04,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite96,{3716E0F1-42FD-4F81-88BA-D8BD27D24E9B},,fa-bms04-plant.bms.local,,,,,
+MC044,Faraday Building,,MC044-B05,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite96,{5540FD17-E137-4E32-B993-CF8840E8B7DE},,fa-bms04-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B06,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite128,{A69642A1-3855-479C-89F7-DCB47B48FCC0},,fa-bms05-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B07,BMS Controller: Faraday Building,BMS controller,Trend,IQ4NC0,{57383A46-C0FF-47F6-B21F-74DD8D1E75B9},,fa-bms08-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B08,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite128,{2C8E78F1-21B2-4BA7-92EA-1BD563073161},,fa-bms09-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B09,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite96,{47CF40CD-0E05-412B-A804-6545452D9D09},,fa-bms10-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B10,BMS Controller: Faraday Building,BMS controller,Trend,IQ4NC0,{71AA78DD-3EFF-40D0-A7FD-3E414621646B},,fa-bms11-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B11,BMS Controller: Faraday Building,BMS controller,Trend,IQ4NC0,{7F166780-ABE6-4C9E-8C47-5EC085713260},,fa-bms12-refurb.bms.local,,,,,
+MC044,Faraday Building,,MC044-B12,BMS Controller: Faraday Building,BMS controller,Trend,IQ3xcite16,{F00BC4D6-6407-4BAB-96D5-610EF45C2F1C},,fa-centsrv-plant.bms.local,,,,,
+MC055,Furness Blocks,,MC055-B01,BMS Controller: Furness Blocks,BMS controller,Trend,IQ3xcite16,{6BF82177-CB8B-4774-9B9C-0008202C0CE8},,fu-bms01.bms.local,,,,,
+MC071,Furness,,MC071-B01,BMS Controller: Furness Blocks,BMS controller,Trend,IQ3xcite96,{B9940A04-170E-4DBA-A49A-27721AC37F8B},,fu-bms01-plant.bms.local,,,,,
+MC072,Fylde College,,MC072-B01,BMS Controller: Fylde College,BMS controller,Trend,IQ3xcite96,{3F71EC78-3A9B-43A8-B993-784A6EA21D65},,fy-bms01-a19.bms.local,,,,,
+MC171,PSC Building,,MC072-B02,BMS Controller: Fylde College,BMS controller,Trend,IQ3xcite96,{BADFAEDD-2A1C-4E3B-9CE0-EF4317AFA24E},,fy-bms01-psc.bms.local,,,,,
+MC072,Fylde College,,MC072-B03,BMS Controller: Fylde College,BMS controller,Trend,IQ3xcite96,{91C56BA1-95E9-4099-BD8B-266E6CE57551},,fy-bms02-a19.bms.local,,,,,
+MC171,PSC Building,,MC072-B04,BMS Controller: Fylde College,BMS controller,Trend,IQ3xcite96,{078DAF9E-3C94-4BAE-8EC9-7FAB08BDC088},,fy-bms02-psc.bms.local,,,,,
+MC072,Fylde College,,MC072-B05,BMS Controller: Fylde College,BMS controller,Trend,IQ3xcite96,{9ADC5A5F-E957-4CC1-A1CA-EB7CBF5FE984},,fy-bms03-plant.bms.local,,,,,
+MC029,Bowland Hall cetad,,MC029-B01,BMS Controller: Bowland Hall CETAD,BMS controller,Trend,IQ3xact12,{C5EB0995-CC13-4C45-B732-F9DC921BE834},,gc-bms01-cetad.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B01,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{372351A9-1932-4EBC-A590-4475CF1CA36B},,gc-bms01-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B02,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{4397B3AD-B2DA-4CFF-88CD-633149466F1D},,gc-bms02-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B03,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{66962349-F186-4FFB-B6F4-D28FC0DACF4A},,gc-bms03-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B04,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{B66444CE-8D77-4B80-B4F3-2E610BDA9DB2},,gc-bms04-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B05,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{270A9CF6-5956-499F-B22A-FF038DD13B90},,gc-bms05-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B06,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{A3661DBE-F2F8-4076-94A5-CAA9DB805347},,gc-bms06-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B07,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{F9A2A82C-CC68-47FC-8BA7-4CFBB7569404},,gc-bms07-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B08,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{8637D0F4-448D-4D66-B40A-FB5E63C944EC},,gc-bms08-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B09,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{A146CE66-78B4-4E89-A2AD-A0FEA3BBFD56},,gc-bms09-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B10,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{E2D921D1-1782-4CD5-A0A4-0BAE9D9AB275},,gc-bms10-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B11,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{86E0852E-7DFF-4049-968B-8B4F90295F68},,gc-bms11-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B12,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{876BF2BC-A4A2-457D-BE20-10309008F5E9},,gc-bms12-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B13,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{89B7E579-E490-4EB6-A4A5-E5AA5A0BF962},,gc-bms13-plant.bms.local,,,,,
+MC014,Bowland Hall,,MC014-B14,BMS Controller: Bowland Hall,BMS controller,Trend,IQ3xact12,{BF4BE985-374C-4EFD-978E-52172DEAE5EC},,gc-bms14-plant.bms.local,,,,,
+MC078,George Fox Building,,MC078-B01,BMS Controller: George Fox Building,BMS controller,Trend,IQ3xcite128,{4FB7A303-EA35-4C60-92CF-DB2AD300376E},,gf-bms02-plant.bms.local,,,,,
+MC078,George Fox Building,,MC078-B02,BMS Controller: George Fox Building,BMS controller,Trend,IQ3xcite128,{564F573E-0217-4001-A35E-4213A1FFCF9A},,gf-bms03-plant.bms.local,,,,,
+MC078,George Fox Building,,MC078-B03,BMS Controller: George Fox Building,BMS controller,Trend,IQ4E96,{0ACA7181-4DFC-472A-9C71-73818ABAA838},,gf-bms05-plant.bms.local,,,,,
+MC031,Great Hall,,MC031-B01,BMS Controller: Great Hall,BMS controller,Trend,IQ3xcite96,{E1D32C01-8115-404C-8D8E-DAE2931F5400},,gh-bms01-b19b.bms.local,,,,,
+MC031,Great Hall,,MC031-B02,BMS Controller: Great Hall,BMS controller,Trend,IQ3xcite96,{B2FD5139-B531-447A-9616-7D1560491BC2},,gh-bms02-b19b.bms.local,,,,,
+MC198,Grizedale,,MC198-B01,BMS Controller: Grizedale,BMS controller,Trend,IQ3xcite96,{6EA798B2-8551-41E6-90E6-EDA8CBF76E41},,gr-bms01-plant.bms.local,,,,,
+MC198,Grizedale,,MC198-B02,BMS Controller: Grizedale,BMS controller,Trend,IQ3xcite96,{49AC67B2-8E0A-41A6-A75F-F50D40320C6B},,gr-bms03-plant.bms.local,,,,,
+MC207,HR Building,,MC207-B01,BMS Controller: HR Building,BMS controller,Trend,IQ3xcite96,{3BF53C6F-96DB-4B9B-8B7C-ED6D6490F4E5},,hr-bms01-a35x.bms.local,,,,,
+MC200,LICA,,MC200-B01,BMS Controller: LICA,BMS controller,Trend,IQ3xcite96,{76BFB361-B79C-44F2-AAD7-C2FECB031A0F},,lb-controller-c28.bms.local,,,,,
+MC011,The Roundhouse,,MC011-B01,BMS Controller: The Roundhouse,BMS controller,Trend,IQ3xcite96,{F698567A-6820-48AB-B287-D0EE6631CD5F},,lc-bms01-a1a.bms.local,,,,,
+MC030,Bowland Annexe,,MC030-B01,BMS Controller: Bowland Annexe,BMS controller,Trend,IQ3xcite96,{FE0BB1FD-874A-414D-A62A-C7177273F35B},,lh-bms01-a1.bms.local,,,,,
+MC065,Library,,MC065-B01,BMS Controller: Library,BMS controller,Trend,IQ3xcite96,{9704F5FC-1908-4642-BA99-5C88503B3E08},,li-bms01-bt006a.bms.local,,,,,
+MC065,Library,,MC065-B02,BMS Controller: Library,BMS controller,Trend,IQ3xcite96,{A278BEED-CB45-4502-AEC2-095D0B40400B},,li-bms01-mcc1.bms.local,,,,,
+MC065,Library,,MC065-B03,BMS Controller: Library,BMS controller,Trend,IQ3xcite96,{2D1450F7-A411-4B2F-BBB6-220951C410ED},,li-bms01-mcc2.bms.local,,,,,
+MC065,Library,,MC065-B04,BMS Controller: Library,BMS controller,Trend,IQ3xcite96,{1A188B0C-90A9-42EC-A887-D5CD3B6555A4},,li-bms01-mcc3.bms.local,,,,,
+MC065,Library,,MC065-B05,BMS Controller: Library,BMS controller,Trend,IQ3xact12,{1AADE260-6DED-4EA4-88F0-6220EAFEB0DD},,li-bms01-mcc4.bms.local,,,,,
+MC065,Library,,MC065-B06,BMS Controller: Library,BMS controller,Trend,IQ3xcite96,{A997A2D4-BD3E-4157-9FF4-53D2163E9A42},,li-bms01-rf001.bms.local,,,,,
+MC065,Library,,MC065-B07,BMS Controller: Library,BMS controller,Trend,IQ3xcite96,{85C535B2-81C1-4F84-B126-EB707FEA7403},,li-bms01-rf002.bms.local,,,,,
+MC065,Library,,MC065-B08,BMS Controller: Library,BMS controller,Trend,IQ3xcite96,{2F435FCA-FD67-4D1D-ACF1-8B5C9B277E65},,li-bms01-rf003.bms.local,,,,,
+MC065,Library,,MC065-B09,BMS Controller: Library,BMS controller,Trend,IQ3xcite96,{FED19B1E-B0D1-45DA-ACBF-D7303CD37E58},,li-bms01-rf004.bms.local,,,,,
+MC065,Library,,MC065-B10,BMS Controller: Library,BMS controller,Trend,IQ3xcite16,{98DE1912-B985-46D7-95C8-00E5D593F1A9},,li-bms01-weather.bms.local,,,,,
+EX001,Underpass,,EX001-B01,BMS Controller: Underpass,BMS controller,Trend,IQ3xact12,{6AF33BBD-AC58-4990-A6BB-9DBE9C25CBAB},,li-underpass-pump01.bms.local,,,,,
+MC103,Hotel,,MC103-B01,BMS Controller: Hotel,BMS controller,Trend,IQ4E64,{C3572196-3975-4B85-B08E-E745880ECAAD},,md-bms01.bms.local,,,,,
+MC210,Engineering Building,,MC210-B01,BMS Controller: Engineering Building,BMS controller,Trend,IQ3xcite128,{0F850990-984A-49FC-B351-82CCFD6A644B},,ng-bms01-e01.bms.local,,,,,
+MC210,Engineering Building,,MC210-B02,BMS Controller: Engineering Building,BMS controller,Trend,IQ3xcite128,{B39C7903-72F6-4B03-A5B6-6CE8CF57D680},,ng-bms02-e01.bms.local,,,,,
+MC210,Engineering Building,,MC210-B03,BMS Controller: Engineering Building,BMS controller,Trend,IQ3xcite128,{9DA6D329-30E9-46CC-A840-5B656A5FFDC2},,ng-bms03-e01.bms.local,,,,,
+MC083,Pendle College,,MC083-B01,BMS Controller: Pendle College,BMS controller,Trend,IQ3xcite96,{1612AE3B-9040-400E-B892-E470195CF179},,pd-bms01.bms.local,,,,,
+MC045,Physics Building,,MC045-B01,BMS Controller: Physics Building,BMS controller,Trend,IQ3xcite128,{FFB77EFC-DD27-49F4-982D-A3EFAD1B8654},,py-bms01-roofqtc.bms.local,,,,,
+MC066,Ruskin Library,,MC066-B01,BMS Controller: Ruskin Library,BMS controller,Trend,IQ3xcite96,{DB4CA2D4-8B29-4C03-9D1D-A868E05300E8},,rl-bms01.bms.local,,,,,
+MC204,Sports Centre,,MC204-B01,BMS Controller: Sports Centre,BMS controller,Trend,IQ3xcite96,{C1212EB2-1C53-4BD3-AC24-BDBF47351D34},,sc-bms01-cp1-b12.bms.local,,,,,
+MC204,Sports Centre,,MC204-B02,BMS Controller: Sports Centre,BMS controller,Trend,IQ3xcite96,{98951DB3-A869-4DB9-9A9F-CB3AD2AC803F},,sc-bms01-cp2-a43x.bms.local,,,,,
+MC204,Sports Centre,,MC204-B03,BMS Controller: Sports Centre,BMS controller,Trend,IQ3xcite96,{0012D954-81C9-4F32-9FBF-5B472505636F},,sc-bms01-cp3-lg01.bms.local,,,,,
+MC204,Sports Centre,,MC204-B04,BMS Controller: Sports Centre,BMS controller,Trend,IQ3xcite16,{15F8682F-C35B-445C-975A-09E7A0C0BCD5},,sc-bms01-window-a83.bms.local,,,,,
+MC204,Sports Centre,,MC204-B05,BMS Controller: Sports Centre,BMS controller,Trend,IQ3xcite96,{791002B8-3DAD-40C8-9E6B-509F60BA707D},,sc-bms02-cp1-b12.bms.local,,,,,
+MC204,Sports Centre,,MC204-B06,BMS Controller: Sports Centre,BMS controller,Trend,IQ3xcite96,{6732BA2D-2B96-4E05-9B8F-E63421C57BE9},,sc-bms02-cp2-a43x.bms.local,,,,,
+MC063,Slaidburn House,,MC063-B01,BMS Controller: Slaidburn House,BMS controller,Trend,IQ3xcite96,{54561EAD-15A2-4A32-9DAC-ECD49A2F7506},,sl-bms01-plant.bms.local,,,,,
+MC075,Management School,,MC075-B01,BMS Controller: Management School,BMS controller,Trend,IQ3xcite96,{04761130-16B0-45EA-86D9-D101995DC7DA},,sm-bms01-a27.bms.local,,,,,
+MC075,Management School,,MC075-B02,BMS Controller: Management School,BMS controller,Trend,IQ3xcite96,{368653BE-1709-4CA6-89AC-BABAB6B489F1},,sm-bms01-astroturf.bms.local,,,,,
+MC051,University House,,MC051-B01,BMS Controller: University House,BMS controller,Trend,IQ3xcite96,{25326464-4DD7-472F-9E39-6EDC4A2629B3},,unaplant0001.bms.local,,,,,
+MC001,The Croft,,MC001-B01,BMS Controller: The Croft,BMS controller,Trend,IQ3xcite16,{39A16E8D-2D2B-49BC-BA47-5C2FC061DA17},,vc-bms01-croft.bms.local,,,,,
+MC077,Whewell building,,MC077-B01,BMS Controller: Whewell building,BMS controller,Trend,IQ422,{8D697446-4CBD-4B7E-B4D3-3D520F9D2DDB},,wh-controller01-a3.bms.local,,,,,
+MC202,Charles Carter Building,,MC202-B17,BMS Controller: Charles Carter Building,BMS controller,Trend,IQ3xcite96 Iss2.31 Aug 26 2010,{52b02653-d689-4ef9-8bd3-c4235c70e2c8},,10.23.15.101,,,,,
+MC210,Engineering Building,,MC210-L01,Data logger: Engineering,Data logger,SIP,SIP MLog,,,10.23.16.51,,,,,
+MC210,Engineering Building,,MC210-L02,Data logger: Engineering,Data logger,SIP,SIP MLog,,,10.23.16.52,,,,,
