@@ -30438,32 +30438,32 @@
 30436,MC044-L82/M816,"Supply to DB DB/P1, First Floor Plant Room, LV Switcboard FP SB 1",Energy meter,Electricity,kWh,Socomec,Diris A20,1,MC044,L82,M816
 30437,MC044-L82/M817,"Supply to DB FP DB1, First Floor Plant Room, LV Switcboard FP SB 1",Energy meter,Electricity,kWh,Socomec,Diris A20,1,MC044,L82,M817
 30438,MC044-L82/M818,"Spare Supply, LV Switcboard FP SB 1",Energy meter,Electricity,kWh,Socomec,Diris A20,1,MC044,L82,M818
-30439,MC044-L82/M819,Metering Section BusBar 1,Energy meter,Electricity ,kWh,Socomec,DIRIS A20,1,MC044,L82,M819
-30440,MC044-L82/M820,Metering and Surge Protection Section,Energy meter,Electricity ,kWh,Socomec,DIRIS A41,1,MC044,L82,M820
-30441,MC044-L82/M821,Metering Section BusBar 2,Energy meter,Electricity ,kWh,Socomec,DIRIS A20,1,MC044,L82,M821
-30442,MC044-L82/M822,Metering and Surge Protection Section,Energy meter,Electricity ,kWh,Socomec,DIRIS A41,1,MC044,L82,M822
-30443,MC044-L82/M823,Supply to Distribution Board,Energy meter,Electricity ,kWh,Socomec,DIRIS A20,1,MC044,L82,M823
-30444,MC044-L82/M824,NoData,Energy meter,Electricity ,kWh,NoData,NoData,1,MC044,L82,M824
-30445,MC044-L82/M825,Supply to Retail Unit,Energy meter,Electricity ,kWh,Socomec,DIRIS A20,1,MC044,L82,M825
-30446,MC044-L82/M826,Top Section/Total Load x2 Distribution Board DBA/C/ST,Energy meter,Electricity ,kWh,Schneider,IEM3255,1,MC044,L82,M826
-30447,MC044-L82/M827,Top Section/Total Load x2 Distribution Board DBA/C/G,Energy meter,Electricity ,kWh,Schneider,IEM3255,1,MC044,L82,M827
-30448,MC044-L82/M828,Top Section/Total Load x2 Distribution Board DBA/C/SR,Energy meter,Electricity ,kWh,Schneider,IEM3255,1,MC044,L82,M828
-30449,MC044-L82/M829,Top Section/Total Load x2 Distribution Board DBA/C/CHEM,Energy meter,Electricity ,kWh,Schneider,IEM3255,1,MC044,L82,M829
-30450,MC044-L82/M830,Distribution Board DBA/E/M,Energy meter,Electricity ,kWh,Schneider,IEM3255,1,MC044,L82,M830
+30439,MC044-L82/M819,Metering Section BusBar 1,Energy meter,Electricity,kWh,Socomec,DIRIS A20,1,MC044,L82,M819
+30440,MC044-L82/M820,Metering and Surge Protection Section,Energy meter,Electricity,kWh,Socomec,DIRIS A41,1,MC044,L82,M820
+30441,MC044-L82/M821,Metering Section BusBar 2,Energy meter,Electricity,kWh,Socomec,DIRIS A20,1,MC044,L82,M821
+30442,MC044-L82/M822,Metering and Surge Protection Section,Energy meter,Electricity,kWh,Socomec,DIRIS A41,1,MC044,L82,M822
+30443,MC044-L82/M823,Supply to Distribution Board,Energy meter,Electricity,kWh,Socomec,DIRIS A20,1,MC044,L82,M823
+30444,MC044-L82/M824,NoData,Energy meter,Electricity,kWh,NoData,NoData,1,MC044,L82,M824
+30445,MC044-L82/M825,Supply to Retail Unit,Energy meter,Electricity,kWh,Socomec,DIRIS A20,1,MC044,L82,M825
+30446,MC044-L82/M826,Top Section/Total Load x2 Distribution Board DBA/C/ST,Energy meter,Electricity,kWh,Schneider,IEM3255,1,MC044,L82,M826
+30447,MC044-L82/M827,Top Section/Total Load x2 Distribution Board DBA/C/G,Energy meter,Electricity,kWh,Schneider,IEM3255,1,MC044,L82,M827
+30448,MC044-L82/M828,Top Section/Total Load x2 Distribution Board DBA/C/SR,Energy meter,Electricity,kWh,Schneider,IEM3255,1,MC044,L82,M828
+30449,MC044-L82/M829,Top Section/Total Load x2 Distribution Board DBA/C/CHEM,Energy meter,Electricity,kWh,Schneider,IEM3255,1,MC044,L82,M829
+30450,MC044-L82/M830,Distribution Board DBA/E/M,Energy meter,Electricity,kWh,Schneider,IEM3255,1,MC044,L82,M830
 30451,MC044-L82/M831,NoData,Energy meter,District Heating,kWh,Kamstrup,Multical 602,1,MC044,L82,M831
 30452,MC044-L82/M832,NoData,Energy meter,District Heating,kWh,Kamstrup,Multical 602,1,MC044,L82,M832
 30453,MC044-L82/M833,NoData,Energy meter,Water,NoData,WRAS,M14,1,MC044,L82,M833
 30454,MC044-L82/M834,NoData,Energy meter,Water,NoData,WRAS,M14,1,MC044,L82,M834
-30455,MC044-L82/M835,Top Section/Total Load x2 Distribution Board DB1 NMR,Energy meter,Electricity ,kWh,Schneider,Power Logic PM750,1,MC044,L82,M835
+30455,MC044-L82/M835,Top Section/Total Load x2 Distribution Board DB1 NMR,Energy meter,Electricity,kWh,Schneider,Power Logic PM750,1,MC044,L82,M835
 30456,MC044-L82/M836,NoData,Energy meter,District Heating,kWh,Kamstrup,Multical 602,1,MC044,L82,M836
 30457,MC044-L82/M837,NoData,Energy meter,District Heating,kWh,Kamstrup,Multical 602,1,MC044,L82,M837
 30458,MC044-L82/M838,NoData,Energy meter,Water,NoData,Siemens,Sirtrans FUE080,1,MC044,L82,M838
 30459,MC044-L82/M839,NoData,Energy meter,Water,NoData,NoData,NoData,1,MC044,L82,M839
 30460,MC044-L82/M840,NoData,Energy meter,Water,NoData,NoData,NoData,1,MC044,L82,M840
 30461,MC044-L82/M841,NoData,Energy meter,Water,NoData,NoData,NoData,1,MC044,L82,M841
-30462,MC044-L82/M842,NoData,Energy meter,Electricity ,kWh,IME,CONTO imp,1,MC044,L82,M842
-30463,MC044-L82/M843,DBA/W/G Top Section/Total Load,Energy meter,Electricity ,kWh,Schneider,IEM3255,1,MC044,L82,M843
-30464,MC044-L82/M844,DBA/W/DATA Top Section/Total Load,Energy meter,Electricity ,kWh,Schneider,IEM3255,1,MC044,L82,M844
+30462,MC044-L82/M842,NoData,Energy meter,Electricity,kWh,IME,CONTO imp,1,MC044,L82,M842
+30463,MC044-L82/M843,DBA/W/G Top Section/Total Load,Energy meter,Electricity,kWh,Schneider,IEM3255,1,MC044,L82,M843
+30464,MC044-L82/M844,DBA/W/DATA Top Section/Total Load,Energy meter,Electricity,kWh,Schneider,IEM3255,1,MC044,L82,M844
 30465,MC044-L82/M845,LTD DB Ground Floor,Energy meter,Electricity,kWh,Scheider Electric,Power Logic PM 700,1,MC044,L82,M845
 30466,MC044-L82/M846,PWR DB Ground Floor,Energy meter,Electricity,kWh,Scheider Electric,Power Logic PM 700,1,MC044,L82,M846
 30467,MC044-L82/M847,LTG/PWR 1st Floor,Energy meter,Electricity,kWh,Scheider Electric,Power Logic PM 700,1,MC044,L82,M847
@@ -30539,7 +30539,7 @@
 30537,MC044-L82/M917,A5 Furness,Energy meter,Electricity,kWh,IME ,Nemo 72-L,1,MC044,L82,M917
 30538,MC044-L82/M918,Adj. DB Board,Energy meter,Electricity,kWh,IME ,Nemo 72-L,1,MC044,L82,M918
 30539,MC044-L82/M919,Involve,Energy meter,Electricity,kWh,IME ,Nemo 72-L,1,MC044,L82,M919
-30540,MC044-L82/M920,NoData,Energy meter,District Heating ,kWh,Danfoss,INFOCAL 8,1,MC044,L82,M920
+30540,MC044-L82/M920,NoData,Energy meter,District Heating,kWh,Danfoss,INFOCAL 8,1,MC044,L82,M920
 30541,MC044-L82/M921,NoData,Energy meter,Water,NoData,NoData,NoData,1,MC044,L82,M921
 30542,MC044-L82/M922,Furness Colton,Energy meter,Natural Gas,NoData,GWF,Radial Blade Turbine Gas Meter,1,MC044,L82,M922
 30543,MC044-L82/M923,Furness Colton,Energy meter,Electricity,kWh,Merlin Gerin,Power Logic PM700,1,MC044,L82,M923
