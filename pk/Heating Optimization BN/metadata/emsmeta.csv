@@ -1,0 +1,517 @@
+id,node_id,network_collection,network_domain,subnet_description,subnet_collection,node_description,node_collection,input_description,input_collection,data_unit,storage_method,storage_duration,meter_constants
+1,05012DFC1300,Com 1,Net_01,ISS Building,100,ISS Building Logger 98,2,ServicesDB/E/S4B,1,kWh,Minutely,30,1
+2,05012DFC1300,Com 1,Net_01,ISS Building,100,ISS Building Logger 98,2,Reg Net DB/E/S3B,2,kWh,Minutely,30,1
+3,05012DFC1300,Com 1,Net_01,ISS Building,100,ISS Building Logger 98,2,RegCamCoLoDBES1B,3,kWh,Minutely,30,1
+4,05012DFC1300,Com 1,Net_01,ISS Building,100,ISS Building Logger 98,2,Camp Net DBES2B,4,kWh,Minutely,30,1
+5,05012DFC1300,Com 1,Net_01,ISS Building,100,ISS Building Logger 98,2,Build Com BDES5B,5,kWh,Minutely,30,1
+6,05012DFC1300,Com 1,Net_01,ISS Building,100,ISS Building Logger 98,2,Cam Serv DBES4A ,6,kWh,Minutely,30,1
+7,05012DFC1300,Com 1,Net_01,ISS Building,100,ISS Building Logger 98,2,Reg Net DB/E/S3A,7,kWh,Minutely,30,1
+8,05012DFC1300,Com 1,Net_01,ISS Building,100,ISS Building Logger 98,2,RegCamCoLoDBES1A,8,kWh,Minutely,30,1
+9,050137C72900,Com 1,Net_01,Chaplaincy Centre,15,Meters,1,Main Elect Meter,1,kWh,Minutely,30,1
+10,050137C72900,Com 1,Net_01,Chaplaincy Centre,15,Meters,1,Kitchen Electric,2,kWh,Minutely,30,1
+11,050137C72900,Com 1,Net_01,Chaplaincy Centre,15,Meters,1,Main Water Meter,3,m3,Minutely,30,1
+12,050137C72900,Com 1,Net_01,Chaplaincy Centre,15,Meters,1,Kitchen Water,4,m3,Minutely,30,1
+13,050137C72900,Com 1,Net_01,Chaplaincy Centre,15,Meters,1,Heat Meter,5,kWh,Minutely,30,1
+14,050137C72900,Com 1,Net_01,Chaplaincy Centre,15,Meters,1,Immersion Heater,6,kWh,Minutely,30,1
+15,050137C89C00,Com 1,Net_01,Bowland Hall House 2 4,4,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+16,050137C89C00,Com 1,Net_01,Bowland Hall House 2 4,4,Meters,1,Water Meter,2,m3,Minutely,30,1
+17,050137CA2600,Com 1,Net_01,IENS Phase 2 Basement Plt Rm,91,Logger 91 - Meters,1,NERC 1 Water,1,m3,Minutely,30,1
+18,050137CA2600,Com 1,Net_01,IENS Phase 2 Basement Plt Rm,91,Logger 91 - Meters,1,heat Meter,2,kWh,Minutely,30,1
+19,050137CA2600,Com 1,Net_01,IENS Phase 2 Basement Plt Rm,91,Logger 91 - Meters,1,gas meter,3,kWh,Minutely,30,1
+20,050137CA2600,Com 1,Net_01,IENS Phase 2 Basement Plt Rm,91,Logger 91 - Meters,1,Lec 3 water,4,m3,Minutely,30,1
+21,050137CA2600,Com 1,Net_01,IENS Phase 2 Basement Plt Rm,91,Logger 91 - Meters,1,Phase 2 electric,5,kWh,Minutely,30,1
+22,050137CA2600,Com 1,Net_01,IENS Phase 2 Basement Plt Rm,91,Logger 91 - Meters,1,ph2 no.2 imm,6,kWh,Minutely,30,1
+23,050137CA2600,Com 1,Net_01,IENS Phase 2 Basement Plt Rm,91,Logger 91 - Meters,1,ph 2 animal rms,7,kWh,Minutely,30,1
+24,050137F53200,Com 1,Net_01,ISS Building,100,ISS building Logger 99,3,Camp Net DBES2A,1,kWh,Minutely,30,1
+25,050137F53200,Com 1,Net_01,ISS Building,100,ISS building Logger 99,3,Build Com DBES5A,2,kWh,Minutely,30,1
+26,050137F53200,Com 1,Net_01,ISS Building,100,ISS building Logger 99,3,Inc No2 ESS Sw,3,kWh,Minutely,30,1
+27,050137F53200,Com 1,Net_01,ISS Building,100,ISS building Logger 99,3,Inc No1 ESS Sw,4,kWh,Minutely,30,1
+28,050137F53200,Com 1,Net_01,ISS Building,100,ISS building Logger 99,3,LV2 ESS Main M,5,kWh,Minutely,30,1
+29,050137F53200,Com 1,Net_01,ISS Building,100,ISS building Logger 99,3,Ess Mech Control,6,kWh,Minutely,30,1
+30,050137F53200,Com 1,Net_01,ISS Building,100,ISS building Logger 99,3,DB/E/M1,7,kWh,Minutely,30,1
+31,050137F53200,Com 1,Net_01,ISS Building,100,ISS building Logger 99,3,CB/E/M2,8,kWh,Minutely,30,1
+32,050157909800,Com 1,Net_01,Infolab - 21,7,Meters,1,Plant Room Gas,1,m3,Minutely,30,1
+33,050157909800,Com 1,Net_01,Infolab - 21,7,Meters,1,Electric Meter,3,kWh,Minutely,30,1
+34,050157909800,Com 1,Net_01,Infolab - 21,7,Meters,1,Water Meter,4,m3,Minutely,30,100
+35,050157909800,Com 1,Net_01,Infolab - 21,7,Meters,1,Chiller No 1,5,kWh,Minutely,30,1
+36,050157909800,Com 1,Net_01,Infolab - 21,7,Meters,1,Chiller No 2,6,kWh,Minutely,30,1
+37,05015794BC00,Com 1,Net_01,Conference Centre Switch Room,11,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+38,05015794BC00,Com 1,Net_01,Conference Centre Switch Room,11,Meters,1,Gas,2,m3,Minutely,30,1
+39,050157A6F100,Com 1,Net_01,Sub Station 6,64,Meters,1,Transformer 1,1,kWh,Minutely,30,1
+40,050157A6F100,Com 1,Net_01,Sub Station 6,64,Meters,1,Transformer 2,2,kWh,Minutely,30,1
+41,050157A77B00,Com 1,Net_01,Great Hall A32,39,Great Hall Plant 56,2,Water,1,m3,Minutely,30,1
+42,050157A77B00,Com 1,Net_01,Great Hall A32,39,Great Hall Plant 56,2,Heat meter,2,kWh,Minutely,30,1
+43,050157A77B00,Com 1,Net_01,Great Hall A32,39,Great Hall Plant 56,2,Ash House Water,3,m3,Minutely,30,1
+44,050157A77B00,Com 1,Net_01,Great Hall A32,39,Great Hall Plant 56,2,Immersion No 1,4,kWh,Minutely,30,1
+45,050157A77B00,Com 1,Net_01,Great Hall A32,39,Great Hall Plant 56,2,Immersion No 2,5,kWh,Minutely,30,1
+46,050157A79200,Com 1,Net_01,IENS,46,Meters,1,IENS Ph 1 Elect,1,kWh,Minutely,30,1
+47,050157A79200,Com 1,Net_01,IENS,46,Meters,1,NERC PH1 Elect,2,kWh,Minutely,30,1
+48,050157A79200,Com 1,Net_01,IENS,46,Meters,1,Water,3,m3,Minutely,30,1000
+49,050157A79200,Com 1,Net_01,IENS,46,Meters,1,Gas,4,m3,Minutely,30,1
+50,050157A79200,Com 1,Net_01,IENS,46,Meters,1,Heat Meter,5,kWh,Minutely,30,1
+51,050157A79200,Com 1,Net_01,IENS,46,Meters,1,Immersion No 1,6,kWh,Minutely,30,1
+52,050157A79200,Com 1,Net_01,IENS,46,Meters,1,Immersion No 2,7,kWh,Minutely,30,1
+53,050157A87E00,Com 1,Net_01,George Fox A65,18,No 5 Sub Station Logger 93,3,Transformer No.1,1,kWh,Minutely,30,1
+54,050157A87E00,Com 1,Net_01,George Fox A65,18,No 5 Sub Station Logger 93,3,Transformer No.2,2,kWh,Minutely,30,1
+55,050157A87E00,Com 1,Net_01,George Fox A65,18,No 5 Sub Station Logger 93,3,Man School Ph 1,3,kWh,Minutely,30,1
+56,050157A87E00,Com 1,Net_01,George Fox A65,18,No 5 Sub Station Logger 93,3,Man School Ext,4,kWh,Minutely,30,1
+57,050157A87E00,Com 1,Net_01,George Fox A65,18,No 5 Sub Station Logger 93,3,Grizedale 1 Elec,5,kWh,Minutely,30,1
+58,050157A87E00,Com 1,Net_01,George Fox A65,18,No 5 Sub Station Logger 93,3,Pendle College E,6,kWh,Minutely,30,1
+59,050157A87E00,Com 1,Net_01,George Fox A65,18,No 5 Sub Station Logger 93,3,Charles Carter E,7,kWh,Minutely,30,1
+60,050157A87E00,Com 1,Net_01,George Fox A65,18,No 5 Sub Station Logger 93,3,Grizedale 2 Elec,8,kWh,Minutely,30,1
+61,050157AB6700,Com 1,Net_01,Lonsdale Laundrette Plant Room,42,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+62,050157AB6700,Com 1,Net_01,Lonsdale Laundrette Plant Room,42,Meters,1,Water Meter,2,kWh,Minutely,30,1000
+63,050157AB6700,Com 1,Net_01,Lonsdale Laundrette Plant Room,42,Meters,1,Gas Meter,3,m3,Minutely,30,1
+64,050157AB9B00,Com 1,Net_01,No 8 Sub Station LEC 2,37,NERC2 Logger 102,2,Nerc Ph 2 Elect,1,kWh,Minutely,30,1
+65,050157AD6E00,Com 1,Net_01,Main Boiler House ,61,Boiler House 2  152,2,CHP Elct Input,1,kWh,Minutely,30,1
+66,050157AD6E00,Com 1,Net_01,Main Boiler House ,61,Boiler House 2  152,2,CHP Output Gen,2,kWh,Minutely,30,1
+67,050157AD6E00,Com 1,Net_01,Main Boiler House ,61,Boiler House 2  152,2,CHP Heat Mtr,3,kWh,Minutely,30,1
+68,050157AD6E00,Com 1,Net_01,Main Boiler House ,61,Boiler House 2  152,2,Biomass Heat Mtr,4,kWh,Minutely,30,1
+69,050157AD6E00,Com 1,Net_01,Main Boiler House ,61,Boiler House 2  152,2,Bio Boiler Elect,5,kWh,Minutely,30,1
+70,050157AD8100,Com 1,Net_01,Post Grad Statistics Roof P R,34,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+71,050157AD8100,Com 1,Net_01,Post Grad Statistics Roof P R,34,Meters,1,Water Meter,2,m3,Minutely,30,1000
+72,050157AD8100,Com 1,Net_01,Post Grad Statistics Roof P R,34,Meters,1,Heat Meter,3,kWh,Minutely,30,1
+73,050157AD8600,Com 1,Net_01,Central Maintenance Workshop,40,Meters,1,Elect Workshop,1,kWh,Minutely,30,1
+74,050157AD8600,Com 1,Net_01,Central Maintenance Workshop,40,Meters,1,Electric Garage,2,kWh,Minutely,30,1
+75,050157AD8600,Com 1,Net_01,Central Maintenance Workshop,40,Meters,1,Water Garage,3,l,Minutely,30,1
+76,050157AD9C00,Com 1,Net_01,County South C56 ,115,County South C56 Logger 114 ,2,Elec Fl 6 7 8 9,4,kWh,Minutely,30,1
+77,050157AD9C00,Com 1,Net_01,County South C56 ,115,County South C56 Logger 114 ,2,DB D2 Power,5,kWh,Minutely,30,1
+78,050157AD9C00,Com 1,Net_01,County South C56 ,115,County South C56 Logger 114 ,2,DB D2 Lighting,6,kWh,Minutely,30,1
+79,050157AD9C00,Com 1,Net_01,County South C56 ,115,County South C56 Logger 114 ,2,DB C2 Power,7,kWh,Minutely,30,1
+80,050157AD9C00,Com 1,Net_01,County South C56 ,115,County South C56 Logger 114 ,2,DB C2 Lighting,8,kWh,Minutely,30,1
+81,050157AE7A00,Com 1,Net_01,Fylde Lytham,72,Meters,1,Water,1,m3,Minutely,30,1
+82,050157AF8200,Com 1,Net_01,Slaidburn House,43,Travel Agent Logger No 86,5,Travel Corr,1,kWh,Minutely,30,1000
+83,050157AF8200,Com 1,Net_01,Slaidburn House,43,Travel Agent Logger No 86,5,Travel Front,2,kWh,Minutely,30,1000
+84,050157AF8200,Com 1,Net_01,Slaidburn House,43,Travel Agent Logger No 86,5,Travel Water,3,m3,Minutely,30,1000
+85,050157B10800,Com 1,Net_01,No 8 Sub Station LEC 2,37,Meters,1,SUB 8 Elect Mtr,1,kWh,Minutely,30,1
+86,050157B10800,Com 1,Net_01,No 8 Sub Station LEC 2,37,Meters,1,SUB 10 Elect Mtr,2,kWh,Minutely,30,1
+87,050157B10800,Com 1,Net_01,No 8 Sub Station LEC 2,37,Meters,1,No 1 Bus Bar,3,kWh,Minutely,30,1
+88,050157B10800,Com 1,Net_01,No 8 Sub Station LEC 2,37,Meters,1,No 2 Bus Bar,4,kWh,Minutely,30,1
+89,050157B23900,Com 1,Net_01,Faraday Plant Room,24,Meters,1,Faraday Lifeboat,3,kWh,Minutely,30,1
+90,050157B23900,Com 1,Net_01,Faraday Plant Room,24,Meters,1,Gas Meter,4,m3,Minutely,30,1
+91,050157B23900,Com 1,Net_01,Faraday Plant Room,24,Meters,1,Chiller No 1,6,kWh,Minutely,30,1
+92,050157B23900,Com 1,Net_01,Faraday Plant Room,24,Meters,1,Chiller No 2,7,kWh,Minutely,30,1
+93,050157B23900,Com 1,Net_01,Faraday Plant Room,24,Meters,1,MCCP Panel,8,kWh,Minutely,30,1
+94,050157B28000,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Bowland Annexe 2/1,2,Annexe Electric,1,kWh,Minutely,30,1
+95,050157B2F000,Com 1,Net_01,Substation 11,96,Meters No 11,1,Non Ess (MCCN) ,1,kWh,Minutely,30,1
+96,050157B2F000,Com 1,Net_01,Substation 11,96,Meters No 11,1,Chiller No 2,2,kWh,Minutely,30,1
+97,050157B2F000,Com 1,Net_01,Substation 11,96,Meters No 11,1,LV3-NE Supply,3,kWh,Minutely,30,1
+98,050157B2F000,Com 1,Net_01,Substation 11,96,Meters No 11,1,LV4-NE Supply,4,kWh,Minutely,30,1
+99,050157B2F000,Com 1,Net_01,Substation 11,96,Meters No 11,1,Incomer No 2,5,kWh,Minutely,30,1
+100,050157B2F000,Com 1,Net_01,Substation 11,96,Meters No 11,1,Incomer No 1,6,kWh,Minutely,30,1
+101,050157B35300,Com 1,Net_01,The Croft E,74,Node 1,1,Elecrtic Meter,1,kWh,Minutely,30,1
+102,050157B3C100,Com 1,Net_01,Bowland North Switch Room,6,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+103,050157B3C100,Com 1,Net_01,Bowland North Switch Room,6,Meters,1,Water Meter,2,m3,Minutely,30,1
+104,050157B3C100,Com 1,Net_01,Bowland North Switch Room,6,Meters,1,Heat Meter,3,kWh,Minutely,30,1
+105,050157B4B800,Com 1,Net_01,Furness Hawkshead,71,Meters,1,Water,1,m3,Minutely,30,1
+106,050157B56900,Com 1,Net_01,Management School Adj Lift,27,Management School phase log 66,2,Heat ,1,kWh,Minutely,30,1
+107,050157B56900,Com 1,Net_01,Management School Adj Lift,27,Management School phase log 66,2,Immersion No 1,2,kWh,Minutely,30,1
+108,050157B56900,Com 1,Net_01,Management School Adj Lift,27,Management School phase log 66,2,Immersion No 2,3,kWh,Minutely,30,1
+109,050157B58B00,Com 1,Net_01,Slaidburn House,43,Logger 88 - Meters,2,Charity Shop - E,1,kWh,Minutely,30,1000
+110,050157B58B00,Com 1,Net_01,Slaidburn House,43,Logger 88 - Meters,2,Charity Shop - W,2,m3,Minutely,30,1000
+111,050157B58B00,Com 1,Net_01,Slaidburn House,43,Logger 88 - Meters,2,LUSU Housing E,3,kWh,Minutely,30,1
+112,050157B6DA00,Com 1,Net_01,John Creed  ,12,John Creed Fairsnape,1,Electric Meter,1,kWh,Minutely,30,1
+113,050157B6DA00,Com 1,Net_01,John Creed  ,12,John Creed Fairsnape,1,Water Fairsnape,2,m3,Minutely,30,1
+114,050157B96E00,Com 1,Net_01,LEC Workshops,53,Meters,1,Workshop Water,1,m3,Minutely,30,1000
+115,050157B96E00,Com 1,Net_01,LEC Workshops,53,Meters,1,Workshop Gas,2,m3,Minutely,30,1
+116,050157BA9600,Com 1,Net_01,County South C20 Modem,117,Meters Logger 116 Mains,2,DB B1 Power,3,kWh,Minutely,30,1
+117,050157BA9600,Com 1,Net_01,County South C20 Modem,117,Meters Logger 116 Mains,2,DB B1 Lighting,4,kWh,Minutely,30,1
+118,050157BA9600,Com 1,Net_01,County South C20 Modem,117,Meters Logger 116 Mains,2,DB C1 Power,5,kWh,Minutely,30,1
+119,050157BA9600,Com 1,Net_01,County South C20 Modem,117,Meters Logger 116 Mains,2,DB C1 Lighting,6,kWh,Minutely,30,1
+120,050157BA9600,Com 1,Net_01,County South C20 Modem,117,Meters Logger 116 Mains,2,BD D1 Power,7,kWh,Minutely,30,1
+121,050157BA9600,Com 1,Net_01,County South C20 Modem,117,Meters Logger 116 Mains,2,DB D1 Lighting,8,kWh,Minutely,30,1
+122,050157BB0800,Com 1,Net_01,Security Lodge,9,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+123,050157BBFD00,Com 1,Net_01,Tower plantroom,82,Tower Switch Room Logger 85,2,W H Smith News,1,kWh,Minutely,30,1
+124,050157BBFD00,Com 1,Net_01,Tower plantroom,82,Tower Switch Room Logger 85,2,Nat West ATM,2,kWh,Minutely,30,1
+125,050157BBFD00,Com 1,Net_01,Tower plantroom,82,Tower Switch Room Logger 85,2,WH Smiths Water,3,kWh,Minutely,30,1000
+126,050157BBFD00,Com 1,Net_01,Tower plantroom,82,Tower Switch Room Logger 85,2,Tower Ent DB,4,kWh,Minutely,30,1
+127,050157BBFD00,Com 1,Net_01,Tower plantroom,82,Tower Switch Room Logger 85,2,BowT MCCP Panel,6,kWh,Minutely,30,1
+128,050157BBFD00,Com 1,Net_01,Tower plantroom,82,Tower Switch Room Logger 85,2,BowT Sprinkler P,7,kWh,Minutely,30,1
+129,050157BEA900,Com 1,Net_01,Management School Adj Lift,27,Meters,1,Electricity,1,kWh,Minutely,30,1
+130,050157BEAB00,Com 1,Net_01,Substation 11,96,Meters No 11/2 Logger 97,2,Chiller No 3 Fut,1,kWh,Minutely,30,1
+131,050157BEAB00,Com 1,Net_01,Substation 11,96,Meters No 11/2 Logger 97,2,Standby Gener,2,kWh,Minutely,30,1
+132,050157BEAB00,Com 1,Net_01,Substation 11,96,Meters No 11/2 Logger 97,2,LV2-ESS Supply,3,kWh,Minutely,30,1
+133,050157BEAB00,Com 1,Net_01,Substation 11,96,Meters No 11/2 Logger 97,2,Chiller No 1,4,kWh,Minutely,30,1
+134,050157BEEE00,Com 1,Net_01,John Creed  ,12,Fairsnape 13,2,Heat Meter 1,1,kWh,Minutely,30,1
+135,050157BEEE00,Com 1,Net_01,John Creed  ,12,Fairsnape 13,2,Immersion Heater,2,kWh,Minutely,30,1
+136,050157C09400,Com 1,Net_01,Engineering,49,Engineering,1,Electric Meter,1,kWh,Minutely,30,1
+137,050157C09400,Com 1,Net_01,Engineering,49,Engineering,1,Heat Meter,2,kWh,Minutely,30,1
+138,050157C09400,Com 1,Net_01,Engineering,49,Engineering,1,Gas Meter,3,m3,Minutely,30,1
+139,050157C09400,Com 1,Net_01,Engineering,49,Engineering,1,Man School Water,4,m3,Minutely,30,1000
+140,050157C09400,Com 1,Net_01,Engineering,49,Engineering,1,Spts Cntre Water,5,m3,Minutely,30,1000
+141,050157C09400,Com 1,Net_01,Engineering,49,Engineering,1,Eng Water,6,m3,Minutely,30,1000
+142,050157C09400,Com 1,Net_01,Engineering,49,Engineering,1,Immersion Heater,7,kWh,Minutely,30,1
+143,050157C09600,Com 1,Net_01,Barker House Plant Room,44,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+144,050157C09600,Com 1,Net_01,Barker House Plant Room,44,Meters,1,Water Meter,2,m3,Minutely,30,1
+145,050157C09600,Com 1,Net_01,Barker House Plant Room,44,Meters,1,Gas Meter,3,kWh,Minutely,30,1
+146,050157C0F200,Com 1,Net_01,Bailrigg House,29,Basement Level 28,2,Gas Meter,1,m3,Minutely,30,1
+147,050157C0F200,Com 1,Net_01,Bailrigg House,29,Basement Level 28,2,Water Meter,2,m3,Minutely,30,1000
+148,050157C16100,Com 1,Net_01,Cartmel Laundrette,62,Meters,1,Electricity,1,kWh,Minutely,30,1
+149,050157C16100,Com 1,Net_01,Cartmel Laundrette,62,Meters,1,Water,2,m3,Minutely,30,1
+150,050157C16100,Com 1,Net_01,Cartmel Laundrette,62,Meters,1,Gas,3,m3,Minutely,30,1
+151,050157C1EF00,Com 1,Net_01,Energy Centre RHS,126,Meters,1,Maint Water,1,l,Minutely,30,1
+152,050157C1EF00,Com 1,Net_01,Energy Centre RHS,126,Meters,1,Oil Meter,2,kWh,Minutely,30,1
+153,050157C1EF00,Com 1,Net_01,Energy Centre RHS,126,Meters,1,MCCP Elect,3,kWh,Minutely,30,1
+154,050157C1EF00,Com 1,Net_01,Energy Centre RHS,126,Meters,1,3 Boilers H Out ,4,kWh,Minutely,30,1
+155,050157C2DF00,Com 1,Net_01,Faraday Plant Room,24,Lifeboat Logger 103,2,DB Lifeboat,1,kWh,Minutely,30,1
+156,050157C2DF00,Com 1,Net_01,Faraday Plant Room,24,Lifeboat Logger 103,2,UPS Output,2,kWh,Minutely,30,1
+157,050157C2DF00,Com 1,Net_01,Faraday Plant Room,24,Lifeboat Logger 103,2,UPS Rectifier,3,kWh,Minutely,30,1
+158,050157C2DF00,Com 1,Net_01,Faraday Plant Room,24,Lifeboat Logger 103,2,CS Imm Htr,4,kWh,Minutely,30,1
+159,050157C3C000,Com 1,Net_01,Tower plantroom,82,Tower Switch Room 81,4,Slaidburn Heat,1,kWh,Minutely,30,1
+160,050157C3C000,Com 1,Net_01,Tower plantroom,82,Tower Switch Room 81,4,BT S&E W Heat M,2,kWh,Minutely,30,1
+161,050157C3C000,Com 1,Net_01,Tower plantroom,82,Tower Switch Room 81,4,Slaidburn Water,3,m3,Minutely,30,1
+162,050157C3C000,Com 1,Net_01,Tower plantroom,82,Tower Switch Room 81,4,Bow Tower Water,4,m3,Minutely,30,1
+163,050157C3C000,Com 1,Net_01,Tower plantroom,82,Tower Switch Room 81,4,Walling ice Elec,5,kWh,Minutely,30,1
+164,050157C3C000,Com 1,Net_01,Tower plantroom,82,Tower Switch Room 81,4,Wallings Ice W,6,m3,Minutely,30,1000
+165,050157C3C000,Com 1,Net_01,Tower plantroom,82,Tower Switch Room 81,4,Hair D Electric,7,kWh,Minutely,30,1000
+166,050157C3C000,Com 1,Net_01,Tower plantroom,82,Tower Switch Room 81,4,Hair D 2 Water,8,m3,Minutely,30,1000
+167,050157C4B500,Com 1,Net_01,Slaidburn House,43,Travel Agent Logger No 87,6,Ketchup-Electric,1,kWh,Minutely,30,1
+168,050157C4B500,Com 1,Net_01,Slaidburn House,43,Travel Agent Logger No 87,6,Ketchup -  Water,2,m3,Minutely,30,1000
+169,050157C4B500,Com 1,Net_01,Slaidburn House,43,Travel Agent Logger No 87,6,PO electric,3,kWh,Minutely,30,1000
+170,050157C4B500,Com 1,Net_01,Slaidburn House,43,Travel Agent Logger No 87,6,PO Water,4,m3,Minutely,30,1
+171,050157C58400,Com 1,Net_01,County South C88,118,Meters,1,Flats 1 2 3 4 5,1,kWh,Minutely,30,1
+172,050157C58400,Com 1,Net_01,County South C88,118,Meters,1,DB D3 Power,2,kWh,Minutely,30,1
+173,050157C58400,Com 1,Net_01,County South C88,118,Meters,1,DB D3 Lighting,3,kWh,Minutely,30,1
+174,050157C58400,Com 1,Net_01,County South C88,118,Meters,1,DB C3 Power,4,kWh,Minutely,30,1
+175,050157C58400,Com 1,Net_01,County South C88,118,Meters,1,DB C3 Lighting,5,kWh,Minutely,30,1
+176,050157C58400,Com 1,Net_01,County South C88,118,Meters,1,DB B3 Power,6,kWh,Minutely,30,1
+177,050157C58400,Com 1,Net_01,County South C88,118,Meters,1,DB B3 lighting,7,kWh,Minutely,30,1
+178,050157C5EE00,Com 1,Net_01,Main Boiler House ,61,Meters,1,No 1 Transformer,1,kWh,Minutely,30,1
+179,050157C5EE00,Com 1,Net_01,Main Boiler House ,61,Meters,1,No 2 Transformer,2,kWh,Minutely,30,1
+180,050157C5EE00,Com 1,Net_01,Main Boiler House ,61,Meters,1,Orange Telephone,3,kWh,Minutely,30,1
+181,050157C5EE00,Com 1,Net_01,Main Boiler House ,61,Meters,1,CHP Gas,4,m3,Minutely,30,1
+182,050157C5EE00,Com 1,Net_01,Main Boiler House ,61,Meters,1,Blr Hse G supply,5,kWh,Minutely,30,1000
+183,050157C5EE00,Com 1,Net_01,Main Boiler House ,61,Meters,1,FurFyd Res Gas,6,m3,Minutely,30,1
+184,050157C5EE00,Com 1,Net_01,Main Boiler House ,61,Meters,1,Firm Gas,7,m3,Minutely,30,1
+185,050157C5EE00,Com 1,Net_01,Main Boiler House ,61,Meters,1,3 Gas Boilers,8,m3,Minutely,30,1
+186,050157C69800,Com 1,Net_01,Tower plantroom,82,Meters,1,Hair D 1 Water,1,m3,Minutely,30,1000
+187,050157C69800,Com 1,Net_01,Tower plantroom,82,Meters,1,Tower Electric,2,kWh,Minutely,30,1
+188,050157C69800,Com 1,Net_01,Tower plantroom,82,Meters,1,Create Electric,3,kWh,Minutely,30,1000
+189,050157C69800,Com 1,Net_01,Tower plantroom,82,Meters,1,Create Water,4,m3,Minutely,30,1000
+190,050157C69800,Com 1,Net_01,Tower plantroom,82,Meters,1,Tower Dis Board,5,kWh,Minutely,30,1
+191,050157C69800,Com 1,Net_01,Tower plantroom,82,Meters,1,Greggs Electric,6,kWh,Minutely,30,1000
+192,050157C69800,Com 1,Net_01,Tower plantroom,82,Meters,1,Input 7,7,kWh,Minutely,30,1
+193,050157C69800,Com 1,Net_01,Tower plantroom,82,Meters,1,Greggs Water,8,kWh,Minutely,30,1000
+194,050157C7D800,Com 1,Net_01,George Fox A65,18,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+195,050157C7D800,Com 1,Net_01,George Fox A65,18,Meters,1,Water Meter,2,m3,Minutely,30,1
+196,050157C7D800,Com 1,Net_01,George Fox A65,18,Meters,1,Chinese Water,3,m3,Minutely,30,1000
+197,050157C84000,Com 1,Net_01,Great Hall A32,39,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+198,050157C84000,Com 1,Net_01,Great Hall A32,39,Meters,1,Gas Meter,2,m3,Minutely,30,1
+199,050157C97800,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Meters,1,Annexe Water ,1,m3,Minutely,30,1
+200,050157C97800,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Meters,1,Ash Electric,2,kWh,Minutely,30,1
+201,050157C97800,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Meters,1,Ash Heat,3,kWh,Minutely,30,1
+202,050157C97800,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Meters,1,Annexe Heat ,4,kWh,Minutely,30,1
+203,050157C97800,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Meters,1,Annexe Gas,5,kWh,Minutely,30,1
+204,050157C97800,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Meters,1,Imm Heater No 2,6,kWh,Minutely,30,1
+205,050157C97800,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Meters,1,Imm Heater No 1,7,kWh,Minutely,30,1
+206,050157C97800,Com 1,Net_01,Bowland Annexe Plant Room 2,2,Meters,1,Muslim Prayer Rm,8,kWh,Minutely,30,1
+207,050157C99B00,Com 1,Net_01,Bailrigg House,29,Ground Floor,1,Electric Meter,1,kWh,Minutely,30,1000
+208,050157CA0E00,Com 1,Net_01,Furness Colton,69,Meters,1,Water,1,m3,Minutely,30,1
+209,050157CAD800,Com 1,Net_01,Fylde Pilling,75,Meter,1,Water,1,m3,Minutely,30,1
+210,050159F5B000,Com 1,Net_01,Sub Station 3,8,Meters,1,CntySth75 76 77,1,kWh,Minutely,30,1
+211,050159F5B000,Com 1,Net_01,Sub Station 3,8,Meters,1,No 1 Transformer,2,kWh,Minutely,30,1
+212,050159F5B000,Com 1,Net_01,Sub Station 3,8,Meters,1,Nerc W Shop Elec,3,kWh,Minutely,30,1
+213,050159F5B000,Com 1,Net_01,Sub Station 3,8,Meters,1,No 2 Transformer,4,kWh,Minutely,30,1
+214,050159F5B000,Com 1,Net_01,Sub Station 3,8,Meters,1,County Town Elec,5,kWh,Minutely,30,1
+215,050159F5B000,Com 1,Net_01,Sub Station 3,8,Meters,1,BowHall Gas 1-15,6,m3,Minutely,30,1
+216,050159F5B000,Com 1,Net_01,Sub Station 3,8,Meters,1,CEH Workshops 1,7,kWh,Minutely,30,1
+217,050198367D00,Com 1,Net_01,Uni House Phase 1,16,Meters,1,Uni House Ph 1,1,kWh,Minutely,30,1
+218,050198367D00,Com 1,Net_01,Uni House Phase 1,16,Meters,1,Uni House Ph 2,2,kWh,Minutely,30,1
+219,050198367D00,Com 1,Net_01,Uni House Phase 1,16,Meters,1,Uni House D Flr,3,kWh,Minutely,30,1
+220,050198367D00,Com 1,Net_01,Uni House Phase 1,16,Meters,1,Heat Meter,4,kWh,Minutely,30,1
+221,050198367D00,Com 1,Net_01,Uni House Phase 1,16,Meters,1,Water Meter,5,m3,Minutely,30,1
+222,050198367D00,Com 1,Net_01,Uni House Phase 1,16,Meters,1,Immersion Heater,6,kWh,Minutely,30,1
+223,050198367E00,Com 1,Net_01,County South C20 Modem,117,Meters,1,Flt 1011121314 ,1,kWh,Minutely,30,1
+224,05019836F200,Com 1,Net_01,Pre School Plant Room,30,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+225,05019836F200,Com 1,Net_01,Pre School Plant Room,30,Meters,1,Water Meter,2,m3,Minutely,30,1000
+226,05019836F200,Com 1,Net_01,Pre School Plant Room,30,Meters,1,Gas Meter,3,m3,Minutely,30,10
+227,05019838EB00,Com 1,Net_01,Barker House Plant Room,44,Sub No 7 Logger No 45,2,Transformer No 1,1,kWh,Minutely,30,1
+228,05019838EB00,Com 1,Net_01,Barker House Plant Room,44,Sub No 7 Logger No 45,2,Transformer No 2,2,kWh,Minutely,30,1
+229,0501983B4300,Com 1,Net_01,Whewell Plant Room,10,Meters,1,Electric Meter,1,kWh,Minutely,1,1
+230,0501983B4300,Com 1,Net_01,Whewell Plant Room,10,Meters,1,Water Meter,2,m3,Minutely,30,1000
+231,0501983CDA00,Com 1,Net_01,County Town Houses,84,Meters,1,Water Meter,1,m3,Minutely,30,1
+232,0501983CDA00,Com 1,Net_01,County Town Houses,84,Meters,1,Gas ,2,kWh,Minutely,30,1
+233,0501987F4400,Com 1,Net_01,The Croft,73,Node 1,1,Water Meter,1,m3,Minutely,30,1
+234,0501987F4400,Com 1,Net_01,The Croft,73,Node 1,1,Gas Meter,2,kWh,Minutely,30,1
+235,0501987F4700,Com 1,Net_01,Satelite Sub Station,59,Meters,1,No 1 Transformer,1,kWh,Minutely,30,1
+236,0501987F4700,Com 1,Net_01,Satelite Sub Station,59,Meters,1,Fylde Res Elect,2,kWh,Minutely,30,1
+237,0501987F4700,Com 1,Net_01,Satelite Sub Station,59,Meters,1,Furn Res Elect,3,kWh,Minutely,30,1
+238,050198807A00,Com 1,Net_01,County South C56 ,115,Meters,1,BD B2 Power,1,kWh,Minutely,30,1
+239,050198807A00,Com 1,Net_01,County South C56 ,115,Meters,1,BD B2 Lighting,2,kWh,Minutely,30,1
+240,050198812D00,Com 1,Net_01,County South Laundrette,94,Meters,1,Cnty Sth Ldry W,1,m3,Minutely,30,1
+241,050198812D00,Com 1,Net_01,County South Laundrette,94,Meters,1,Cnty Sth Ldry G,2,kWh,Minutely,30,1
+242,050198812D00,Com 1,Net_01,County South Laundrette,94,Meters,1,Plant Room Light,3,kWh,Minutely,30,1
+243,050198812D00,Com 1,Net_01,County South Laundrette,94,Meters,1,Plant Room Power,4,kWh,Minutely,30,1
+244,050198812D00,Com 1,Net_01,County South Laundrette,94,Meters,1,Plant Room Water,5,kWh,Minutely,30,1
+245,050198812D00,Com 1,Net_01,County South Laundrette,94,Meters,1,Heat Meter,6,kWh,Minutely,30,1
+246,050198812D00,Com 1,Net_01,County South Laundrette,94,Meters,1,FASS MCCP ,7,kWh,Minutely,30,1
+247,050198829500,Com 1,Net_01,Slaidburn House,43,Meters,1,Sultan Resturant,1,kWh,Minutely,30,1
+248,050198829500,Com 1,Net_01,Slaidburn House,43,Meters,1,Student Union,2,kWh,Minutely,30,1
+249,050198829500,Com 1,Net_01,Slaidburn House,43,Meters,1,T Mobile,3,kWh,Minutely,30,1
+250,050198829500,Com 1,Net_01,Slaidburn House,43,Meters,1,Spar Shop No 2,4,kWh,Minutely,30,1
+251,050198829500,Com 1,Net_01,Slaidburn House,43,Meters,1,Spar Shop No 1,5,kWh,Minutely,30,1
+252,050198829500,Com 1,Net_01,Slaidburn House,43,Meters,1,Slaidburn House,6,kWh,Minutely,30,1
+253,050198829500,Com 1,Net_01,Slaidburn House,43,Meters,1,Spar Water,7,m3,Minutely,30,1000
+254,050198829500,Com 1,Net_01,Slaidburn House,43,Meters,1,LUSU Shop Water,8,m3,Minutely,30,1
+255,05019884CF00,Com 1,Net_01,George Fox A65,18,Logger 17,2,GF Chinese Elect,1,kWh,Minutely,30,1
+256,05019884CF00,Com 1,Net_01,George Fox A65,18,Logger 17,2,GF Chinese Gas,2,m3,Minutely,30,1
+257,050198864300,Com 1,Net_01,George Fox B27,19,Meters,1,Heat Meter,1,kWh,Minutely,30,1
+258,050198864300,Com 1,Net_01,George Fox B27,19,Meters,1,Imm Heater Gd Fl,2,kWh,Minutely,30,1
+259,050198864300,Com 1,Net_01,George Fox B27,19,Meters,1,Imm Htr 1st Fl,3,kWh,Minutely,30,1
+260,050198864300,Com 1,Net_01,George Fox B27,19,Meters,1,G Fox B Flr N E,4,kWh,Minutely,1,1
+261,050198864300,Com 1,Net_01,George Fox B27,19,Meters,1,G Fox B Flr S W,5,kWh,Minutely,30,1
+262,050198872600,Com 1,Net_01,Tower plantroom,82,Barclays Bank Logger No 95,3,Electric,1,kWh,Minutely,30,1000
+263,050198872600,Com 1,Net_01,Tower plantroom,82,Barclays Bank Logger No 95,3,Water,2,m3,Minutely,30,1000
+264,050198872F00,Com 1,Net_01,ISS Building,100,Meters,1,Future UPS,1,kWh,Minutely,30,1
+265,050198872F00,Com 1,Net_01,ISS Building,100,Meters,1,Heat Meter ISS,3,kWh,Minutely,30,1
+266,050198872F00,Com 1,Net_01,ISS Building,100,Meters,1,Water Meter ISS,4,kWh,Minutely,30,1
+267,050198872F00,Com 1,Net_01,ISS Building,100,Meters,1,UPSLV-US-1,5,kWh,Minutely,30,1
+268,050198872F00,Com 1,Net_01,ISS Building,100,Meters,1,UPSLV-US-2,7,kWh,Minutely,30,1
+269,050198872F00,Com 1,Net_01,ISS Building,100,Meters,1,UPSLV-US-3,8,kWh,Minutely,30,1
+270,0501988B3100,Com 1,Net_01,Courses Centre,32,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+271,0501988B3100,Com 1,Net_01,Courses Centre,32,Meters,1,Water Meter,2,m3,Minutely,30,1000
+272,0501988B3100,Com 1,Net_01,Courses Centre,32,Meters,1,Gas Meter,3,kWh,Minutely,30,1
+273,0501988C0B00,Com 1,Net_01,Grizedale Bar,101,Meters,1,Griz Bar Elect,1,kWh,Minutely,30,1
+274,0501988C0B00,Com 1,Net_01,Grizedale Bar,101,Meters,1,Griz Bar Water,2,m3,Minutely,30,1
+275,0501988C0B00,Com 1,Net_01,Grizedale Bar,101,Meters,1,Griz Bar Gas,3,kWh,Minutely,30,1
+276,0501988C0B00,Com 1,Net_01,Grizedale Bar,101,Meters,1,Griz Laun Elect,4,kWh,Minutely,30,1
+277,0501988C0B00,Com 1,Net_01,Grizedale Bar,101,Meters,1,Griz Laun Water,5,kWh,Minutely,30,1
+278,0501988C0B00,Com 1,Net_01,Grizedale Bar,101,Meters,1,Griz Laun Gas,6,kWh,Minutely,30,1
+279,0501988C0B00,Com 1,Net_01,Grizedale Bar,101,Meters,1,Griz Laun Light,7,kWh,Minutely,30,1
+280,0501988C0B00,Com 1,Net_01,Grizedale Bar,101,Meters,1,Griz Bar Heat,8,kWh,Minutely,30,1
+281,0501988C7A00,Com 1,Net_01,Lec II Nerc Plant Rm,63,Meters,1,NERC LEC Lab Gas,1,kWh,Minutely,30,1
+282,0501988C7A00,Com 1,Net_01,Lec II Nerc Plant Rm,63,Meters,1,LEC NERC Blr Gas,2,kWh,Minutely,30,1
+283,0501988FC000,Com 1,Net_01,Sultan,90,Logger 90 - Meters,1,Sultan - Water,1,m3,Minutely,30,1000
+284,0501988FC000,Com 1,Net_01,Sultan,90,Logger 90 - Meters,1,Sultan - Gas,2,m3,Minutely,30,100
+285,0501988FC000,Com 1,Net_01,Sultan,90,Logger 90 - Meters,1,Ketchup Gas,3,m3,Minutely,30,1000
+286,0501988FCB00,Com 1,Net_01,Furness Perimeter Plant Room,36,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+287,0501988FCB00,Com 1,Net_01,Furness Perimeter Plant Room,36,Meters,1,Water meter,2,m3,Minutely,30,1
+288,0501988FCB00,Com 1,Net_01,Furness Perimeter Plant Room,36,Meters,1,Heat Meter,3,kWh,Minutely,30,1
+289,0501988FCB00,Com 1,Net_01,Furness Perimeter Plant Room,36,Meters,1,Immersion Heater,4,kWh,Minutely,30,1
+290,0501E384B100,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 130,2,Steam Room,1,kWh,Minutely,30,1
+291,0501E384B100,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 130,2,AHU1,2,kWh,Minutely,30,1
+292,0501E384B100,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 130,2,AHU2,3,kWh,Minutely,30,1
+293,0501E384B100,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 130,2,FLOATING FLOOR,4,kWh,Minutely,30,1
+294,0501E384B100,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 130,2,MECH PANEL 1,5,kWh,Minutely,30,1
+295,0501E384B100,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 130,2,MECH PANEL 2,6,kWh,Minutely,30,1
+296,0501E384B100,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 130,2,Passenger Lift,7,kWh,Minutely,30,1
+297,0501E384B100,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 130,2,SAUNA,8,kWh,Minutely,30,1
+298,0501E388CE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 1,1,Grd Flr A1 Total,1,kWh,Minutely,30,1
+299,0501E388CE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 1,1,Grd Flr A1 Light,2,kWh,Minutely,30,1
+300,0501E388CE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 1,1,Grd Flr A2 Total,3,kWh,Minutely,30,1
+301,0501E388CE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 1,1,Grd Flr A2 Light,4,kWh,Minutely,30,1
+302,0501E388CE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 1,1,1st Flr B1 Total,5,kWh,Minutely,30,1
+303,0501E388CE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 1,1,1st Flr B1 Light,6,kWh,Minutely,30,1
+304,0501E388CE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 1,1,1st Flr B2 Total,7,kWh,Minutely,30,1
+305,0501E388CE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 1,1,1st Flr B2 Light,8,kWh,Minutely,30,1
+306,0501E389FE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 3 Logger 124,3,Plant DB Total,1,kWh,Minutely,30,1
+307,0501E389FE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 3 Logger 124,3,Comms Room Total,2,kWh,Minutely,30,1
+308,0501E389FE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 3 Logger 124,3,Plant Room Total,3,kWh,Minutely,30,1
+309,0501E389FE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 3 Logger 124,3,Heat Meter,4,MWh,Minutely,30,100
+310,0501E389FE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 3 Logger 124,3,Mech Control,5,kWh,Minutely,30,1
+311,0501E389FE00,Com 1,Net_01,Charles Carter,122,Charles Carter No 3 Logger 124,3,Water Meter,6,m3,Minutely,30,1
+312,0501E3CFE100,Com 1,Net_01,Energy Centre LHS,125,Meters,1,Circ Pump No 1,1,kWh,Minutely,30,1
+313,0501E3CFE100,Com 1,Net_01,Energy Centre LHS,125,Meters,1,Circ Pump No 2,2,kWh,Minutely,30,1
+314,0501E3CFE100,Com 1,Net_01,Energy Centre LHS,125,Meters,1,Circ Pump No 3,3,kWh,Minutely,30,1
+315,0501E3CFE100,Com 1,Net_01,Energy Centre LHS,125,Meters,1,Circ Pump No 4,4,kWh,Minutely,30,1
+316,0501E3CFE100,Com 1,Net_01,Energy Centre LHS,125,Meters,1,Worksh Ht Meter,5,kWh,Minutely,30,1
+317,0501E3CFE100,Com 1,Net_01,Energy Centre LHS,125,Meters,1,Water A RHS Rear,7,m3,Minutely,30,1
+318,0501E3CFE100,Com 1,Net_01,Energy Centre LHS,125,Meters,1,Water B LHS Rear,8,m3,Minutely,30,1
+319,0501E3E63200,Com 1,Net_01,LICA 2,128,LICA 128/1,1,DB 1C ,1,kWh,Minutely,30,1
+320,0501E3E63200,Com 1,Net_01,LICA 2,128,LICA 128/1,1,BMS Panel,2,kWh,Minutely,30,1
+321,0501E3E63200,Com 1,Net_01,LICA 2,128,LICA 128/1,1,LIFT,3,kWh,Minutely,30,1
+322,0501E3E63200,Com 1,Net_01,LICA 2,128,LICA 128/1,1,Chiller,4,kWh,Minutely,30,1
+323,0501E3E63200,Com 1,Net_01,LICA 2,128,LICA 128/1,1,Heat Meter,5,MWh,Minutely,30,100
+324,0501E3E63200,Com 1,Net_01,LICA 2,128,LICA 128/1,1,Water Meter,6,m3,Minutely,30,100
+325,0501E3E77B00,Com 1,Net_01,Charles Carter,122,Charles Carter No 2 Logger 123,2,2nd Flr C1 Total,1,kWh,Minutely,30,1
+326,0501E3E77B00,Com 1,Net_01,Charles Carter,122,Charles Carter No 2 Logger 123,2,2nd Flr C1 Light,2,kWh,Minutely,30,1
+327,0501E3E77B00,Com 1,Net_01,Charles Carter,122,Charles Carter No 2 Logger 123,2,2nd Flr C2 Total,3,kWh,Minutely,30,1
+328,0501E3E77B00,Com 1,Net_01,Charles Carter,122,Charles Carter No 2 Logger 123,2,2nd Flr C2 Light,4,kWh,Minutely,30,1
+329,0501E3E77B00,Com 1,Net_01,Charles Carter,122,Charles Carter No 2 Logger 123,2,3rd Flr D1 Total,5,kWh,Minutely,30,1
+330,0501E3E77B00,Com 1,Net_01,Charles Carter,122,Charles Carter No 2 Logger 123,2,3rd Flr D1 Light,6,kWh,Minutely,30,1
+331,0501E3E77B00,Com 1,Net_01,Charles Carter,122,Charles Carter No 2 Logger 123,2,3rd Flr D2 Total,7,kWh,Minutely,30,1
+332,0501E3E77B00,Com 1,Net_01,Charles Carter,122,Charles Carter No 2 Logger 123,2,3rd Flr D2 Light,8,kWh,Minutely,30,1
+333,0501E41C3C00,Com 1,Net_01,County Houses 75/76/77,108,Meters,1,Gas,1,kWh,Minutely,30,1
+334,0501E41C3C00,Com 1,Net_01,County Houses 75/76/77,108,Meters,1,Water,2,m3,Minutely,30,1
+335,0501E41D8C00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 119 Mains,3,BB01 Riser,1,kWh,Minutely,30,1
+336,0501E41D8C00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 119 Mains,3,BB02 Riser,2,kWh,Minutely,30,1
+337,0501E41D8C00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 119 Mains,3,BB03 Riser,3,kWh,Minutely,30,1
+338,0501E41D8C00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 119 Mains,3,LT Plant Room,4,kWh,Minutely,30,1
+339,0501E41D8C00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 119 Mains,3,Comm DB,5,kWh,Minutely,30,1
+340,0501E41D8C00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 119 Mains,3,Plant Rn Panel,6,kWh,Minutely,30,1
+341,0501E4347800,Com 1,Net_01,County South C20 Modem,117,Meter mains Logger 121 ,5,DB A1 Lighting,1,kWh,Minutely,30,1
+342,0501E4347800,Com 1,Net_01,County South C20 Modem,117,Meter mains Logger 121 ,5,DB A1 Power,2,kWh,Minutely,30,1
+343,0501E4353A00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 120  ,4,DB Laundry,1,kWh,Minutely,30,1
+344,0501E4353A00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 120  ,4,Existing Lift,2,kWh,Minutely,30,1
+345,0501E4353A00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 120  ,4,DB2 Room A62,3,kWh,Minutely,30,1
+346,0501E4353A00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 120  ,4,County Sth IAMS,4,kWh,Minutely,30,1
+347,0501E4353A00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 120  ,4,BD LK Room 107,5,kWh,Minutely,30,1
+348,0501E4353A00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 120  ,4,DB Ext Power,6,kWh,Minutely,30,1
+349,0501E4353A00,Com 1,Net_01,County South C20 Modem,117,Meters Logger 120  ,4,MSBCSLV Sw Board,7,kWh,Minutely,30,1
+350,0501E4369600,Com 1,Net_01,Slaidburn House,43,Student Union Logger 113,4,Electric SU Shop,1,kWh,Minutely,30,1
+351,0501F26CFE00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 133,5,Emergency Light,1,kWh,Minutely,30,1
+352,0501F26CFE00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 133,5,BasePlRmlgs 01-L,2,kWh,Minutely,30,1
+353,0501F26CFE00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 133,5,BasePlRm P DB01P,3,kWh,Minutely,30,1
+354,0501F26CFE00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 133,5,Wet CH L DB-02-L,4,kWh,Minutely,30,1
+355,0501F26CFE00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 133,5,Wet Ch P DB-02-P,5,kWh,Minutely,30,1
+356,0501F26DBC00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 131,3,DB EXT,1,kWh,Minutely,30,1
+357,0501F26DBC00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 131,3,DB5,2,kWh,Minutely,30,1
+358,0501F26DBC00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 131,3,INCOMER A1,3,kWh,Minutely,30,1
+359,0501F26DBC00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 131,3,DB-06-L,4,kWh,Minutely,30,1
+360,0501F26DBC00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 131,3,DB-07-P,5,kWh,Minutely,30,1
+361,0501F26DBC00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 131,3,DB COMMS,6,kWh,Minutely,30,1
+362,0501F26DBC00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 131,3,GENERATOR A2,7,kWh,Minutely,30,1
+363,0501F26DBC00,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 131,3,POOL FILTER,8,kWh,Minutely,30,1
+364,0501F26EB900,Com 1,Net_01,LICA,127,Meters,1,DB 1A,1,kWh,Minutely,30,1
+365,0501F26EB900,Com 1,Net_01,LICA,127,Meters,1,DB 1B,2,kWh,Minutely,30,1
+366,0501F26EB900,Com 1,Net_01,LICA,127,Meters,1,DB 2A,3,kWh,Minutely,30,1
+367,0501F26EB900,Com 1,Net_01,LICA,127,Meters,1,DB 2B,4,kWh,Minutely,30,1
+368,0501F26EB900,Com 1,Net_01,LICA,127,Meters,1,DB 3A,5,kWh,Minutely,30,1
+369,0501F26EB900,Com 1,Net_01,LICA,127,Meters,1,DB 3B,6,kWh,Minutely,30,1
+370,0501F26EB900,Com 1,Net_01,LICA,127,Meters,1,Dimmer Pack 1,7,kWh,Minutely,30,1
+371,0501F26EB900,Com 1,Net_01,LICA,127,Meters,1,Dimmer Pack 2,8,kWh,Minutely,30,1
+372,0501F5AECA00,Com 1,Net_01,County South Laundrette,94,County South 151,2,County S Imm Htr,1,kWh,Minutely,30,1
+373,0501F5AECA00,Com 1,Net_01,County South Laundrette,94,County South 151,2,Laundry Imm Htr,2,kWh,Minutely,30,1
+374,0501F5B73700,Com 1,Net_01,ISS Building,100,ISS Logger 150,4,UPS2A,5,kWh,Minutely,30,1
+375,0501F5BE3900,Com 1,Net_01,Tower plantroom,82,BowT Water 82/3,7,Slaid Hot Water,1,m3,Minutely,30,10
+376,0501F5BE3900,Com 1,Net_01,Tower plantroom,82,BowT Water 82/3,7,BowT Hot water F,2,m3,Minutely,30,10
+377,0501F5BE3900,Com 1,Net_01,Tower plantroom,82,BowT Water 82/3,7,Bow Tow Heating,3,m3,Minutely,30,10
+378,0501F883F600,Com 1,Net_01,Furness College 146,146,Furness College 147,2,Flat 1 HT Meter,1,kWh,Minutely,30,1
+379,0501F883F600,Com 1,Net_01,Furness College 146,146,Furness College 147,2,Flat 2 HT Meter,2,kWh,Minutely,30,1
+380,0501F883F600,Com 1,Net_01,Furness College 146,146,Furness College 147,2,Ftat 3 HT Meter,3,kWh,Minutely,30,1
+381,0501F883F600,Com 1,Net_01,Furness College 146,146,Furness College 147,2,Flat 4 HT Meter,4,kWh,Minutely,30,1
+382,0501F883F600,Com 1,Net_01,Furness College 146,146,Furness College 147,2,Flat 5 Electric,5,kWh,Minutely,30,1600
+383,0501F883F600,Com 1,Net_01,Furness College 146,146,Furness College 147,2,Flat 6 Electric,6,kWh,Minutely,30,1600
+384,0501F883F600,Com 1,Net_01,Furness College 146,146,Furness College 147,2,Flat 7 Electric,7,kWh,Minutely,30,1600
+385,0501F883F600,Com 1,Net_01,Furness College 146,146,Furness College 147,2,Flat5 Water Mtr,8,l,Minutely,30,10
+386,0501F8FB1000,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 129,1,WM 1,1,kWh,Minutely,30,1
+387,0501F8FB1000,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 129,1,SPORT GM1,2,kWh,Minutely,30,1
+388,0501F8FB1000,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 129,1,BOILER GM2,3,kWh,Minutely,30,1
+389,0501F8FB1000,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 129,1,Main Gas Meter,4,kWh,Minutely,30,1
+390,0501F8FB1000,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 129,1,CT DHW HEAT,5,MWh,Minutely,30,10
+391,0501F8FB1000,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 129,1,MTHW HEAT,6,kW,Minutely,30,10
+392,0501F8FB1000,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 129,1,CT HEAT,7,kWh,Minutely,30,100
+393,0501F8FB1000,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 129,1,VT HEAT,8,kWh,Minutely,30,10
+394,0501F900AA00,Com 1,Net_01,Tower plantroom,82,Bow T Light & Power 82/1,8,BowT D & E Light,1,kWh,Minutely,30,1
+395,0501F900AA00,Com 1,Net_01,Tower plantroom,82,Bow T Light & Power 82/1,8,BowT D & E Total,2,kWh,Minutely,30,1
+396,0501F900AA00,Com 1,Net_01,Tower plantroom,82,Bow T Light & Power 82/1,8,BowT F G H Light,3,kWh,Minutely,30,1
+397,0501F900AA00,Com 1,Net_01,Tower plantroom,82,Bow T Light & Power 82/1,8,BowT F G H Total,4,kWh,Minutely,30,1
+398,0501F900AA00,Com 1,Net_01,Tower plantroom,82,Bow T Light & Power 82/1,8,BowT J K L Light,5,kWh,Minutely,30,1
+399,0501F900AA00,Com 1,Net_01,Tower plantroom,82,Bow T Light & Power 82/1,8,BowT J K L Total,6,kWh,Minutely,30,1
+400,0501F900AA00,Com 1,Net_01,Tower plantroom,82,Bow T Light & Power 82/1,8,BowT M N O Light,7,kWh,Minutely,30,1
+401,0501F900AA00,Com 1,Net_01,Tower plantroom,82,Bow T Light & Power 82/1,8,BowT M N O Total,8,kWh,Minutely,30,1
+402,0501F9058600,Com 1,Net_01,Furness College 146,146,Furness College 148,3,Flat 6 Water,1,l,Minutely,30,10
+403,0501F9058600,Com 1,Net_01,Furness College 146,146,Furness College 148,3,Flat 7 Water,2,l,Minutely,30,10
+404,0501F9058600,Com 1,Net_01,Furness College 146,146,Furness College 148,3,Flat 5 HT Meter,3,kWh,Minutely,30,1
+405,0501F9058600,Com 1,Net_01,Furness College 146,146,Furness College 148,3,Flat 6 HT Meter,4,kWh,Minutely,30,1
+406,0501F9058600,Com 1,Net_01,Furness College 146,146,Furness College 148,3,Flat 7 HT Meter,5,kWh,Minutely,30,1
+407,0501F9058600,Com 1,Net_01,Furness College 146,146,Furness College 148,3,Power DB LCDB 21,7,kWh,Minutely,30,1
+408,0501F9058600,Com 1,Net_01,Furness College 146,146,Furness College 148,3,Light DB LCDB 21,8,kWh,Minutely,30,1
+409,0501F9076200,Com 1,Net_01,Furness College 146,146,Furness College 149,4,Power DB NDB 02,1,kWh,Minutely,30,1
+410,0501F9076200,Com 1,Net_01,Furness College 146,146,Furness College 149,4,Light DB NDB 02,2,kWh,Hourly,1,1
+411,0501F9076200,Com 1,Net_01,Furness College 146,146,Furness College 149,4,Power DB LBDB 21,3,kWh,Minutely,30,1
+412,0501F9076200,Com 1,Net_01,Furness College 146,146,Furness College 149,4,Light DB LBDB 21,4,kWh,Minutely,30,1
+413,0501F9076200,Com 1,Net_01,Furness College 146,146,Furness College 149,4,Power DB NBD 01,5,kWh,Minutely,30,1
+414,0501F9076200,Com 1,Net_01,Furness College 146,146,Furness College 149,4,Light DB NDB 01,6,kWh,Hourly,1,1
+415,0501F9076200,Com 1,Net_01,Furness College 146,146,Furness College 149,4,Power DB LADB 21,7,kWh,Minutely,30,1
+416,0501F9076200,Com 1,Net_01,Furness College 146,146,Furness College 149,4,Light DB LADB 21,8,kWh,Hourly,1,1
+417,0501F97CC800,Com 1,Net_01,Tower plantroom,82,Bow Tower 82/2,6,Bow T RmB41comms,1,kWh,Minutely,30,1
+418,0501F97CC800,Com 1,Net_01,Tower plantroom,82,Bow Tower 82/2,6,BowT E Flat16/17,2,kWh,Minutely,30,1
+419,0501F97CC800,Com 1,Net_01,Tower plantroom,82,Bow Tower 82/2,6,BowT South F 18,3,kWh,Minutely,30,1
+420,0501F97CC800,Com 1,Net_01,Tower plantroom,82,Bow Tower 82/2,6,BowT S F19/20,4,kWh,Minutely,30,1
+421,0501F97CC800,Com 1,Net_01,Tower plantroom,82,Bow Tower 82/2,6,BowT East B Flr,5,kWh,Minutely,30,1
+422,0501F97CC800,Com 1,Net_01,Tower plantroom,82,Bow Tower 82/2,6,BowT East C Flr,6,kWh,Minutely,30,1
+423,0501F97CC800,Com 1,Net_01,Tower plantroom,82,Bow Tower 82/2,6,BowT South B Flr,7,kWh,Minutely,30,1
+424,0501F97CC800,Com 1,Net_01,Tower plantroom,82,Bow Tower 82/2,6,Bow Tw Sth C Flr,8,kWh,Minutely,30,1
+425,050200C3E800,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 132,4,Grd F DryLst 03L,1,kWh,Minutely,30,1
+426,050200C3E800,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 132,4,Grd F DryPw 03 P,2,kWh,Minutely,30,1
+427,050200C3E800,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 132,4,Grd F Fit Lt04 L,3,kWh,Minutely,30,1
+428,050200C3E800,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 132,4,Grd F Fit Power,4,kWh,Minutely,30,1
+429,050200C3E800,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 132,4,Roof Lts DB 08 L,5,kWh,Minutely,30,1
+430,050200C3E800,Com 1,Net_01,New Sports Centre,129,Sports Centre Logger 132,4,Roof Pwr DB 08 L,6,kWh,Minutely,30,1
+431,050201221E00,Com 1,Net_01,Furness College 140,140,Furness College 143,3,SW Bus Bar,1,kWh,Minutely,30,1
+432,050201221E00,Com 1,Net_01,Furness College 140,140,Furness College 143,3,Ne Bus Bar,2,kWh,Minutely,30,1
+433,050201221E00,Com 1,Net_01,Furness College 140,140,Furness College 143,3,South Bl DB 4X,3,kWh,Minutely,30,1
+434,050201221E00,Com 1,Net_01,Furness College 140,140,Furness College 143,3,NE Plant Room DB,7,kWh,Minutely,30,1
+435,050201221E00,Com 1,Net_01,Furness College 140,140,Furness College 143,3,DHWS Heat Meter,8,l,Minutely,30,10
+436,050201255B00,Com 1,Net_01,Furness College 140,140,Meters,1,Foyer DB A5,1,kWh,Minutely,30,1
+437,050201255B00,Com 1,Net_01,Furness College 140,140,Meters,1,Fire Alarm Panel,2,kWh,Minutely,30,1
+438,050201255B00,Com 1,Net_01,Furness College 140,140,Meters,1,NE Pass Lift,3,kWh,Minutely,30,1
+439,050201255B00,Com 1,Net_01,Furness College 140,140,Meters,1,NW Pass Lift,4,kWh,Minutely,30,1
+440,050201255B00,Com 1,Net_01,Furness College 140,140,Meters,1,SCR TV Room,5,kWh,Minutely,30,1
+441,050201255B00,Com 1,Net_01,Furness College 140,140,Meters,1,Bar Dis Board ,6,kWh,Minutely,30,1
+442,050201255B00,Com 1,Net_01,Furness College 140,140,Meters,1,Switch Rm Dis B,7,kWh,Minutely,30,1
+443,050201255B00,Com 1,Net_01,Furness College 140,140,Meters,1,OSS Walk Lights,8,kWh,Minutely,30,1
+444,05020125CA00,Com 1,Net_01,Furness College 140,140,Furness College 144,4,Flat 8 Elect,1,kWh,Minutely,30,1600
+445,05020125CA00,Com 1,Net_01,Furness College 140,140,Furness College 144,4,Flat 9 Elect,2,kWh,Minutely,30,1600
+446,05020125CA00,Com 1,Net_01,Furness College 140,140,Furness College 144,4,Flat 8 Water,3,m3,Minutely,30,100
+447,05020125CA00,Com 1,Net_01,Furness College 140,140,Furness College 144,4,Flat 9 Water ,4,m3,Minutely,30,100
+448,05020125CA00,Com 1,Net_01,Furness College 140,140,Furness College 144,4,Flat 8 Heat,5,kWh,Minutely,30,1
+449,05020125CA00,Com 1,Net_01,Furness College 140,140,Furness College 144,4,Flat 9 Heat,6,kWh,Minutely,30,1
+450,05020125CA00,Com 1,Net_01,Furness College 140,140,Furness College 144,4,Power DB LCDB011,7,kWh,Minutely,30,1
+451,05020125CA00,Com 1,Net_01,Furness College 140,140,Furness College 144,4,Light DB LCDB011,8,kWh,Minutely,30,1
+452,050201286300,Com 1,Net_01,Furness College 140,140,Furness College 145,5,Pwr LB DB 11,1,kWh,Minutely,30,1
+453,050201286300,Com 1,Net_01,Furness College 140,140,Furness College 145,5,Light LB DB 11,2,kWh,Minutely,30,1
+454,050201286300,Com 1,Net_01,Furness College 140,140,Furness College 145,5,PWR Foyer GDB 3,3,kWh,Minutely,30,1
+455,050201286300,Com 1,Net_01,Furness College 140,140,Furness College 145,5,Lgt Foyer GDB 3,4,kWh,Minutely,30,1
+456,050201286300,Com 1,Net_01,Furness College 140,140,Furness College 145,5,PWR LA DB 3,5,kWh,Minutely,30,1
+457,050201286300,Com 1,Net_01,Furness College 140,140,Furness College 145,5,Light LA DB 11,6,kWh,Minutely,30,1
+458,050201286300,Com 1,Net_01,Furness College 140,140,Furness College 145,5,CW DHW System,7,l,Minutely,30,10
+459,050201286300,Com 1,Net_01,Furness College 140,140,Furness College 145,5,Main Water IN ,8,l,Minutely,30,100
+460,0502012BA000,Com 1,Net_01,Furness College 146,146,Furness College 146,1,Flat 1 Electric,1,kWh,Minutely,30,1600
+461,0502012BA000,Com 1,Net_01,Furness College 146,146,Furness College 146,1,Flat 2 Electric,2,kWh,Minutely,30,1600
+462,0502012BA000,Com 1,Net_01,Furness College 146,146,Furness College 146,1,Flat 3 Electric,3,kWh,Minutely,30,1600
+463,0502012BA000,Com 1,Net_01,Furness College 146,146,Furness College 146,1,Flat 4 Electric,4,kWh,Minutely,30,1600
+464,0502012BA000,Com 1,Net_01,Furness College 146,146,Furness College 146,1,Flat 1 Water,5,l,Minutely,30,10
+465,0502012BA000,Com 1,Net_01,Furness College 146,146,Furness College 146,1,Flat 2 Water,6,l,Minutely,30,10
+466,0502012BA000,Com 1,Net_01,Furness College 146,146,Furness College 146,1,Flat 3 Water,7,l,Minutely,30,10
+467,0502012BA000,Com 1,Net_01,Furness College 146,146,Furness College 146,1,Ftat 4 Water,8,m3,Minutely,30,10
+468,05020136CE00,Com 1,Net_01,Furness College 140,140,Furness College 145a,6,Pres M Up Water,1,l,Minutely,30,10
+469,05020136CE00,Com 1,Net_01,Furness College 140,140,Furness College 145a,6,Elect Level A?,3,kWh,Minutely,30,1
+470,050201428B00,Com 1,Net_01,Furness College 140,140,Furness College  141,2,NthBlk BflrNDB1 ,1,kWh,Minutely,30,1
+471,050201428B00,Com 1,Net_01,Furness College 140,140,Furness College  141,2,CommRmB COMDB01,2,kWh,Minutely,30,1
+472,050201428B00,Com 1,Net_01,Furness College 140,140,Furness College  141,2,NrthBL CFlrNDB02,3,kWh,Minutely,30,1
+473,050201428B00,Com 1,Net_01,Furness College 140,140,Furness College  141,2,ComRm C flrDB02,4,kWh,Minutely,30,1
+474,050201428B00,Com 1,Net_01,Furness College 140,140,Furness College  141,2,N Blk Roof NDB03,5,kWh,Minutely,30,1
+475,050201428B00,Com 1,Net_01,Furness College 140,140,Furness College  141,2,Sw DB01 Flat 8 9,6,kWh,Minutely,30,1
+476,050201428B00,Com 1,Net_01,Furness College 140,140,Furness College  141,2,SE-DB01Flat5 6 7,7,kWh,Minutely,30,1
+477,050201428B00,Com 1,Net_01,Furness College 140,140,Furness College  141,2,Flat DB NEDB 01,8,kWh,Minutely,30,1
+478,05021DE8C900,Com 1,Net_01,Library,159,Riser 2b,4,Book HEAT,4,kWh,Minutely,30,1
+479,05021DE8C900,Com 1,Net_01,Library,159,Riser 2b,4,DB LG2LP,5,kWh,Minutely,30,100
+480,05021DE8C900,Com 1,Net_01,Library,159,Riser 2b,4,DB LG3L,6,kWh,Minutely,30,100
+481,05021DE8C900,Com 1,Net_01,Library,159,Riser 2b,4,Book WATER,7,m3,Minutely,30,1000
+482,05021DE8C900,Com 1,Net_01,Library,159,Riser 2b,4,DB LG3P,8,kWh,Minutely,30,100
+483,05021DE99A00,Com 1,Net_01,Library,159,Riser 2a,3,DB A1P,1,kWh,Minutely,30,100
+484,05021DE99A00,Com 1,Net_01,Library,159,Riser 2a,3,DB B1L,2,kWh,Minutely,30,100
+485,05021DE99A00,Com 1,Net_01,Library,159,Riser 2a,3,DB B1P,3,kWh,Minutely,30,100
+486,05021DE99A00,Com 1,Net_01,Library,159,Riser 2a,3,DB B2P,4,kWh,Minutely,30,100
+487,05021DE99A00,Com 1,Net_01,Library,159,Riser 2a,3,DB A1L,5,kWh,Minutely,30,100
+488,05021DE99A00,Com 1,Net_01,Library,159,Riser 2a,3,DB B2L,6,kWh,Minutely,30,100
+489,05021DE99A00,Com 1,Net_01,Library,159,Riser 2a,3,DB A2L,7,kWh,Minutely,30,100
+490,05021DE99A00,Com 1,Net_01,Library,159,Riser 2a,3,DB A2P,8,kWh,Minutely,30,100
+491,05021E1FE600,Com 1,Net_01,Library,159,Riser 2,2,DBCP4 COM2,1,kWh,Minutely,30,100
+492,05021E1FE600,Com 1,Net_01,Library,159,Riser 2,2,DB3LP,2,kWh,Minutely,30,100
+493,05021E1FE600,Com 1,Net_01,Library,159,Riser 2,2,MCP5,3,MWh,Minutely,30,1000
+494,05021E1FE600,Com 1,Net_01,Library,159,Riser 2,2,DB C2P,4,kWh,Minutely,30,100
+495,05021E1FE600,Com 1,Net_01,Library,159,Riser 2,2,DB C2L,5,kWh,Minutely,30,100
+496,05021E1FE600,Com 1,Net_01,Library,159,Riser 2,2,MCP3,7,MWh,Minutely,30,1000
+497,05021E1FE600,Com 1,Net_01,Library,159,Riser 2,2,DBD4LP,8,kWh,Minutely,30,100
+498,05021E232E00,Com 1,Net_01,LICA 2,128,LICA 3 128/2,2,Questionabel,1,kWh,Minutely,30,1
+499,050235468D00,Com 1,Net_01,Library,159,Basement Plantroom,5,DB LG4P,1,kWh,Minutely,30,100
+500,050235468D00,Com 1,Net_01,Library,159,Basement Plantroom,5,DB LG4L,2,kWh,Minutely,30,100
+501,050235468D00,Com 1,Net_01,Library,159,Basement Plantroom,5,DB LG5L,3,kWh,Minutely,30,100
+502,050235468D00,Com 1,Net_01,Library,159,Basement Plantroom,5,DB LG5P,4,kWh,Minutely,30,100
+503,050235468D00,Com 1,Net_01,Library,159,Basement Plantroom,5,DIST HEAT EAST,5,MWh,Minutely,30,100
+504,050235468D00,Com 1,Net_01,Library,159,Basement Plantroom,5,MCP01,6,MWh,Minutely,30,1000
+505,050235468D00,Com 1,Net_01,Library,159,Basement Plantroom,5,DOM HOT WATER,7,MWh,Minutely,30,1000
+506,05023A235700,Com 1,Net_01,Library,159,Riser 1,1,DB COMMS,1,kWh,Minutely,30,100
+507,05023A235700,Com 1,Net_01,Library,159,Riser 1,1,MCP03,2,MWh,Minutely,30,1000
+508,05023A235700,Com 1,Net_01,Library,159,Riser 1,1,DB C1L,3,kWh,Minutely,30,100
+509,05023A235700,Com 1,Net_01,Library,159,Riser 1,1,DB C1P,4,kWh,Minutely,30,100
+510,05023A235700,Com 1,Net_01,Library,159,Riser 1,1,DB D1LP,5,kWh,Minutely,30,100
+511,05023A235700,Com 1,Net_01,Library,159,Riser 1,1,MCP02,6,kWh,Minutely,30,1
+512,05023A235700,Com 1,Net_01,Library,159,Riser 1,1,DB D2LP,7,kWh,Minutely,30,100
+513,050157C0C300,Com 1,Net_01,Grizedale Res,104,Meters,1,Gas ,1,kWh,Minutely,30,1
+514,050157C0C300,Com 1,Net_01,Grizedale Res,104,Meters,1,Water,2,m3,Minutely,30,1
+515,05012DE37B00,Com 1,Net_01,Bowland Hall House 8 5,5,Meters,1,Electric Meter,1,kWh,Minutely,30,1
+516,05012DE37B00,Com 1,Net_01,Bowland Hall House 8 5,5,Meters,1,Water Meter,2,m3,Minutely,30,1
