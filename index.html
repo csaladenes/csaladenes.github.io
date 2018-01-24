@@ -17,7 +17,7 @@
    <link rel="stylesheet" type="text/css" href="css/tileslideshowplugin.css" />
    <link rel="stylesheet" type="text/css" href="css/gfdynamicfeedcontrol.css" />
    <style>
-      html{background-color:#DDD;}
+      html{background-color:#111;}
       .tile{
          -webkit-transition-property: box-shadow, margin-left,  margin-top;
          -webkit-transition-duration: 0.25s, 0.5s, 0.5s;
@@ -66,7 +66,7 @@
 
       /*For responsive */
       autoRearrangeTiles = "1";
-      autoResizeTiles = "1";
+      autoResizeTiles = "0";
       rearrangeTreshhold = 3;
    </script>
    <script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
@@ -187,6 +187,12 @@
 </script>
 </head>
 <body class="full desktop">
+  <video style="position: fixed; left:0px; top:0px; width: 100%; z-index=-99;"
+        autoplay=true loop=true src="vid/2.mp4">
+    </video>
+    <div style="position: fixed; left:0px; top:0px; width: 100%; height: 100%; z-index=98; background-color: rgba(0,0,0,0.5);">
+    </div>
+      
    <header>
       <div id="headerWrapper">
          <div class="menu" style=" position:fixed;	top:10px;	right:10px; z-index:800; padding: 6px 3px 6px 3px; margin:0; width:74px; text-align:center;" onclick="langchange();">
@@ -247,7 +253,7 @@
          </div>
       </div>
    </header>
-   <div id="wrapper">
+   <div id="wrapper">      
       <div id="centerWrapper">
          <div id="tileContainer">
             <img id='arrowLeft' class="navArrows" src='menu/arrowLeft.png' onClick="javascript:$group.goLeft();"/>
@@ -2005,7 +2011,7 @@ padding:0;"  data-pos='355-310-145'>
 <div  class="tile group7 noClick" href="https://twitter.com/csaladenes"  style="
 margin-top:45px; margin-left:465px;
 width:300px; height:455px;
-background:#ffffff; padding:0; padding-top:0px;"  data-pos='45-465-300'>
+background:#dddddd; padding:0; padding-top:0px;"  data-pos='45-465-300'>
 <div class="twitter-timeline" href="https://twitter.com/csaladenes" data-widget-id="462362661829623808">
    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
@@ -2057,7 +2063,7 @@ background:#ddd;width:300px; height:1px; padding:0; padding-top:0px;"  data-pos=
 }
 </script>
 </div>
-<footer><a href="https://www.csaladen.es">© Dénes Csala 2017</a>
+<footer><a href="https://www.csaladen.es">© Dénes Csala 2018</a>
 		<!--<div><a class="iframe" href='https://bl.ocks.org/csaladenes/raw/65657556231733faa4e9/'><img src="css/footer.jpg" style="width:155px; height:65px;"></a></div>
    --></footer>
 		 <!--<a id='popup' href='https://bl.ocks.org/csaladenes/raw/65657556231733faa4e9/' class="iframe" ></a>

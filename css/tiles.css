@@ -1,5 +1,5 @@
 .tile{
-	color: #FFF;
+	color: #ddd;
 	display:block;
 	padding:0;
 	margin: 0;
@@ -24,7 +24,7 @@
 	-ms-transition:  none;
 }
 .tile:visited{
-	color:#FFF;
+	color:#ddd;
 }
 
 .tile:hover{
@@ -68,7 +68,7 @@
 	display:inline-block;
 	font-size:13px;	
 	text-decoration: none;  
-    color: #FFF; 
+    color: #ddd; 
 }
 .tileLabelDesc{
 	border-top:1px solid #999;
@@ -169,7 +169,7 @@
 	font-size:12px;
 	display: none; 
 	opacity:0.9;
-	color:#fff; 
+	color:#ddd; 
 }
 .tileImg>.tileLabelWrapper.top>.imgDesc{
 	margin-top:-20px;
