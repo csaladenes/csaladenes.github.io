@@ -102,7 +102,7 @@
      var url = 'https://csaladenes.egologo.ro/?feed=rss2'
     feednami.loadGoogleFormat(url,function(result){
        if(result.error){
-         console.log(result.error)
+         //console.log(result.error)
       }
       else{
          var entries = result.feed.entries
@@ -262,28 +262,28 @@
             <img id='arrowLeft' class="navArrows" src='menu/arrowLeft.png' onClick="javascript:$group.goLeft();"/>
             <img id='arrowRight' class="navArrows" src='menu/arrowRight.png' onClick="javascript:$group.goRight();"/>
             <a href="#&professional" id="groupTitle0" class="groupTitle" style="margin-top:0px text-decoration:none;" onclick="javascript:$group.goTo(0);">
-               <h3><div class="en">Professional - data science | energy | sustainability</div><div class="hu">Szakmai - adattudomány | energia | fenntarthatóság</div>
+               <h3><div><span class="en">Professional - data science | energy | sustainability</span><span class="hu">Szakmai - adattudomány | energia | fenntarthatóság</span></div>
                </h3>
             </a>
             <a href="#&personal" id="groupTitle1" class="groupTitle" style="margin-top:0px text-decoration:none;" onclick="javascript:$group.goTo(1);">
-               <h3><div class="en">Personal - science | development | datactivism</div><div class="hu">Személyes - tudomány | fejlődés | dataktivizmus</div></h3>
+               <h3><div><span class="en">Personal - science | development | datactivism</span><span class="hu">Személyes - tudomány | fejlődés | dataktivizmus</span></div></h3>
                <a href="#&projects" id="groupTitle2" class="groupTitle" style="margin-top:0px text-decoration:none;" onclick="javascript:$group.goTo(2);">
-                  <h3><div class="en">Research - energy transitions | system dynamics | sustainability</div><div class="hu">Kutatás - energiaátmenetek | rendszerdinamika | fenntarthatóság</div></h3>
+                  <h3><div><span class="en">Research - energy transitions | system dynamics | sustainability</span><span class="hu">Kutatás - energiaátmenetek | rendszerdinamika | fenntarthatóság</span></div></h3>
                </a>
                <a href="#&projects" id="groupTitle3" class="groupTitle" style="margin-top:0px text-decoration:none;" onclick="javascript:$group.goTo(3);">
-                  <h3><div class="en">Projects - data blogs | workshops | development outreach | karate</div><div class="hu">Projektek - adatblogok | workshopok | fejlődés | karate</div></h3>
+                  <h3><div><span class="en">Projects - data blogs | workshops | development outreach | karate</span><span class="hu">Projektek - adatblogok | workshopok | fejlődés | karate</span></div></h3>
                </a>
                <a href="#&visualizations" id="groupTitle4" class="groupTitle" style="margin-top:0px text-decoration:none;" onclick="javascript:$group.goTo(4);">
-                  <h3><div class="en">Visualizations -  interactive websites | data visualizations | infographics</div><div class="hu">Vizualizációk -  interaktív weboldalak | adatvizualizációk | infografikák</div></h3>
+                  <h3><div><span class="en">Visualizations -  interactive websites | data visualizations | infographics</span><span class="hu">Vizualizációk -  interaktív weboldalak | adatvizualizációk | infografikák</span></div></h3>
                </a>
                <a href="#&models" id="groupTitle5" class="groupTitle" style="margin-top:0px text-decoration:none;" onclick="javascript:$group.goTo(5);">
-                  <h3><div class="en">Models - system dynamics | agent-based modeling | data science</div><div class="hu">Modellek - system dynamics | agent-based modellezés | adattudomány </div></h3>
+                  <h3><div><span class="en">Models - system dynamics | agent-based modeling | data science</span><span class="hu">Modellek - system dynamics | agent-based modellezés | adattudomány</span></div></h3>
                </a>
                <a href="#&contact" id="groupTitle6" class="groupTitle" style="margin-top:0px text-decoration:none;" onclick="javascript:$group.goTo(6);">
-                  <h3><div class="en">Presentations - research updates | latest workshops</div><div class="hu">Előadások - kutatási eredmények | workshop hírek</div></h3>
+                  <h3><div><span class="en">Presentations - research updates | latest workshops</span><span class="hu">Előadások - kutatási eredmények | workshop hírek</span></div></h3>
                </a>
                <a href="#&contact" id="groupTitle7" class="groupTitle" style="margin-top:0px text-decoration:none;" onclick="javascript:$group.goTo(7);">
-                  <h3><div class="en">Contact - researcher | thinker | modeler | blogger | traveller</div><div class="hu">Kapcsolat - kutató | gondolkodó | modellező | blogger | utazó</div></h3>
+                  <h3><div><span class="en">Contact - researcher | thinker | modeler | blogger | traveller</span><span class="hu">Kapcsolat - kutató | gondolkodó | modellező | blogger | utazó</span></div></h3>
                </a>
             </a><script>
             for (i=0;i<8;i++){

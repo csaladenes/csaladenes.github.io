@@ -175,8 +175,11 @@ $(window).resize(function(){
 		if(!$("body").hasClass("column")){
 			$("body").removeClass("full").removeClass("small").addClass("column");
 			$page.layout = "column";
+			//
 			$("#bgvid1").css("visibility","hidden");
 			$("#bgvid2").css("visibility","visible");
+			$("#tileContainer h3").addClass("marquee").css("width","300px");
+			//
 			$("nav").prepend("<div id='navTitle'><span class='en'>&nbsp;&nbsp;Menu</span><span class='hu'>&nbsp;&nbsp;Menü</span></div>").appendTo("body").children("a").css("display","none")
 			if(autoRearrangeTiles){
 				var t = 0;
@@ -251,6 +254,9 @@ $(window).resize(function(){
 		if(!$("body").hasClass("small") || ($("body").hasClass("small") && Math.ceil(windowWidth) != $page.smallWidth)){
 			$("body").removeClass("column").removeClass("full").addClass("small");
 			$page.layout = "small";
+			//
+			$("#tileContainer h3").addClass("marquee").css("width","455px");
+			//
 			$page.smallWidth = (Math.ceil(windowWidth)>rearrangeTreshhold ? rearrangeTreshhold+1 : Math.ceil(windowWidth) );
 			$("nav").appendTo("#headerCenter").children("a").css("display","inline-block")
 			$("#navTitle").remove()
@@ -390,6 +396,9 @@ $(window).resize(function(){
 		if(!$("body").hasClass("full")){
 			$("body").removeClass("column").removeClass("small").addClass("full");
 			$page.layout = "full";
+			//
+			$("#tileContainer h3").removeClass("marquee");
+			//
 			$("nav").appendTo("#headerCenter").children("a").css("display","inline-block")
 			$("#navTitle").remove()
 			$group.spacing = $group.spacingFull.slice();
