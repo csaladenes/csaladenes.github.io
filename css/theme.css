@@ -90,8 +90,7 @@ nav>a>div{
 	color:#111;
 }
 #contentWrapper{
-	background-color:#222;
-	background-color:rgba(180,180,180,0.2);
+	background-color: #222;
 	-webkit-box-shadow: 0 0 7px #777;
 	-moz-box-shadow: 0 0 7px #777;
 	box-shadow: 0 0 7px #777;
