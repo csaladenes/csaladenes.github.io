@@ -255,6 +255,8 @@ $(window).resize(function(){
 			$("body").removeClass("column").removeClass("full").addClass("small");
 			$page.layout = "small";
 			//
+			$("#bgvid1").css("visibility","hidden");
+			$("#bgvid2").css("visibility","visible");
 			$("#tileContainer h3").addClass("marquee").css("width","455px");
 			//
 			$page.smallWidth = (Math.ceil(windowWidth)>rearrangeTreshhold ? rearrangeTreshhold+1 : Math.ceil(windowWidth) );
@@ -397,6 +399,8 @@ $(window).resize(function(){
 			$("body").removeClass("column").removeClass("small").addClass("full");
 			$page.layout = "full";
 			//
+			$("#bgvid2").css("visibility","hidden");
+			$("#bgvid1").css("visibility","visible");
 			$("#tileContainer h3").removeClass("marquee");
 			//
 			$("nav").appendTo("#headerCenter").children("a").css("display","inline-block")
