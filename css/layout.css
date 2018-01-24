@@ -129,7 +129,7 @@ footer:hover{
 .groupTitle{ /*the title of the tilegroups*/	
 	position:absolute;
 	text-decoration:none;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
 }
 .groupTitle>h3{
 	margin:0;
@@ -179,15 +179,18 @@ nav>a>img{
 }
 /* For smaller column nav */
 .column nav{
-	position:absolute;
-	right:0;
-	top:0;
+	position:fixed;
+	background-color: rgba(0,0,0,0.5);
+	right:10px;
+	top:80px;
+	width:82px;
+	text-align: center;
 	margin-top:0;
 	z-index:300;
 	overflow:visible;
 }
 .column #navTitle{
-	background-color:#668800;
+	background-color:none;
 	color:#ddd;
 	font-size:16px;
 	display:inline-block;

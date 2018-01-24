@@ -175,7 +175,9 @@ $(window).resize(function(){
 		if(!$("body").hasClass("column")){
 			$("body").removeClass("full").removeClass("small").addClass("column");
 			$page.layout = "column";
-			$("nav").prepend("<div id='navTitle'>Menu</div>").appendTo("body").children("a").css("display","none")
+			$("#bgvid1").css("visibility","hidden");
+			$("#bgvid2").css("visibility","visible");
+			$("nav").prepend("<div id='navTitle'><span class='en'>&nbsp;&nbsp;Menu</span><span class='hu'>&nbsp;&nbsp;Menü</span></div>").appendTo("body").children("a").css("display","none")
 			if(autoRearrangeTiles){
 				var t = 0;
 				for(i=0;i<$group.count;i++){

@@ -187,7 +187,10 @@
 </script>
 </head>
 <body class="full desktop">
-  <video style="position: fixed; left:0px; top:0px; width: 100%; z-index=-99;"
+  <video id="bgvid1" style="position: fixed; left:0px; top:0px; width: 100%; z-index=-99; visibility: visible;"
+        autoplay=true loop=true src="vid/2.mp4">
+    </video>
+    <video id="bgvid2" style="position: fixed; left:0px; top:0px; height: 100%; z-index=-99; visibility: hidden;"
         autoplay=true loop=true src="vid/2.mp4">
     </video>
     <div style="position: fixed; left:0px; top:0px; width: 100%; height: 100%; z-index=98; background-color: rgba(0,0,0,0.5);">
