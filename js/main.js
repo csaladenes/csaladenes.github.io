@@ -575,6 +575,6 @@ window.onload = function(){
 	/*Start page rendering */
 	setTimeout(function(){
 		$(window).hashchange();
-	},20);
+	},200);
 	$(window).resize();
 };

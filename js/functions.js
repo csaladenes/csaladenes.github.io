@@ -256,7 +256,7 @@ makeLink = function(lp){/* To make valid links */
 	   lp.substr(0,8) == "https://" ||
 	   lp.substr(0,1) == "/" ||
 	   lp.substr(0,1) == "#" ||
-	   lp[lp.length-1] == "http://www.csaladen.es")
+	   lp[lp.length-1] == "https://www.csaladen.es")
 	{
 		return lp;
 	}
