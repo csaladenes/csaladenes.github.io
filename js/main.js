@@ -176,7 +176,7 @@ $(window).resize(function(){
 			$("body").removeClass("full").removeClass("small").addClass("column");
 			$page.layout = "column";
 			//
-			$(".bg").css("height","100%").css("width","");
+			//$(".bg").css("height","100%").css("width","");
 			$("#tileContainer h3").addClass("marquee").css("width","300px");
 			//
 			$("nav").prepend("<div id='navTitle'><span class='en'>&nbsp;&nbsp;Menu</span><span class='hu'>&nbsp;&nbsp;Menü</span></div>").appendTo("body").children("a").css("display","none")
@@ -254,7 +254,7 @@ $(window).resize(function(){
 			$("body").removeClass("column").removeClass("full").addClass("small");
 			$page.layout = "small";
 			//
-			$(".bg").css("height","100%").css("width","");
+			//$(".bg").css("height","100%").css("width","");
 			$("#tileContainer h3").addClass("marquee").css("width","455px");
 			//
 			$page.smallWidth = (Math.ceil(windowWidth)>rearrangeTreshhold ? rearrangeTreshhold+1 : Math.ceil(windowWidth) );
@@ -397,7 +397,7 @@ $(window).resize(function(){
 			$("body").removeClass("column").removeClass("small").addClass("full");
 			$page.layout = "full";
 			//
-			$(".bg").css("width","100%").css("height","");
+			//$(".bg").css("width","100%").css("height","");
 			$("#tileContainer h3").removeClass("marquee");
 			//
 			$("nav").appendTo("#headerCenter").children("a").css("display","inline-block")
