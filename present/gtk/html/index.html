@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<!-- load D3js -->
+<script src="//d3plus.org/js/d3.js"></script>
+
+<!-- load D3plus after D3js -->
+<script src="//d3plus.org/js/d3plus.js"></script>
+
+<!-- create container element for visualization -->
+<div id="viz"></div>
+
+<script>
+ 
+  // instantiate d3plus
+  var visualization = d3plus.viz()
+    .container("#viz")     // container DIV to hold the visualization
+    .data("mv2.json")     // data to use with the visualization
+    .type("bar")       // visualization type
+    .id("Év") // nesting keys
+    .y("ujoszlop")         // key name to size bubbles
+    .x("Év")         // key name to size bubbles
+    //.time("Év")         // key name to size bubbles
+    .draw()                // finally, draw the visualization!
+</script>

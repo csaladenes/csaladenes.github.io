@@ -1,0 +1,18 @@
+<html>
+<script src="//d3plus.org/js/d3.js"></script>
+<script src="//d3plus.org/js/d3plus.js"></script>
+<script>
+
+  var visualization = d3plus.viz()
+    .container("#viz")  // container DIV to hold the visualization
+    .type("bar")    // visualization type
+    .data("ures.json")  // sample dataset to attach to nodes
+    // list of node connections
+    .y("egyujnev")       // key to size the nodes
+    .x("Month")
+    .id("Month")         // key for which our data is unique on
+    .draw()             // finally, draw the visualization!
+</script>
+
+<div id="viz"></div>
+</html>
