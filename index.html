@@ -187,12 +187,13 @@
 </script>
 </head>
 <body class="full desktop">
-  <img id="bgim1" class="bgim bg" style="position: fixed; left:0px; top:0px; min-width: 100%;
+  <!--<img id="bgim1" class="bgim bg" style="position: fixed; left:0px; top:0px; min-width: 100%;
   min-height: 100%; z-index=-101; opacity:0;"
-         src="img/bg.jpg"/>
+         src="img/bg.jpg"/>-->
     <video id="bgvid1" class="bgvid bg" style="position: fixed; left:0px; top:0px; min-width: 100%;
   min-height: 100%; z-index=-99; opacity:0;"
-        autoplay=true loop=true src="vid/2.mp4">
+        loop muted autoplay poster="img/bg.jpg">
+        <source src="vid/2.mp4" type="video/mp4">
     </video>
     <div style="position: fixed; left:0px; top:0px; width: 100%; height: 100%; z-index=98; background-color: rgba(0,0,0,0.5);">
     </div>
@@ -2016,8 +2017,8 @@ padding:0;"  data-pos='355-310-145'>
 margin-top:45px; margin-left:465px;
 width:300px; height:455px;
 background:#dddddd; padding:0; padding-top:0px;"  data-pos='45-465-300'>
-<div class="twitter-timeline" href="http://twitter.com/csaladenes" data-widget-id="462362661829623808">
-   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div class="twitter-timeline" href="https://twitter.com/csaladenes" data-widget-id="462362661829623808">
+   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 </div>
 <!--tile 4-7-->  
