@@ -191,7 +191,7 @@
   min-height: 100%; z-index=-101; opacity:0;"
          src="img/bg.jpg"/>-->
     <video id="bgvid1" class="bgvid bg" style="position: fixed; left:0px; top:0px; min-width: 100%;
-  min-height: 100%; z-index=-99; opacity:0;"
+  min-height: 100%; z-index=-99; opacity:1;"
         loop muted autoplay poster="img/bg.jpg">
         <source src="vid/2.mp4" type="video/mp4">
     </video>
@@ -2066,8 +2066,8 @@ background:#ddd;width:300px; height:1px; padding:0; padding-top:0px;"  data-pos=
   for (i=0;i<8;i++){
    positioning(i);
 }
-$('.bgvid').stop(true, true).delay(500).animate({opacity: 1}, 1000)
-$('.bgim').stop(true, true).delay(1000).animate({opacity: 1}, 1000)
+//$('.bgvid').stop(true, true).delay(500).animate({opacity: 1}, 1000)
+//$('.bgim').stop(true, true).delay(1000).animate({opacity: 0}, 1000)
 $('#tileContainer').stop(true, true).delay(2000).animate({opacity: 1}, 3000)
 </script>
 </div>
