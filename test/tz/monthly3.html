@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="//d3plus.org/js/d3.min.js"></script>
+<script src="//d3plus.org/js/d3plus-plot.v0.8.full.min.js"></script>
+
+<div id="viz"></div>
+
+<script>
+  d3.json("data2.json",function(rawdata){
+  var data=rawdata.filter(function(d){return d["category"]!="self"})
+  var months = {};
+  var links={"bars":'bars','tree':'index','monthly':'monthly'}
+  for (var i = 0; i < data.length; i++) {
+  var num = data[i]['month'];
+  months[num] = months[num] ? months[num] + 1 : 1;
+  }
+  nr_months=Object.keys(months).length
+  data.forEach(function(d){
+    d['monthly out']=d['out']/nr_months
+    d['monthly in']=d['in']/nr_months
+    d['monthly net']=d['value']/nr_months
+  })
+  
+  new d3plus.BarChart()
+  .data(data)
+  .groupBy(["category"])
+  .x("category")
+  .color("category")
+  .y("monthly out")
+  .legend(false)
+  .render();
+
+})
+</script>

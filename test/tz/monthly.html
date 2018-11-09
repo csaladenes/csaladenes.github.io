@@ -27,7 +27,7 @@
     .container("#viz")
     .data(data)
     .type("bar")
-    .id({"value":["type","month","category","tx"]})
+    .id({"value":["type","category","category","month","tx"]})
     .depth(2)
     .font({"size":16,"family":"Verdana"})
     .color(function(d){
@@ -39,17 +39,17 @@
         else if (d["value"]>0) return "green"
              else return "red"
      })
-    .x("month")
-    .y({"value":"value","scale":"linear"})
+    .x("category")
+    .y({"value":"monthly out","scale":"linear"})
     //.legend({"filters":true})
     .time("month")
+    .text("category")
     .tooltip(["month","time","bank"])
-    .ui([{"method":"depth","value":[1,2,3]},
-        {"method":"size","value":["in","out","value"]},
+    .ui([{"method":"depth","value":[2,3,4]},
+        {"method":"size","value":["monthly in","monthly out","monthly net"]},
         {"method":"time","value":["time","month"]},
-        {"method":function(value){id=value;visualization.id((value=="cat")?["type","month","category","bank","tx"]:(value=="bank")?["type","month","bank","category","tx"]:["type","month","category","tx"]).data(data).draw()},"value":["tx","cat","bank"],"label":"Hierarchy"},
         {"method":function(value){var z=(value=="Off")?[]:[-300,300];visualization.y({"range":z}).draw()},"value":["Off","On"],"label":"Limits"},
-        {"method":function(d){window.location.href = './'+links[d]+'.html'},"value":["bars","monthly","tree"],"label":"View"}
+        {"method":function(d){window.location.href = './'+links[d]+'.html'},"value":["monthly","bars","tree"],"label":"View"}
         ])
     .draw()
 })
