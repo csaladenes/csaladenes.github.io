@@ -1,0 +1,55 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="d3.js"></script>
+<script src="d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+  d3.json("data2.json",function(rawdata){
+  var data=rawdata.filter(function(d){return d["category"]!="self"})
+  var months = {};
+  for (var i = 0; i < data.length; i++) {
+  var num = data[i]['month'];
+  months[num] = months[num] ? months[num] + 1 : 1;
+  }
+  nr_months=Object.keys(months).length
+  data.forEach(function(d){
+    d['monthly out']=d['out']/nr_months
+    d['monthly in']=d['in']/nr_months
+    d['monthly net']=d['value']/nr_months
+  })
+  
+  var id="tx";
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("bar")
+    .id({"value":["type","month","category","tx"]})
+    .depth(2)
+    .font({"size":16,"family":"Verdana"})
+    .color(function(d){
+        if (d.d3plus.depth!=1) {
+          if (id=="cat") return (d.d3plus.depth==2)?d["category"]:d["bank"]
+          else if (id=="bank") return (d.d3plus.depth==2)?d["bank"]:d["category"]
+          else return d["category"];
+        }
+        else if (d["value"]>0) return "green"
+             else return "red"
+     })
+    .x("month")
+    .y({"value":"value","scale":"linear"})
+    //.legend({"filters":true})
+    .time("month")
+    .tooltip(["month","time","bank"])
+    .ui([{"method":"depth","value":[1,2,3]},
+        {"method":"size","value":["in","out","value"]},
+        {"method":"time","value":["time","month"]},
+        {"method":function(value){id=value;visualization.id((value=="cat")?["type","month","category","bank","tx"]:(value=="bank")?["type","month","bank","category","tx"]:["type","month","category","tx"]).data(data).draw()},"value":["tx","cat","bank"],"label":"Hierarchy"},
+        {"method":function(value){var z=(value=="Off")?[]:[-300,300];visualization.y({"range":z}).draw()},"value":["Off","On"],"label":"Limits"},
+        {"method":function(d){window.location.href = './index.html'},"value":["Tree"],"label":"View"}
+        ])
+    .draw()
+})
+</script>

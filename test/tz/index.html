@@ -1,0 +1,52 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="d3.js"></script>
+<script src="d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+  d3.json("data2.json",function(rawdata){
+  var data=rawdata.filter(function(d){return d["category"]!="self"})
+  var months = {};
+  for (var i = 0; i < data.length; i++) {
+  var num = data[i]['month'];
+  months[num] = months[num] ? months[num] + 1 : 1;
+  }
+  nr_months=Object.keys(months).length
+  data.forEach(function(d){
+  	d['monthly out']=d['out']/nr_months
+  	d['monthly in']=d['in']/nr_months
+  	d['monthly net']=d['value']/nr_months
+  })
+  
+  var id="tx";
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("tree_map")
+    .id({"value":["type","category","tx"]})
+    .depth(2)
+    //.color("category")
+    .color(function(d){
+          if (id=="cat") return (d.d3plus.depth==1)?d["category"]:d["bank"]
+          else if (id=="bank") return (d.d3plus.depth==1)?d["bank"]:d["category"]
+          else return d["category"];
+     })
+    .font({"size":16,"family":"Verdana"})
+    .size({"value":"out"})
+    //.labels({"text": function(d){console.log(d);return ((d.d3plus.depth<2)?d["category"]:d["tx"])+' '+parseInt(d.d3plus.share*1000)/10.0+'%'}})
+    .tooltip(['out','monthly out','monthly net'])
+    .labels({"align": "left", "valign": "top","value":"out"})
+    .time("month")
+    .ui([{"method":"depth","value":[1,2]},
+         {"method":"size","value":["in","out"]},
+         {"method":"time","value":["time","month"]},
+         {"method":function(value){id=value;visualization.id((value=="cat")?["type","category","bank","tx"]:(value=="bank")?["type","bank","category","tx"]:["type","category","tx"]).data(data).draw()},"value":["tx","cat","bank"],"label":"Hierarchy"},
+         {"method":"type","value":["tree_map","bubbles","pie"]},
+         {"method":function(d){window.location.href = './bars.html'},"value":["bars"],"label":"View"}
+         ])
+    .draw()
+    })
+</script>
