@@ -20,6 +20,7 @@
   	d['monthly out']=d['out']/nr_months
   	d['monthly in']=d['in']/nr_months
   	d['monthly net']=d['value']/nr_months
+    d['net']=-d['value']
   })
   
   var id="tx";
@@ -36,13 +37,13 @@
           else return d["category"];
      })
     .font({"size":16,"family":"Verdana"})
-    .size({"value":"out"})
+    .size({"value":"net"})
     //.labels({"text": function(d){console.log(d);return ((d.d3plus.depth<2)?d["category"]:d["tx"])+' '+parseInt(d.d3plus.share*1000)/10.0+'%'}})
-    .tooltip(['out','monthly out','monthly net'])
+    .tooltip(['out','monthly in','monthly out','monthly net'])
     .labels({"align": "left", "valign": "top","value":"out"})
     .time("month")
     .ui([{"method":"depth","value":[1,2]},
-         {"method":"size","value":["in","out"]},
+         {"method":"size","value":["in","out","net"]},
          {"method":"time","value":["time","month"]},
          {"method":function(value){id=value;visualization.id((value=="cat")?["type","category","bank","tx"]:(value=="bank")?["type","bank","category","tx"]:["type","category","tx"]).data(data).draw()},"value":["tx","cat","bank"],"label":"Hierarchy"},
          {"method":"type","value":["tree_map","bubbles","pie"]},
