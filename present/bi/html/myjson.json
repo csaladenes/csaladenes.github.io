@@ -1,0 +1,9 @@
+[
+    {"value": 100, "value2": 90, "csoport":"elso", "szin": "blue", "name": "alpha"},
+    {"value": 70, "value2": 180, "csoport":"elso","szin": "#ccf34d", "name": "beta"},
+    {"value": 40, "value2": 200, "csoport":"elso","szin": "#ccf34d", "name": "gamma"},
+    {"value": 15, "value2": 700, "csoport":"masodik","szin": "#001155", "name": "delta"},
+    {"value": 5, "value2": 100, "csoport":"masodik","szin": "#aa015d", "name": "epsilon"},
+    {"value": 10, "value2": 310, "csoport":"elso","szin": "#885533", "name": "zeta"},
+    {"value": 10, "value2": 300, "csoport":"masodik","szin": "#885533", "name": "zeta"}
+ ]
