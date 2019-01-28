@@ -1,0 +1,189 @@
+.titlebox{
+   width: 100%;
+   height: 100px;
+   background: #001a1a;
+   padding-top: 42px;
+   text-align: center;
+   font-size: 40px;
+   font-weight: 700;
+   color: white;
+}
+
+#top, #bottom {
+  float: none;
+  overflow: hidden;    
+}
+
+.triangle1 {
+    width: 600px;
+    height: 40px;
+    border-top: 100px solid #003333;
+    border-right: 100px solid transparent;
+    position: absolute;
+    left: 10px;
+    top: 153px;
+    z-index: -1;
+  }
+
+  .transbox1 {
+    margin: 20px;
+    background-color: #003333;
+    width: 500px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 160px;
+  }
+
+  .transbox1 a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .triangle2 {
+    width: 500px;
+    height: 40px;
+    border-top: 100px solid #004d4d;
+    border-right: 100px solid transparent;
+    position: absolute;
+    left: 10px;
+    top: 257px;
+    z-index: -1;
+  }
+
+  .transbox2 {
+    margin: 20px;
+    background-color: #004d4d;
+    width: 400px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 260px;
+  }
+
+  .transbox2 a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .triangle3 {
+    width: 400px;
+    height: 40px;
+    border-top: 100px solid #006666;
+    border-right: 100px solid transparent;
+    position: absolute;
+    left: 10px;
+    top: 361px;
+    z-index: -1;
+  }
+
+  .transbox3 {
+    margin: 20px;
+    background-color: #006666;
+    width: 350px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 370px;
+  }
+
+  .transbox3 a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .triangle4 {
+    width: 300px;
+    height: 40px;
+    border-top: 100px solid #008080;
+    border-right: 100px solid transparent;
+    position: absolute;
+    left: 10px;
+    top: 465px;
+    z-index: -1;
+  }
+
+  .transbox4 {
+    margin: 20px;
+    background-color: #008080;
+    width: 300px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 460px;
+  }
+
+  .transbox4 a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .triangle5 {
+    width: 200px;
+    height: 40px;
+    border-top: 100px solid #009999;
+    border-right: 100px solid transparent;
+    position: absolute;
+    left: 10px;
+    bottom: 54px;
+    z-index: -1;
+  }
+
+  .transbox5 {
+    margin: 20px;
+    background-color: #009999;
+    width: 200px;
+    height: 40px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    bottom: 115px;
+  }
+
+  .transbox5 a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .triangle6 {
+    width: 100px;
+    height: 40px;
+    border-top: 100px solid #00b3b3;
+    border-right: 100px solid transparent;
+    position: absolute;
+    left: 10px;
+    bottom: -51px;
+    z-index: -1;
+  }
+
+  .transbox6 {
+    margin: 20px;
+    background-color: #00b3b3;
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+  }
+
+  .transbox6 a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
