@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../buttonformat.css">
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "GDP per Capita and External Debt propotion in Europe (2008)"
+	},
+	axisX: {
+		title:"GDP per Capita (EUR)"
+	},
+	axisY: {
+		title:"External Debt (mEUR)"
+	},
+	legend:{
+		horizontalAlign: "left"
+	},
+	data: [{
+		type: "bubble",
+		showInLegend: true,
+		legendText: "Size of Bubble Represents Population",
+		legendMarkerType: "circle",
+		legendMarkerColor: "grey",
+		toolTipContent: "<b>{name}</b><br/>GDP per Capita: {x} EUR<br/> External Debt: {y} EUR<br/> Population: {z}",
+		dataPoints: [
+        {x:	4114.1	, y:	155000	, z:	2947314	, name:	'Albania'},
+{x:	43339.4	, y:	0	, z:	83861	, name:	'Andorra'},
+{x:	47963.2	, y:	556000	, z:	8321496	, name:	'Austria'},
+{x:	44880.6	, y:	1140000	, z:	10709973	, name:	'Belgium'},
+{x:	4701.3	, y:	6730	, z:	3763599	, name:	'Bosnia and Herzegovina'},
+{x:	6969.6	, y:	37200	, z:	7492561	, name:	'Bulgaria'},
+{x:	14157.2	, y:	40700	, z:	4434508	, name:	'Croatia'},
+{x:	32105.8	, y:	140000	, z:	1081563	, name:	'Cyprus'},
+{x:	19741.6	, y:	52400	, z:	10384603	, name:	'Czech Republic'},
+{x:	58163.3	, y:	0	, z:	5493621	, name:	'Denmark'},
+{x:	14726.3	, y:	19000	, z:	1337090	, name:	'Estonia'},
+{x:	47107.2	, y:	214000	, z:	5313399	, name:	'Finland'},
+{x:	41575.4	, y:	3660000	, z:	64374989	, name:	'France'},
+{x:	41732.7	, y:	3680000	, z:	82110097	, name:	'Germany'},
+{x:	29711	, y:	311000	, z:	11077841	, name:	'Greece'},
+{x:	44918.6	, y:	111277	, z:	56328	, name:	'Greenland'},
+{x:	13029.9	, y:	125900	, z:	10038188	, name:	'Hungary'},
+{x:	40641	, y:	1810000	, z:	317414	, name:	'Iceland'},
+{x:	52104	, y:	14900	, z:	4489544	, name:	'Ireland'},
+{x:	36976.8	, y:	1720000	, z:	58826731	, name:	'Italy'},
+{x:	12219.4	, y:	29800	, z:	2177322	, name:	'Latvia'},
+{x:	11837.4	, y:	23600	, z:	35541	, name:	'Lithuania'},
+{x:	125945	, y:	0	, z:	3198231	, name:	'Liechtenstein'},
+{x:	103198.7	, y:	1480000	, z:	488650	, name:	'Luxembourg'},
+{x:	4543.9	, y:	2900	, z:	2067378	, name:	'Macedonia'},
+{x:	20675.6	, y:	61800	, z:	409379	, name:	'Malta'},
+{x:	1525.5	, y:	2140	, z:	3570108	, name:	'Moldova'},
+{x:	6727.1	, y:	4080	, z:	616969	, name:	'Montenegro'},
+{x:	51900.3	, y:	3000000	, z:	16445593	, name:	'Netherlands'},
+{x:	80067.2	, y:	0	, z:	4768212	, name:	'Norway'},
+{x:	11527.6	, y:	234000	, z:	38125759	, name:	'Poland'},
+{x:	23064	, y:	342000	, z:	10558177	, name:	'Portugal'},
+{x:	8474.9	, y:	39700	, z:	20537875	, name:	'Romania'},
+{x:	8562.8	, y:	479800	, z:	142742350	, name:	'Russia'},
+{x:	5821.3	, y:	19600	, z:	7350222	, name:	'Serbia'},
+{x:	16513	, y:	45000	, z:	5379233	, name:	'Slovak Republic'},
+{x:	24633.8	, y:	40400	, z:	2021316	, name:	'Slovenia'},
+{x:	32334	, y:	1670000	, z:	45954106	, name:	'Spain'},
+{x:	46207.1	, y:	551000	, z:	9219637	, name:	'Sweden'},
+{x:	69927.5	, y:	1710000	, z:	7647675	, name:	'Switzerland'},
+{x:	9036.3	, y:	281000	, z:	70440032	, name:	'Turkey'},
+{x:	2545.5	, y:	102000	, z:	46258200	, name:	'Ukraine'},
+{x:	38262.2	, y:	6180000	, z:	61806995	, name:	'United Kingdom'}
+
+		]
+	}]
+});
+chart.render();
+
+}
+
+</script>
+
+   <span class="buttonformat">
+       <button> <a href="2000.html"> 2000 </a> </button>
+       <button> <a href="2001.html"> 2001 </a> </button>
+       <button> <a href="2002.html"> 2002 </a> </button>
+       <button> <a href="2003.html"> 2003 </a> </button>
+       <button> <a href="2004.html"> 2004 </a> </button>
+       <button> <a href="2005.html"> 2005 </a></button>
+       <button> <a href="2006.html"> 2006 </a> </button>
+       <button> <a href="2007.html"> 2007 </a> </button>
+       <button> <a href="2008.html"> 2008 </a> </button>
+       <button> <a href="2009.html"> 2009 </a> </button>
+       <button> <a href="2010.html"> 2010 </a> </button>
+       <button> <a href="2011.html"> 2011 </a> </button>
+       <button> <a href="2012.html"> 2012 </a></button>
+       <button> <a href="2013.html"> 2013 </a> </button>
+       <button> <a href="2014.html"> 2014 </a> </button>
+       <button> <a href="2015.html"> 2015 </a> </button>
+       <button> <a href="2016.html"> 2016 </a> </button>
+       <button> <a href="2017.html"> 2017 </a> </button>
+   </span>
+</head>
+<body>
+		<br> <br> <br> <br>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
