@@ -159,25 +159,16 @@ em{
 }
 .group2{
 	 background:#e73;
-}
-
-.group2 a:hover{
-	 color:#111;
-}
-.group2:hover{
-	 color:#111;
+	 color:#222;
 }
 .group3{
 	 background:#fc1;
 	 color:#222;
 }
-.group3 a{
+.group2 a, .group3 a{
 	 color:#222;
 }
-.group3:hover{
-	 color:#008;
-}
-.group3 a:hover{
+.group3:hover,.group2:hover,.group2 a:hover,.group3 a:hover{
 	 color:#008;
 }
 .group6{
