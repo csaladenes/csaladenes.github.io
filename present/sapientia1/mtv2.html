@@ -3,7 +3,7 @@
 <script src="//d3plus.org/js/d3.js"></script>
 <script src="//d3plus.org/js/d3plus.js"></script>
 
-<div id="viz"></div>
+<div id="viz" style='padding:20px;'></div>
 
 <script>
 
@@ -24,7 +24,7 @@
     .data(data)
     .type("bar")
     .id("date")
-	.background("none")
+    .background("none")
     .x({"value":"date","grid":false,"label":false})
     .y({"value":"r","grid":false,"label":false})
   .time("k")
