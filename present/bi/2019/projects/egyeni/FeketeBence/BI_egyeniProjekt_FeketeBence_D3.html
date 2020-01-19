@@ -1,0 +1,2997 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<div class="container">
+
+    <h1>Székelyföld elhelyezkedése diaspóra szerint</h1>
+    <h2>Egyre nyugatabbra költözünk?</h2>
+    <h4>Egy nép által lakott terület gyakorlatilag az övékévé válik, országhatároktól függetlenül. Így például a Londonban lakó magyar közösség egy "Kismagyarországot" hoz létre az angol fővárosban. A vizualizációban azt vizsgáljuk, hogy ebben az értelemben mennyire tolódott el Székelyföld földrajzi közepe az elvándorlás következtében.</h4>
+    
+</div>
+<div id="datavizmapcoord"></div>
+
+<style>
+    .circle:hover {
+        stroke: black;
+        stroke-width: 4px;
+    }
+    .container {
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+
+    body {
+            font-family: 'Roboto', sans-serif;
+        }
+</style>
+
+<script>
+    var width = window.innerWidth
+    var height = window.innerHeight
+
+    var svg = d3.select("#datavizmapcoord")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+
+    var projection = d3.geoMercator()
+        .center([4, 47])
+        .scale(1020)
+        .translate([width / 2, height / 2])
+
+    var markers = [{
+        name: "Zabola",
+        lat: 45.887703,
+        long: 26.189789,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "\u00c9rd",
+        lat: 47.3919718,
+        long: 18.904544,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Klagenfurt",
+        lat: 46.6364598,
+        long: 14.3122246,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "M\u00fcllheim, Switzerland",
+        lat: 47.6020263,
+        long: 9.0019686,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szeksz\u00e1rd",
+        lat: 46.3474326,
+        long: 18.7062293,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Zalau",
+        lat: 47.1854562,
+        long: 23.0573324,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bray, Hainaut, Belgium",
+        lat: 50.43164,
+        long: 4.10543,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "S\u00e1rbog\u00e1rd",
+        lat: 46.879104,
+        long: 18.6213353,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Gheorgheni, Cluj, Romania",
+        lat: 46.7662435,
+        long: 23.619693,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Wilhelmshaven, Germany",
+        lat: 53.5323403,
+        long: 8.1068722,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Guntramsdorf",
+        lat: 48.0485033,
+        long: 16.3071196,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bibarczflava, Covasna, Romania",
+        lat: 45.8472767,
+        long: 26.1783452,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bodos, Covasna, Romania",
+        lat: 46.076186,
+        long: 25.6601756,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Fredericksburg, Virginia",
+        lat: 38.3031837,
+        long: -77.4605399,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Rupea",
+        lat: 46.0377858,
+        long: 25.2225074,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ljungby, Sweden",
+        lat: 56.8338774,
+        long: 13.9410417,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Hilib, Covasna, Romania",
+        lat: 45.9693614,
+        long: 26.2357655,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Coventry, United Kingdom",
+        lat: 52.406822,
+        long: -1.519693,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Santa Ninfa",
+        lat: 37.7719947,
+        long: 12.8791253,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "J\u00e1nossomorja",
+        lat: 47.7847917,
+        long: 17.1298642,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ramsey, Isle of Man",
+        lat: 54.3240086,
+        long: -4.3917687,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Csepel",
+        lat: 47.4243579,
+        long: 19.066142,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Peterborough, United Kingdom",
+        lat: 52.5694985,
+        long: -0.2405299,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "S\u00e3o Benedito do Sul",
+        lat: -8.8170241,
+        long: -35.9456706,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ajn\u00e1d, Harghita, Romania",
+        lat: 46.4964802,
+        long: 25.8388143,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sita Buzaului",
+        lat: 45.645137,
+        long: 26.0666791,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Heide, Schleswig-Holstein, Germany",
+        lat: 54.1951764,
+        long: 9.1019015,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Pom\u00e1z",
+        lat: 47.6456397,
+        long: 19.0218001,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Neustadt bei Coburg",
+        lat: 50.3272159,
+        long: 11.1190321,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Zetea, Harghita, Romania",
+        lat: 46.3910308,
+        long: 25.3679291,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Solov\u0103stru",
+        lat: 46.7743869,
+        long: 24.7703304,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "P\u00e0lpataka, Harghita, Romania",
+        lat: 46.5109283,
+        long: 25.212714,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Helsingborg, Sweden",
+        lat: 56.0464674,
+        long: 12.6945121,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Zugl\u00f3,Budapest,Hungary",
+        lat: 47.5224569,
+        long: 19.114709,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bodogaia, Harghita, Romania",
+        lat: 46.2739142,
+        long: 24.9963857,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "C\u00e2mpina",
+        lat: 45.1369957,
+        long: 25.742141,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Salzburg, Austria",
+        lat: 47.80949,
+        long: 13.05501,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Swanscombe",
+        lat: 51.4452254,
+        long: 0.3031822,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "K\u00f6k\u00f6s, Covasna, Romania",
+        lat: 45.7707805,
+        long: 25.7997157,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ilieni",
+        lat: 45.7953615,
+        long: 25.7713587,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Herisau, Switzerland",
+        lat: 47.3857009,
+        long: 9.2798472,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Angyalos, Covasna, Romania",
+        lat: 45.8766525,
+        long: 25.8862459,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Stockholm, Sweden",
+        lat: 59.3293235,
+        long: 18.0685808,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Schliengen",
+        lat: 47.7558933,
+        long: 7.5771823,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "H\u00f2ltmaros, Mures, Romania",
+        lat: 46.8727639,
+        long: 24.7876027,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Farkaslaka, Harghita, Romania",
+        lat: 46.3790616,
+        long: 25.2234911,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "M\u00e0rkosfalva, Covasna, Romania",
+        lat: 45.8472767,
+        long: 26.1783452,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "V\u00e0rmez\u00f6, Mures, Romania",
+        lat: 46.6695499,
+        long: 25.0120796,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Cernavoda",
+        lat: 44.3175539,
+        long: 28.0577087,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ciumani",
+        lat: 46.6799973,
+        long: 25.519454,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Targu-Neamt",
+        lat: 47.2097877,
+        long: 26.3757306,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Zetev\u00e0ralja, Harghita, Romania",
+        lat: 46.4415977,
+        long: 25.3977776,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Grasse",
+        lat: 43.660153,
+        long: 6.926492,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Budafok, Budapest, Hungary",
+        lat: 47.425,
+        long: 19.031667,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Dezmir, Cluj, Romania",
+        lat: 46.7695434,
+        long: 23.7131124,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "B\u00e9k\u00e9scsaba",
+        lat: 46.6735939,
+        long: 21.0877309,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Los Angeles, California",
+        lat: 34.0522342,
+        long: -118.2436849,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Frankfurt, Germany",
+        lat: 50.1109221,
+        long: 8.6821267,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Magyarherm\u00e0ny, Covasna, Romania",
+        lat: 46.1354128,
+        long: 25.7081089,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Haghig",
+        lat: 45.8391349,
+        long: 25.5892157,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Acilia, Lazio, Italy",
+        lat: 41.7841173,
+        long: 12.3640399,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Nagy-Sz\u00e9ben, Sibiu, Romania",
+        lat: 45.7983273,
+        long: 24.1255826,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Kronstadt, Brasov, Romania",
+        lat: 45.6579755,
+        long: 25.6011977,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Passau, Germany",
+        lat: 48.5667364,
+        long: 13.4319466,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Mersin, Turkey",
+        lat: 36.8121041,
+        long: 34.6414811,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Traryd",
+        lat: 56.5783672,
+        long: 13.7477129,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Brighton",
+        lat: 40.598019,
+        long: -111.583187,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Santana-De-Mures, Mures, Romania",
+        lat: 46.581355,
+        long: 24.5546034,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Gloucester, Gloucestershire",
+        lat: 51.8642449,
+        long: -2.238156,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Palermo, Italy",
+        lat: 38.11569,
+        long: 13.3614868,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Havad, Mures, Romania",
+        lat: 46.4784329,
+        long: 24.8301881,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Montagnareale",
+        lat: 38.1321924,
+        long: 14.9465335,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Harrisburg, Pennsylvania",
+        lat: 40.2731911,
+        long: -76.8867008,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "T\u00eergu Secuiesc, Covasna, Romania",
+        lat: 46.0006001,
+        long: 26.1345785,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Genzano di Roma",
+        lat: 41.7088828,
+        long: 12.6865837,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Laholm",
+        lat: 56.5057557,
+        long: 13.0456048,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Hanover, Germany",
+        lat: 52.3758916,
+        long: 9.7320104,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Molinella",
+        lat: 44.6068037,
+        long: 11.6742512,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Maishofen, Salzburg, Austria",
+        lat: 47.36104,
+        long: 12.8073856,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Leeds",
+        lat: 53.8007554,
+        long: -1.5490774,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ciobotani, Mures, Romania",
+        lat: 46.95401,
+        long: 25.270466,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Tab, Hungary",
+        lat: 46.7322262,
+        long: 18.0325771,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Spijkenisse",
+        lat: 51.8561502,
+        long: 4.2972181,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "S\u0103c\u0103dat",
+        lat: 47.042631,
+        long: 22.1341852,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Temerin",
+        lat: 45.415745,
+        long: 19.8931066,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lemh\u00e8ny, Covasna, Romania",
+        lat: 46.0524976,
+        long: 26.260873,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Augsburg, Germany",
+        lat: 48.3705449,
+        long: 10.89779,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Birmingham, United Kingdom",
+        lat: 52.486243,
+        long: -1.890401,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Barcelona, Spain",
+        lat: 41.3850639,
+        long: 2.1734035,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "P\u00e9cel",
+        lat: 47.4908971,
+        long: 19.337941,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "L\u00e0z\u00e0rfalva, Covasna, Romania",
+        lat: 46.1882178,
+        long: 25.9466023,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Fort Worth, Texas",
+        lat: 32.7554883,
+        long: -97.3307658,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sebes",
+        lat: 45.9595588,
+        long: 23.5663758,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Leirvik, Norway",
+        lat: 59.7797664,
+        long: 5.5005327,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Corunca, Mures, Romania",
+        lat: 46.5206203,
+        long: 24.618893,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Zetelaka",
+        lat: 46.3910308,
+        long: 25.3679291,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Toulouse, France",
+        lat: 43.604652,
+        long: 1.444209,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Felsoboldogfalva",
+        lat: 46.2743433,
+        long: 25.2775321,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Odorheiul Secuiesc, Harghita, Romania",
+        lat: 46.3049996,
+        long: 25.2926479,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Olasztelek",
+        lat: 46.1029832,
+        long: 25.5882218,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Chendu Mare, Mures, Romania",
+        lat: 46.3867134,
+        long: 24.7293981,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Poznan, Poland",
+        lat: 52.406374,
+        long: 16.9251681,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Marosszentgy\u00f6rgy",
+        lat: 46.5792435,
+        long: 24.608682,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "V\u00e9gegyh\u00e1za",
+        lat: 46.3882623,
+        long: 20.8699923,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Vatava, Bistrita-Nasaud, Romania",
+        lat: 46.9640442,
+        long: 24.7637161,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bilbor",
+        lat: 47.0656143,
+        long: 25.4864041,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Comandau",
+        lat: 45.7566467,
+        long: 26.2730085,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "P\u00e9cs",
+        lat: 46.0727345,
+        long: 18.232266,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Dunaharaszti",
+        lat: 47.3536817,
+        long: 19.0970722,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Kassel, Germany",
+        lat: 51.3127114,
+        long: 9.4797461,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szendehely",
+        lat: 47.8562253,
+        long: 19.1031731,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Arezzo, Italy",
+        lat: 43.4632839,
+        long: 11.8796336,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ag\u00e1rd, Fejer, Hungary",
+        lat: 47.1866319,
+        long: 18.598814,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Witten, Germany",
+        lat: 51.4438926,
+        long: 7.353197,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Balatonalm\u00e1di",
+        lat: 47.0317027,
+        long: 18.0086997,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Nadlac",
+        lat: 46.1684924,
+        long: 20.7565097,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Las Vegas, Nevada",
+        lat: 36.1699412,
+        long: -115.1398296,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Hal\u00e1sztelek",
+        lat: 47.3630908,
+        long: 18.9817643,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Tiszak\u00e9cske",
+        lat: 46.9358726,
+        long: 20.0969279,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lunca, Mures",
+        lat: 46.95,
+        long: 25.1,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Griesheim, Hessen, Germany",
+        lat: 49.861426,
+        long: 8.5676441,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Csat\u00f3szeg, Covasna, Romania",
+        lat: 46.2412801,
+        long: 25.896655,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Crailsheim",
+        lat: 49.1337354,
+        long: 10.0633573,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Antofagasta, Chile",
+        lat: -23.6509279,
+        long: -70.3975022,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Brunn am Gebirge",
+        lat: 48.108956,
+        long: 16.2853875,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Olaszfa",
+        lat: 47.0162422,
+        long: 16.8851611,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Veszpr\u00e9m",
+        lat: 47.1028087,
+        long: 17.9093019,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Martinis",
+        lat: 36.1417971,
+        long: -95.9759049,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Proseken, Mecklenburg-Vorpommern, Germany",
+        lat: 53.907159,
+        long: 11.3674472,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Yeovil, Somerset",
+        lat: 50.942061,
+        long: -2.633308,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Douglas, Isle of Man",
+        lat: 54.1523372,
+        long: -4.4861228,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Tusnad Sat, Covasna, Romania",
+        lat: 46.2068655,
+        long: 25.9119481,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Netphen",
+        lat: 50.9150588,
+        long: 8.1072664,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Csikszentm\u00e0rton, Covasna, Romania",
+        lat: 46.266217,
+        long: 25.9393672,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szeged",
+        lat: 46.2530102,
+        long: 20.1414253,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "\ufffdSz\u00e1r, Komarom-Esztergom, Hungary",
+        lat: 47.4791911,
+        long: 18.5158147,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sydney, Australia",
+        lat: -33.8688197,
+        long: 151.2092955,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Aldershot",
+        lat: 51.248366,
+        long: -0.7557509,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Botosani",
+        lat: 47.7406537,
+        long: 26.6658127,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Wels",
+        lat: 48.16542,
+        long: 14.03664,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Segesv\u00e1r, Mures, Romania",
+        lat: 46.2197025,
+        long: 24.7963878,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Cologne, Germany",
+        lat: 50.937531,
+        long: 6.9602786,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Zaragoza, Spain",
+        lat: 41.6488226,
+        long: -0.8890853,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "\u0130zmir, Turkey",
+        lat: 38.423734,
+        long: 27.142826,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Aknaszlatina, Zakarpats'Ka Oblast', Ukraine",
+        lat: 47.9557094,
+        long: 23.8775791,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Arcos de Jal\u00f3n, Spain",
+        lat: 41.2170069,
+        long: -2.2765815,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "G\u00e4nserndorf",
+        lat: 48.34067,
+        long: 16.71754,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Dunakeszi",
+        lat: 47.6343844,
+        long: 19.1397121,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Farmos",
+        lat: 47.361515,
+        long: 19.8520869,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Turin, Italy",
+        lat: 45.0703393,
+        long: 7.686864,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Reci, Covasna, Romania",
+        lat: 45.8398226,
+        long: 25.9229125,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Giugliano in Campania",
+        lat: 40.9285635,
+        long: 14.2032077,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Teline, Harghita, Romania",
+        lat: 46.0748425,
+        long: 24.9036871,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bodok, Covasna, Romania",
+        lat: 45.9533973,
+        long: 25.8579893,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bereczk, Covasna, Romania",
+        lat: 46.0434246,
+        long: 26.3028187,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Soest, Germany",
+        lat: 51.5711476,
+        long: 8.105754,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Wolframs-Eschenbach",
+        lat: 49.2262035,
+        long: 10.7232303,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "K\u00f6v\u00e0r, Covasna, Romania",
+        lat: 45.8472767,
+        long: 26.1783452,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Malancrav, Mures, Romania",
+        lat: 46.109311,
+        long: 24.646596,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Baciu, Cluj",
+        lat: 46.7971832,
+        long: 23.5219677,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Misurina, Veneto, Italy",
+        lat: 46.5778327,
+        long: 12.2469397,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sim\u00e8nfalva, Harghita, Romania",
+        lat: 46.3372208,
+        long: 25.1077262,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Nagy-V\u00e1rad, Bihor, Romania",
+        lat: 47.0465005,
+        long: 21.9189438,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Catania, Italy",
+        lat: 37.5078772,
+        long: 15.0830304,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bankfalva, Harghita, Romania",
+        lat: 46.4928507,
+        long: 25.6456696,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Rozavlea",
+        lat: 47.7407838,
+        long: 24.2149115,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Mexico City, Mexico",
+        lat: 19.4326077,
+        long: -99.133208,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Stoke-on-Trent",
+        lat: 53.002668,
+        long: -2.179404,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Mosonmagyar\u00f3v\u00e1r",
+        lat: 47.8681469,
+        long: 17.2689169,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Vasluiul, Vaslui, Romania",
+        lat: 46.6406915,
+        long: 27.7276468,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bicsad, Covasna, Romania",
+        lat: 46.1026791,
+        long: 25.8674939,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Friesoythe",
+        lat: 53.0244916,
+        long: 7.8589508,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Boldog, Heves, Hungary",
+        lat: 47.6031287,
+        long: 19.687521,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "S\u00e2npetru-De-C\u00e2mpie, Mures, Romania",
+        lat: 46.7181828,
+        long: 24.2614783,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Cosenza, Italy",
+        lat: 39.2982629,
+        long: 16.2537357,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lindhorst",
+        lat: 39.0993058,
+        long: -84.5103687,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Gyulakuta",
+        lat: 46.421745,
+        long: 24.7657281,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Gr\u00fcningen, Switzerland",
+        lat: 47.2829567,
+        long: 8.7615482,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bretcu",
+        lat: 46.0434246,
+        long: 26.3028187,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Florida, Uruguay",
+        lat: -34.0948167,
+        long: -56.2202946,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Cata, Harghita, Romania",
+        lat: 46.5545177,
+        long: 25.6887207,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "G\u00f6d\u00f6l\u00f6, Pest, Hungary",
+        lat: 47.6007732,
+        long: 19.3605431,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Rovinari",
+        lat: 44.9000027,
+        long: 23.1543463,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Craciunel, Harghita, Romania",
+        lat: 46.1839361,
+        long: 25.4331009,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Oria, Italy",
+        lat: 40.4993413,
+        long: 17.6388796,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Erd\u00f6szentgy\u00f6rgy, Mures, Romania",
+        lat: 46.4291872,
+        long: 24.8386374,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Di\u00f3sd",
+        lat: 47.4082916,
+        long: 18.9434797,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "K\u00f6z\u00e8pajta, Covasna, Romania",
+        lat: 45.9765624,
+        long: 25.6087491,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Atlanta, Georgia",
+        lat: 33.7489954,
+        long: -84.3879824,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Antwerp, Belgium",
+        lat: 51.2194475,
+        long: 4.4024643,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Recseny\u00e8d, Harghita, Romania",
+        lat: 46.2062151,
+        long: 25.3848939,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Hateg",
+        lat: 45.6068844,
+        long: 22.9493625,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Curtea de Arges",
+        lat: 45.1405966,
+        long: 24.6685182,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lucerne, Switzerland",
+        lat: 47.0501682,
+        long: 8.3093072,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Buda",
+        lat: 30.0817231,
+        long: -97.8428927,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "K\u00e1poln\u00e1sny\u00e9k",
+        lat: 47.2398554,
+        long: 18.6764288,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Jackson, Wyoming",
+        lat: 43.4799291,
+        long: -110.7624282,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Loubill\u00e9, Poitou-Charentes, France",
+        lat: 46.049863,
+        long: -0.062936,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Vlissingen, Netherlands",
+        lat: 51.4536672,
+        long: 3.5709125,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Rugonfalva, Harghita, Romania",
+        lat: 46.3041593,
+        long: 25.0717186,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lefk\u00e1da, Greece",
+        lat: 38.7066464,
+        long: 20.64073,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Adenau",
+        lat: 50.3825077,
+        long: 6.9316299,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "C\u00e2mpia Turzii",
+        lat: 46.5586485,
+        long: 23.8706676,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Schl\u00fcchtern",
+        lat: 50.3493544,
+        long: 9.5255493,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Buzau",
+        lat: 45.1371109,
+        long: 26.8171122,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Pest, Hungary",
+        lat: 47.5002356,
+        long: 19.1000054,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Debrecen",
+        lat: 47.5316049,
+        long: 21.6273124,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Esztelnek",
+        lat: 46.1035107,
+        long: 26.2093748,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Kis\u00fajsz\u00e1ll\u00e1s",
+        lat: 47.215504,
+        long: 20.7571333,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "K\u00f6r\u00f6sszegap\u00e1ti",
+        lat: 47.0396539,
+        long: 21.6317831,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Citt\u00e0 di Castello",
+        lat: 43.4577876,
+        long: 12.2319048,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szekelyszentmihaly, Harghita, Romania",
+        lat: 46.3600801,
+        long: 25.1764254,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Newcastle upon Tyne",
+        lat: 54.978252,
+        long: -1.61778,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Amsterdam, Netherlands",
+        lat: 52.3666969,
+        long: 4.8945398,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sz\u00e0szfal\u00f9, Covasna, Romania",
+        lat: 46.0092793,
+        long: 26.1979214,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sarkad, Hungary",
+        lat: 46.7374245,
+        long: 21.3810771,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sovata Bai, Mures, Romania",
+        lat: 46.5990794,
+        long: 25.0774363,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Mikl\u00f2svar, Covasna, Romania",
+        lat: 46.0088977,
+        long: 25.5825182,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ujsz\u00e8kely, Harghita, Romania",
+        lat: 46.2608366,
+        long: 24.9731894,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "T\u00f6r\u00f6kb\u00e1lint",
+        lat: 47.4384914,
+        long: 18.9108101,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Gold Coast, Queensland",
+        lat: -28.016667,
+        long: 153.4,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bielefeld, Germany",
+        lat: 52.0302285,
+        long: 8.5324708,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Waat, Nordrhein-Westfalen, Germany",
+        lat: 51.1440082,
+        long: 6.4943103,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "L'Aquila, Italy",
+        lat: 42.3498479,
+        long: 13.3995091,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Fels\u00f6sofalva, Harghita, Romania",
+        lat: 46.5242431,
+        long: 25.1505348,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Dragomiresti, Maramures, Romania",
+        lat: 47.6612469,
+        long: 24.2841367,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Spittal, K\u00e4rnten, Austria",
+        lat: 46.79968,
+        long: 13.4928,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "The Hague, Netherlands",
+        lat: 52.0704978,
+        long: 4.3006999,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "St\u00e2nceni",
+        lat: 46.9603377,
+        long: 25.224312,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Korinth, Fyn, Denmark",
+        lat: 55.1437598,
+        long: 10.3294501,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ken\u00e9z, Vas, Hungary",
+        lat: 47.2039567,
+        long: 16.7872306,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szent\u00e0brah\u00e0m, Harghita, Romania",
+        lat: 46.334717,
+        long: 25.0091156,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "H\u00e2rlau",
+        lat: 47.4284267,
+        long: 26.9091247,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Florence, Italy",
+        lat: 43.7695604,
+        long: 11.2558136,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Racosul-De-Sus, Harghita, Romania",
+        lat: 46.0802755,
+        long: 25.547364,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Subcetate",
+        lat: 46.8554621,
+        long: 25.4274754,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Botesti, Neamt, Romania",
+        lat: 47.0609271,
+        long: 26.7524753,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Topolcany",
+        lat: 48.5589454,
+        long: 18.1700065,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Borsec",
+        lat: 46.9702828,
+        long: 25.5597881,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Trento, Italy",
+        lat: 46.0747793,
+        long: 11.1217486,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Oradea-Mare, Bihor, Romania",
+        lat: 47.0465005,
+        long: 21.9189438,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Capelle aan den IJssel",
+        lat: 51.9301505,
+        long: 4.5777053,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Oslo, Norway",
+        lat: 59.9138688,
+        long: 10.7522454,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sevenoaks, Kent",
+        lat: 51.27241,
+        long: 0.190898,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Deva, Hunedoara",
+        lat: 45.8662574,
+        long: 22.9143737,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Als\u00f2b\u00f2ldogfalva, Harghita, Romania",
+        lat: 46.2739142,
+        long: 24.9963857,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ennigerloh, Germany",
+        lat: 51.8402587,
+        long: 8.0308796,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Kisbacon, Covasna, Romania",
+        lat: 46.1039124,
+        long: 25.6959284,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Doughiska",
+        lat: 53.28343,
+        long: -8.98372,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Siklodi Oldal, Mures, Romania",
+        lat: 46.5170204,
+        long: 25.0389112,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Malta",
+        lat: 35.937496,
+        long: 14.375416,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lancaster, Lancashire",
+        lat: 54.046575,
+        long: -2.8007399,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Floresti, Cluj",
+        lat: 46.7312657,
+        long: 23.4783294,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sf\u00eentu Gheorghe, Covasna, Romania",
+        lat: 45.8609375,
+        long: 25.7885796,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szombathely",
+        lat: 47.2306851,
+        long: 16.6218441,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lugano, Switzerland",
+        lat: 46.0036778,
+        long: 8.951052,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "S\u00e1rv\u00e1r",
+        lat: 47.2524196,
+        long: 16.9294866,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Verona, Italy",
+        lat: 45.4383842,
+        long: 10.9916215,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Z\u00fcrich, Switzerland",
+        lat: 47.3768866,
+        long: 8.541694,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szil\u00e1gysomly\u00f3, Salaj, Romania",
+        lat: 47.2260727,
+        long: 22.8037864,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Schweitenkirchen",
+        lat: 48.5052656,
+        long: 11.6060567,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Corby",
+        lat: 52.4922983,
+        long: -0.6842333,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "T\u00e1pl\u00e1nszentkereszt",
+        lat: 47.1974582,
+        long: 16.6982875,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Akosfalva, Mures, Romania",
+        lat: 46.479789,
+        long: 24.6353545,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Biatorb\u00e1gy",
+        lat: 47.4706818,
+        long: 18.8205591,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Palma De Mallorca, Spain",
+        lat: 39.5696005,
+        long: 2.6501603,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Chicago, Illinois",
+        lat: 41.8781136,
+        long: -87.6297982,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Csikr\u00e1kos, Harghita, Romania",
+        lat: 46.4515746,
+        long: 25.7586193,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Alunis, Mures",
+        lat: 46.8941662,
+        long: 24.820585,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lucca, Italy",
+        lat: 43.8429197,
+        long: 10.5026977,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Keszt\u00f6lc",
+        lat: 47.7132605,
+        long: 18.7885429,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Domb\u00f3v\u00e1r",
+        lat: 46.3828653,
+        long: 18.1452879,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ikafalva, Covasna, Romania",
+        lat: 46.0017951,
+        long: 26.0202424,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ludwigshafen Am Rhein-Oggersheim, Rheinland-Pfalz, Germany",
+        lat: 49.4910406,
+        long: 8.3679951,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bulgareni, Harghita, Romania",
+        lat: 46.3674463,
+        long: 25.2538174,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Temesv\u00e1r, Timis, Romania",
+        lat: 45.7488716,
+        long: 21.2086793,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Oriszentpeter",
+        lat: 46.8418469,
+        long: 16.4178428,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Csiktaploca, Harghita, Romania",
+        lat: 46.369746,
+        long: 25.805534,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Moresti, Mures, Romania",
+        lat: 46.4907139,
+        long: 24.4389624,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Malm\u00f6, Sweden",
+        lat: 55.604981,
+        long: 13.003822,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Laval, Quebec",
+        lat: 45.6066487,
+        long: -73.712409,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Logro\u00f1o",
+        lat: 42.4627195,
+        long: -2.4449852,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Hayes, Hillingdon",
+        lat: 51.516758,
+        long: -0.436786,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Santiago, Chile",
+        lat: -33.4488897,
+        long: -70.6692655,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Faringdon",
+        lat: 51.658477,
+        long: -1.584679,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szil",
+        lat: 47.501622,
+        long: 17.233297,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Csikszentimre, Harghita, Romania",
+        lat: 46.2840115,
+        long: 25.8629587,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "St\u00eenceni, Mures, Romania",
+        lat: 46.9603377,
+        long: 25.224312,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Vetschau",
+        lat: 51.783243,
+        long: 14.0757974,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Kesswil, Switzerland",
+        lat: 47.5935362,
+        long: 9.3177304,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "B\u00f6g\u00f6z",
+        lat: 46.257035,
+        long: 25.2210098,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bokod, Hungary",
+        lat: 47.4919931,
+        long: 18.2496494,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Mugeni, Harghita, Romania",
+        lat: 46.257035,
+        long: 25.2210098,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Kr\u00f6v",
+        lat: 49.9770407,
+        long: 7.0834497,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Madaras, Harghita",
+        lat: 46.4932007,
+        long: 25.7458349,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Szigetsentmiklos, Pest, Hungary",
+        lat: 47.3396005,
+        long: 19.0351771,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Kissolymos, Harghita, Romania",
+        lat: 46.338384,
+        long: 24.9604621,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ruganesti, Harghita, Romania",
+        lat: 46.3041593,
+        long: 25.0717186,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Hollywood",
+        lat: 34.0928092,
+        long: -118.3286614,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Eger, Hungary",
+        lat: 47.9025348,
+        long: 20.3772284,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Tusnad",
+        lat: 46.1460752,
+        long: 25.8569589,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "P\u00e1ty, Pest, Hungary",
+        lat: 47.5152562,
+        long: 18.8276879,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Csikszentsimon",
+        lat: 46.232348,
+        long: 25.8331627,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sch\u00fcttorf",
+        lat: 52.3225661,
+        long: 7.2254549,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Archita, Harghita, Romania",
+        lat: 46.1816647,
+        long: 25.0860613,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bagnacavallo",
+        lat: 44.4197361,
+        long: 11.976675,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Hallstahammar",
+        lat: 59.6132041,
+        long: 16.2294755,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Angyalf\u00f6ld, Budapest, Hungary",
+        lat: 47.5355105,
+        long: 19.0709266,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Dumbraveni",
+        lat: 46.2297965,
+        long: 24.5752707,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Cernatul-De-Jos, Covasna, Romania",
+        lat: 45.978243,
+        long: 26.0106084,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Harghita",
+        lat: 46.4928507,
+        long: 25.6456696,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Trnava",
+        lat: 48.3709108,
+        long: 17.5833218,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "M\u00e0rtonfalva, Covasna, Romania",
+        lat: 46.0189549,
+        long: 24.4047545,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Haren, Germany",
+        lat: 52.7941709,
+        long: 7.2368366,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Saddle Brook, New Jersey",
+        lat: 40.9040085,
+        long: -74.1007318,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bergen, Hordaland",
+        lat: 60.3912628,
+        long: 5.3220544,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Str\u00f6velstorp",
+        lat: 56.1693511,
+        long: 12.8353858,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Fitod, Harghita, Romania",
+        lat: 46.3579212,
+        long: 25.8461702,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Ullo",
+        lat: 41.8884096,
+        long: -87.6354498,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Cori, Italy",
+        lat: 41.6445071,
+        long: 12.9129985,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Kopec",
+        lat: 51.4666492,
+        long: 18.1655626,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Lathen",
+        lat: 52.8633516,
+        long: 7.3150725,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Bergneustadt",
+        lat: 51.0204769,
+        long: 7.6485595,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Galautas",
+        lat: 46.912712,
+        long: 25.4042124,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Newton Abbot",
+        lat: 50.528905,
+        long: -3.60836,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Cristur, Harghita, Romania",
+        lat: 46.2924526,
+        long: 25.0317145,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Calgary, Alberta",
+        lat: 51.0447331,
+        long: -114.0718831,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Homor\u00f3dszentm\u00e0rton, Harghita, Romania",
+        lat: 46.2330775,
+        long: 25.3872762,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Wuppertal, Germany",
+        lat: 51.2562128,
+        long: 7.1507636,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Valea Stejarului, Maramures, Romania",
+        lat: 47.87434,
+        long: 23.9880928,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Tolentino",
+        lat: 43.2111776,
+        long: 13.286336,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Sacalu De Padure, Mures, Romania",
+        lat: 46.8836016,
+        long: 24.709663,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Hitchin",
+        lat: 51.94921,
+        long: -0.283414,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Aiud",
+        lat: 46.3086633,
+        long: 23.724558,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Oroszhegy, Harghita, Romania",
+        lat: 46.3959239,
+        long: 25.3039301,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Koroshegy",
+        lat: 46.8350066,
+        long: 17.8988043,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Joseni, Harghita",
+        lat: 46.705003,
+        long: 25.3598641,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Nusfalau, Salaj, Romania",
+        lat: 47.199336,
+        long: 22.7104811,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Jedd",
+        lat: 42.0348274,
+        long: -88.2820988,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Gossau, Zurich",
+        lat: 47.3064531,
+        long: 8.7586121,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "Nasaud",
+        lat: 47.2921849,
+        long: 24.3973258,
+        size: 1,
+        group: "livesin"
+    }, {
+        name: "R\u00e1kospalota, Budapest, Hungary",
+        lat: 47.561541,
+        long: 19.1319345,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Fredrikstad",
+        lat: 59.2205369,
+        long: 10.9347012,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "L\u00f6vete, Harghita, Romania",
+        lat: 46.2747298,
+        long: 25.4914355,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Bristol, United Kingdom",
+        lat: 51.454513,
+        long: -2.58791,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Csikszentdomokos",
+        lat: 46.579049,
+        long: 25.7900345,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "M\u00e1d\u00e9falva, Harghita, Romania",
+        lat: 46.4374818,
+        long: 25.7531516,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Cleveland, Ohio",
+        lat: 41.49932,
+        long: -81.6943605,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Sz\u00e9kesfeh\u00e9rv\u00e1r",
+        lat: 47.1860262,
+        long: 18.4221358,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Gherla",
+        lat: 47.0317645,
+        long: 23.909253,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Borzont, Harghita, Romania",
+        lat: 46.6917445,
+        long: 25.4429835,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Szasz R\u00e9gen, Mures, Romania",
+        lat: 46.7710931,
+        long: 24.700762,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Lajosmizse",
+        lat: 47.0248225,
+        long: 19.5559232,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Homor\u00f2dalm\u00e0s, Harghita, Romania",
+        lat: 46.2343918,
+        long: 25.4569963,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Satu Mare",
+        lat: 47.8016702,
+        long: 22.8575926,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Sz\u00e8kelyszenterzs\u00e8bet, Harghita, Romania",
+        lat: 46.2905308,
+        long: 24.9358959,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Nagybacon",
+        lat: 46.0900927,
+        long: 25.6977467,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Cristuru Secuiesc",
+        lat: 46.2924526,
+        long: 25.0317145,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Bologna, Italy",
+        lat: 44.494887,
+        long: 11.3426162,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "D\u00fcsseldorf, Germany",
+        lat: 51.2277411,
+        long: 6.7734556,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Sopron",
+        lat: 47.6816619,
+        long: 16.5844795,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Zagon",
+        lat: 45.771657,
+        long: 26.1242507,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "P\u00e1pa",
+        lat: 47.3260464,
+        long: 17.4697834,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Gyor",
+        lat: 47.6874569,
+        long: 17.6503974,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Hermannstadt, Sibiu, Romania",
+        lat: 45.7983273,
+        long: 24.1255826,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "D\u00e1nfalva, Harghita, Romania",
+        lat: 46.5158087,
+        long: 25.753395,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Pusztav\u00e1m",
+        lat: 47.4297438,
+        long: 18.2317401,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Paris, France",
+        lat: 48.856614,
+        long: 2.3522219,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Peris, Mures, Romania",
+        lat: 46.6906827,
+        long: 24.6649419,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Korond, Harghita, Romania",
+        lat: 46.4716004,
+        long: 25.1837289,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "M\u00e1r\u00e8falva, Harghita, Romania",
+        lat: 46.3396282,
+        long: 25.3796778,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Hajd\u00faszoboszl\u00f3",
+        lat: 47.4435369,
+        long: 21.3965516,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Suceava",
+        lat: 47.6634521,
+        long: 26.2732302,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Oradea",
+        lat: 47.0465005,
+        long: 21.9189438,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Sz\u00e8kelysz\u00e1ldobos, Harghita, Romania",
+        lat: 46.1272421,
+        long: 25.5933492,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Szigetszentmikl\u00f3s",
+        lat: 47.3396005,
+        long: 19.0351771,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Praid, Harghita, Romania",
+        lat: 46.5553429,
+        long: 25.1272723,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Sarmas",
+        lat: 43.7677345,
+        long: -79.5415164,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Dedrad, Mures, Romania",
+        lat: 46.8261935,
+        long: 24.6567835,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Csiksomly\u00f3, Harghita, Romania",
+        lat: 46.3753277,
+        long: 25.8192703,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Gyergyo, Harghita, Romania",
+        lat: 46.7212112,
+        long: 25.5855275,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Cernat, Covasna",
+        lat: 45.9570931,
+        long: 26.0311933,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Baile Tusnad",
+        lat: 46.1460752,
+        long: 25.8569589,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Kecskem\u00e9t",
+        lat: 46.8963711,
+        long: 19.6896861,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Vecs\u00e9s",
+        lat: 47.4068857,
+        long: 19.2624362,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Istanbul, Turkey",
+        lat: 41.0082376,
+        long: 28.9783589,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Budakeszi",
+        lat: 47.5136249,
+        long: 18.9278382,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Miskolc, Hungary",
+        lat: 48.1034775,
+        long: 20.7784384,
+        size: 2,
+        group: "livesin"
+    }, {
+        name: "Vargyas",
+        lat: 46.1259303,
+        long: 25.5588602,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "New York, New York",
+        lat: 40.7127753,
+        long: -74.0059728,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Nyikomalomfalva, Harghita, Romania",
+        lat: 46.3571262,
+        long: 25.2189094,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Ujfal\u00f9, Harghita, Romania",
+        lat: 46.2425239,
+        long: 26.6508684,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "B\u00f6l\u00f6n, Covasna, Romania",
+        lat: 45.9344587,
+        long: 25.5724102,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Gheorgheni, Harghita, Romania",
+        lat: 46.7212112,
+        long: 25.5855275,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Sibiu, Romania",
+        lat: 45.7983273,
+        long: 24.1255826,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Gelence",
+        lat: 45.9409896,
+        long: 26.2422934,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Piatra Neamt",
+        lat: 46.9299616,
+        long: 26.3779793,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Borsz\u00e8k, Harghita, Romania",
+        lat: 46.9702828,
+        long: 25.5597881,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Uzon, Covasna",
+        lat: 45.7974926,
+        long: 25.8516594,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Oroszl\u00e1ny",
+        lat: 47.4858755,
+        long: 18.315496,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Erdofule, Harghita, Romania",
+        lat: 46.1421904,
+        long: 25.6187743,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Brussels, Belgium",
+        lat: 50.8503396,
+        long: 4.3517103,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "K\u00f6pecz, Covasna, Romania",
+        lat: 46.0421249,
+        long: 25.5791913,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Kily\u00e8nfalva, Harghita, Romania",
+        lat: 46.6795302,
+        long: 25.570039,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Nyujt\u00f2d, Covasna, Romania",
+        lat: 46.0220484,
+        long: 26.2186287,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Dublin, Ireland",
+        lat: 53.3498053,
+        long: -6.2603097,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Iasi, Romania",
+        lat: 47.1584549,
+        long: 27.6014418,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Gyerg\u00f2szentmikl\u00f2s, Harghita, Romania",
+        lat: 46.7212112,
+        long: 25.5855275,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Gyergy\u00f3remete, Harghita, Romania",
+        lat: 46.7963038,
+        long: 25.4426576,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "\u00dajfalu",
+        lat: 46.2425239,
+        long: 26.6508684,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Munich, Germany",
+        lat: 48.1351253,
+        long: 11.5819805,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Milan, Italy",
+        lat: 45.4642035,
+        long: 9.189982,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Szentkatolna, Covasna, Romania",
+        lat: 45.9661534,
+        long: 26.1554986,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Arad, Arad",
+        lat: 46.1865606,
+        long: 21.3122677,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Arkos",
+        lat: 29.755698,
+        long: -95.365141,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Covasna",
+        lat: 45.8472767,
+        long: 26.1783452,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Bacau, Romania",
+        lat: 46.5670437,
+        long: 26.9145748,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Intorsura Buzaului",
+        lat: 45.6640966,
+        long: 26.0149491,
+        size: 3,
+        group: "livesin"
+    }, {
+        name: "Rome, Italy",
+        lat: 41.9027835,
+        long: 12.4963655,
+        size: 4,
+        group: "livesin"
+    }, {
+        name: "Hamburg, Germany",
+        lat: 53.5510846,
+        long: 9.9936819,
+        size: 4,
+        group: "livesin"
+    }, {
+        name: "Stuttgart, Germany",
+        lat: 48.7758459,
+        long: 9.1829321,
+        size: 4,
+        group: "livesin"
+    }, {
+        name: "Timi\u0219oara, Romania",
+        lat: 45.7488716,
+        long: 21.2086793,
+        size: 4,
+        group: "livesin"
+    }, {
+        name: "Kov\u00e0szna, Covasna, Romania",
+        lat: 45.8472767,
+        long: 26.1783452,
+        size: 4,
+        group: "livesin"
+    }, {
+        name: "Brass\u00f3, Brasov, Romania",
+        lat: 45.6579755,
+        long: 25.6011977,
+        size: 4,
+        group: "livesin"
+    }, {
+        name: "Ditro, Harghita, Romania",
+        lat: 46.8107477,
+        long: 25.5014359,
+        size: 5,
+        group: "livesin"
+    }, {
+        name: "Madrid, Spain",
+        lat: 40.4167754,
+        long: -3.7037902,
+        size: 5,
+        group: "livesin"
+    }, {
+        name: "Ozsdola",
+        lat: 45.9804991,
+        long: 26.263009,
+        size: 6,
+        group: "livesin"
+    }, {
+        name: "Bal\u00e1nb\u00e1nya, Harghita, Romania",
+        lat: 46.6585838,
+        long: 25.8076679,
+        size: 6,
+        group: "livesin"
+    }, {
+        name: "Sz\u00e0rhegy, Harghita, Romania",
+        lat: 46.7441185,
+        long: 25.5317885,
+        size: 6,
+        group: "livesin"
+    }, {
+        name: "Vienna, Austria",
+        lat: 48.2081743,
+        long: 16.3738189,
+        size: 6,
+        group: "livesin"
+    }, {
+        name: "Miercurea-Ciuc, Harghita, Romania",
+        lat: 46.3695574,
+        long: 25.7953655,
+        size: 7,
+        group: "livesin"
+    }, {
+        name: "Torja, Covasna, Romania",
+        lat: 46.0512486,
+        long: 26.0422426,
+        size: 7,
+        group: "livesin"
+    }, {
+        name: "K\u00e8zdisznetl\u00e8lek, Covasna, Romania",
+        lat: 46.0443775,
+        long: 26.1329106,
+        size: 8,
+        group: "livesin"
+    }, {
+        name: "Csomafalva, Harghita, Romania",
+        lat: 46.6475065,
+        long: 25.4257751,
+        size: 8,
+        group: "livesin"
+    }, {
+        name: "Gyergy\u00f3alfalu, Harghita, Romania",
+        lat: 46.6989299,
+        long: 25.504907,
+        size: 9,
+        group: "livesin"
+    }, {
+        name: "Baraolt",
+        lat: 46.0753937,
+        long: 25.6050476,
+        size: 9,
+        group: "livesin"
+    }, {
+        name: "Sf\u00e2ntu-Gheorghe, Covasna, Romania",
+        lat: 45.8609375,
+        long: 25.7885796,
+        size: 10,
+        group: "livesin"
+    }, {
+        name: "Brasov, Romania",
+        lat: 45.6579755,
+        long: 25.6011977,
+        size: 12,
+        group: "livesin"
+    }, {
+        name: "Reghinul, Mures, Romania",
+        lat: 46.7710931,
+        long: 24.700762,
+        size: 12,
+        group: "livesin"
+    }, {
+        name: "Szov\u00e0ta, Mures, Romania",
+        lat: 46.5990794,
+        long: 25.0774363,
+        size: 14,
+        group: "livesin"
+    }, {
+        name: "Toplita-Ciuc, Harghita, Romania",
+        lat: 46.9260303,
+        long: 25.3534041,
+        size: 14,
+        group: "livesin"
+    }, {
+        name: "Balan, Romania",
+        lat: 46.6585838,
+        long: 25.8076679,
+        size: 16,
+        group: "livesin"
+    }, {
+        name: "Sovata",
+        lat: 46.5990794,
+        long: 25.0774363,
+        size: 21,
+        group: "livesin"
+    }, {
+        name: "Bucharest, Romania",
+        lat: 44.4267674,
+        long: 26.1025384,
+        size: 22,
+        group: "livesin"
+    }, {
+        name: "Vlahita, Harghita, Romania",
+        lat: 46.3266994,
+        long: 25.5148068,
+        size: 22,
+        group: "livesin"
+    }, {
+        name: "Bar\u00f3t, Covasna, Romania",
+        lat: 46.0753937,
+        long: 25.6050476,
+        size: 27,
+        group: "livesin"
+    }, {
+        name: "London, United Kingdom",
+        lat: 51.5073509,
+        long: -0.1277583,
+        size: 30,
+        group: "livesin"
+    }, {
+        name: "Parajd",
+        lat: 46.5553429,
+        long: 25.1272723,
+        size: 32,
+        group: "livesin"
+    }, {
+        name: "Gyergy\u00f3szentmikl\u00f3s",
+        lat: 46.7212112,
+        long: 25.5855275,
+        size: 39,
+        group: "livesin"
+    }, {
+        name: "Toplita",
+        lat: 46.9260303,
+        long: 25.3534041,
+        size: 42,
+        group: "livesin"
+    }, {
+        name: "Reghin",
+        lat: 46.7710931,
+        long: 24.700762,
+        size: 45,
+        group: "livesin"
+    }, {
+        name: "Marosv\u00e1s\u00e1rhely, Mures, Romania",
+        lat: 46.5385862,
+        long: 24.5514392,
+        size: 46,
+        group: "livesin"
+    }, {
+        name: "Sighisoara, Romania",
+        lat: 46.2197025,
+        long: 24.7963878,
+        size: 54,
+        group: "livesin"
+    }, {
+        name: "Sz\u00e8kelykeresztur, Harghita, Romania",
+        lat: 46.2924526,
+        long: 25.0317145,
+        size: 56,
+        group: "livesin"
+    }, {
+        name: "Szentegyh\u00e1zasfalu",
+        lat: 46.3266994,
+        long: 25.5148068,
+        size: 61,
+        group: "livesin"
+    }, {
+        name: "Budapest, Hungary",
+        lat: 47.497912,
+        long: 19.040235,
+        size: 72,
+        group: "livesin"
+    }, {
+        name: "K\u00e8zdiv\u00e1s\u00e0rhely, Covasna, Romania",
+        lat: 46.0006001,
+        long: 26.1345785,
+        size: 80,
+        group: "livesin"
+    }, {
+        name: "Sz\u00e9kelyudvarhely",
+        lat: 46.3049996,
+        long: 25.2926479,
+        size: 88,
+        group: "livesin"
+    }, {
+        name: "Csikszereda",
+        lat: 46.3695574,
+        long: 25.7953655,
+        size: 114,
+        group: "livesin"
+    }, {
+        name: "Targu-Mures",
+        lat: 46.5385862,
+        long: 24.5514392,
+        size: 115,
+        group: "livesin"
+    }, {
+        name: "Sepsiszentgyorgy",
+        lat: 45.8609375,
+        long: 25.7885796,
+        size: 117,
+        group: "livesin"
+    }, {
+        name: "Cluj-Napoca",
+        lat: 46.7712101,
+        long: 23.6236353,
+        size: 208,
+        group: "livesin"
+    }, {
+        name: "parajd",
+        lat: 46.5553429,
+        long: 25.1272723,
+        size: 39,
+        group: "birth"
+    }, {
+        name: "szovata",
+        lat: 46.5990794,
+        long: 25.0774363,
+        size: 45,
+        group: "birth"
+    }, {
+        name: "balan",
+        lat: 46.6585838,
+        long: 25.8076679,
+        size: 88,
+        group: "birth"
+    }, {
+        name: "toplita",
+        lat: 46.9260303,
+        long: 25.3534041,
+        size: 105,
+        group: "birth"
+    }, {
+        name: "baraolt",
+        lat: 46.0753937,
+        long: 25.6050476,
+        size: 106,
+        group: "birth"
+    }, {
+        name: "vlahica",
+        lat: 46.3266994,
+        long: 25.5148068,
+        size: 106,
+        group: "birth"
+    }, {
+        name: "segesvar",
+        lat: 46.2197025,
+        long: 24.7963878,
+        size: 110,
+        group: "birth"
+    }, {
+        name: "szaszregen",
+        lat: 46.7710931,
+        long: 24.700762,
+        size: 114,
+        group: "birth"
+    }, {
+        name: "szekelykeresztur",
+        lat: 46.2924526,
+        long: 25.0317145,
+        size: 117,
+        group: "birth"
+    }, {
+        name: "szentgyorgy",
+        lat: 45.8609375,
+        long: 25.7885796,
+        size: 131,
+        group: "birth"
+    }, {
+        name: "kezdivasarhely",
+        lat: 46.0006001,
+        long: 26.1345785,
+        size: 136,
+        group: "birth"
+    }, {
+        name: "gyergyo",
+        lat: 46.7212112,
+        long: 25.5855275,
+        size: 138,
+        group: "birth"
+    }, {
+        name: "kovaszna",
+        lat: 45.8472767,
+        long: 26.1783452,
+        size: 143,
+        group: "birth"
+    }, {
+        name: "udvarhely",
+        lat: 46.3049996,
+        long: 25.2926479,
+        size: 150,
+        group: "birth"
+    }, {
+        name: "marosvasarhely",
+        lat: 46.5385862,
+        long: 24.5514392,
+        size: 155,
+        group: "birth"
+    }, {
+        name: "csikszereda",
+        lat: 46.3695574,
+        long: 25.7953655,
+        size: 157,
+        group: "birth"
+    }, {
+        name: "kolozsvar",
+        lat: 46.7712101,
+        long: 23.6236353,
+        size: 160,
+        group: "birth"
+    }, {
+        name: "Sz\u00e9kelyf\u00f6ld diaspora szerint",
+        lat: 46.3899553865,
+        long: 21.1024946875,
+        size: 50,
+        group: "origin"
+    }, {
+        name: "Sz\u00e9kelyf\u00f6ld",
+        lat: 46.3814566409,
+        long: 25.2842361012,
+        size: 50,
+        group: "origin"
+    }]
+
+    d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson", function (data) {
+
+
+        // map
+        svg.append("g")
+            .selectAll("path")
+            .data(data.features)
+            .enter()
+            .append("path")
+            .attr("fill", "#b8b8b8")
+            .attr("d", d3.geoPath()
+                .projection(projection)
+            )
+            .style("stroke", "black")
+            .style("opacity", .3)
+
+        // tooltip
+        var Tooltip = d3.select("#datavizmapcoord")
+            .append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 1)
+            .style("background-color", "white")
+            .style("border", "solid")
+            .style("border-width", "2px")
+            .style("border-radius", "5px")
+            .style("padding", "5px")
+
+        var mouseover = function (d) {
+            Tooltip.style("opacity", 1)
+        }
+        var mousemove = function (d) {
+            Tooltip
+                .html(d.name + "<br>" + "long: " + d.long + "<br>" + "lat: " + d.lat)
+                .style("left", (d3.mouse(this)[0] + 10) + "px")
+                .style("top", (d3.mouse(this)[1]) + "px")
+        }
+        var mouseleave = function (d) {
+            Tooltip.style("opacity", 0)
+        }
+
+        //circles
+        svg
+            .selectAll("myCircles")
+            .data(markers)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) {
+                return projection([d.long, d.lat])[0]
+            })
+            .attr("cy", function (d) {
+                return projection([d.long, d.lat])[1]
+            })
+            .attr("r", 14)
+            .attr("class", "circle")
+            .style("fill", "69b3a2")
+            .attr("stroke", "#69b3a2")
+            .attr("stroke-width", 3)
+            .attr("fill-opacity", .4)
+            .on("mouseover", mouseover)
+            .on("mousemove", mousemove)
+            .on("mouseleave", mouseleave)
+
+    })
+</script>
