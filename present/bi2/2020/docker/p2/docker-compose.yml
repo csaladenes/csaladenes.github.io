@@ -1,0 +1,57 @@
+version: '3'
+services:
+   grafana:
+      image: grafana/grafana
+      container_name: grafana
+      restart: always
+      user: '0'
+      ports:
+         - '3000:3000'
+      volumes:
+         - ./az_en_grafana_mappam:/var/lib/grafana
+      environment:
+         - GF_INSTALL_PLUGINS=grafana-clock-panel,satellogic-3d-globe-panel
+      networks:
+         dc2net:
+            ipv4_address: 172.28.1.3
+   chronograf:
+      image: chronograf
+      container_name: chronograf
+      restart: always
+      ports:
+         - '8889:8888'
+      volumes:
+         - ./az_en_chronograf_mappam:/var/lib/chronograf
+      networks:
+         dc2net:
+            ipv4_address: 172.28.1.4
+   influxdb:
+      image: influxdb
+      container_name: influxdb
+      restart: always
+      ports:
+         - '8086:8086'
+         - '8083:8083'
+      volumes:
+         - ./az_en_influxdb_mappam:/var/lib/influxdb
+      networks:
+         dc2net:
+            ipv4_address: 172.28.1.2
+   jupyter:
+      build: ./az_en_jupyter_mappam
+      container_name: jupyter
+      restart: always
+      user: '0'
+      ports:
+         - '8888:8888'
+      volumes:
+         - ./az_en_jupyter_mappam:/home/jovyan/work
+      networks:
+         dc2net:
+            ipv4_address: 172.28.1.1
+networks:
+    dc2net:
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.28.0.0/16
