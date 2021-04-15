@@ -1,13 +1,11 @@
 version: '3.4'
 services:
    jupyter:
-      build: 
-         context: ./az_en_jupyter2_mappam
-         network: host
-      container_name: jupyter
+      image: jupyter/scipy-notebook
+      container_name: jupyter2
       restart: always
       user: '0'
       ports:
-         - '8888:8888'
+         - '10888:8888'
       volumes:
          - ./az_en_jupyter2_mappam:/home/jovyan/work
