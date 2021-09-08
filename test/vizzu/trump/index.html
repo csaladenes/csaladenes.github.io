@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vizzu Interactive Example</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.1/papaparse.min.js"></script>
+</head>
+
+<body>
+  <div style="display:block;">
+    <form name="rightBar">
+      <input type="radio" id="types" name="menu" value="Tweet type" checked="true">
+      <label for="types">Types</label><br>
+      <input type="radio" id="tools" name="menu" value="Tool">
+      <label for="tools">Tools</label><br>
+      <input type="radio" id="dtti" name="menu" value="DidTTI">
+      <label for="dtti">Trump?</label>
+    </form>
+    <button id="btnTweets" type="button" value="tweet count">Tweets</button>
+    <button id="btnShared" type="button" value="retweet count">Shared</button>
+  </div>
+  <div id="testVizzuCanvas" style="width:700px; height:480px;display:block;"></div>
+  <script src="interactive.js" type="module"></script>
+</body>
+
+</html>
