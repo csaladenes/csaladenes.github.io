@@ -10,17 +10,8 @@ from '../data.js';
 
 const chart = new Vizzu('testVizzuCanvas');
 
-let slider = document.getElementById("myRange");
-
-slider.oninput = (e) => {
-  let t = e.target.value;
-  chart.animation.pause();
-  chart.animation.seek(t / 10 + '%');
-
-};
-
 chart.initializing.then(() => {
-  return chart.animate({ // step1
+  return chart.animate({ // State 2 - The first animation
     data: data,
     descriptor: {
       channels: {
@@ -34,9 +25,9 @@ chart.initializing.then(() => {
         label: {
           attach: ['quadrant']
         }, //Adding the same data series to the label channel, so that the values will be shown on the bars.
-        color: {
-          attach: ['quadrant']
-        }
+        // color: {
+        //   attach: ['supergroup_name']
+        // }
       },
       title: 'Init plot',
       legend: "color", //Switching on the legend
@@ -55,42 +46,41 @@ chart.initializing.then(() => {
 
   });
 }).then((chart) => {
-  return chart.animate({ //step2
+  return chart.animate({ //State 1 - Drawing a static column chart
     descriptor: {
       channels: {
+        x: {
+          attach: ['x_axis_imd_rank'],
+          detach: ['quadrant'],
+          range: '0,1.1,%'
+        }, // Adding the Timeseries to the x-axis
         y: {
-          attach: ['local_authorities'],
+          attach: ['y_axis_allcat_rank'],
           range: '0,1.1,%'
         }, // Adding the Values 1 to the y-axis & setting the range from 0 to 110% of the biggest value in the series
         label: {
-          attach: ['local_authorities'],
-          detach: ['quadrant']
-        },
+          attach: ['local_authorities']
+        }, //Adding the same data series to the label channel, so that the values will be shown on the bars.
         color: {
-          attach: ['quadrant']
+          attach: ['supergroup_name']
         }
 
       },
       title: 'Levelling up', //Setting the chart title
-      // geometry: 'circle',
+      geometry: 'circle',
     },
 
   }, {
-    delay: '0s',
+    delay: '2s',
   });
 }).then(() => {
   return chart.animate({ // State 2 - The first animation
-    data: {
-      filter: record => record["quadrant"] == 'quadrant 1' || record["quadrant"] == 'quadrant 3',
-    },
     descriptor: {
       channels: {
-        x: {
-          attach: ['local_authorities'],
+        color: {
+          detach: ['supergroup_name'],
+          attach: ['region']
         }, //Adding the same date series to the color channel, resulting in a stacked bar chart with different colors used for the different categories on the y axis.
-        y: {
-          detach: ['local_authorities'],
-        },
       },
       title: 'Color by region',
       geometry: 'circle',
