@@ -28,8 +28,8 @@
 			<div id="current_time">04:00</div>
 			<div id="speed">
 				<div class="togglebutton slow" data-val="slow">Lassú</div>
-				<div class="togglebutton medium" data-val="medium">Közepes</div>
-				<div class="togglebutton fast current" data-val="fast">Gyors</div>
+				<div class="togglebutton medium current" data-val="medium">Közepes</div>
+				<div class="togglebutton fast" data-val="fast">Gyors</div>
 				<div class="clr"></div>
 			</div>
 			<div id="week">
@@ -57,7 +57,7 @@
 	<script>
 		var USER_SPEED = "fast";
 
-		var width = 840,
+		var width = 940,
 			height = 680,
 			padding = 1,
 			maxRadius = 7;
@@ -93,7 +93,7 @@
 		})
 
 
-		var speeds = { "slow": 500, "medium": 200, "fast": 50 };
+		var speeds = { "slow": 270, "medium": 90, "fast": 30 };
 
 
 		var all_time_notes = {
@@ -116,7 +116,7 @@
 			{ "start_minute": 35, "stop_minute": 65, "note": "A pontok a válaszadók napi rutinját tükrözik. Most éppen hajnali 5 óra van, egy átlagos hétvégi napon" },
 			{ "start_minute": 70, "stop_minute": 100, "note": "A legtöbben még szundítunk kora reggel. Lassan ébredezünk. De a kutyát már le kell vinni." },
 			{ "start_minute": 130, "stop_minute": 170, "note": "Hétvégén később kelünk. A nap zuhannyal és reggelivel indul." },
-			{ "start_minute": 270, "stop_minute": 330, "note": "Hosszű reggeli után kevesen dolgozunk. Néhányan vásárolni mennek, mások templomba." },
+			{ "start_minute": 270, "stop_minute": yCenter, "note": "Hosszű reggeli után kevesen dolgozunk. Néhányan vásárolni mennek, mások templomba." },
 			{ "start_minute": 360, "stop_minute": 440, "note": "Van aki a természetet választja, kirándul vagy hobbijának hódol. A házimunkára is kerül idő." },
 			{ "start_minute": 480, "stop_minute": 540, "note": "Hétvégén rendszeresbbek az étkezések is: 10-kor reggelizünk, délután 3-kor ebédelünk és este 8-kor vacsorázunk" },
 			{ "start_minute": 660, "stop_minute": 720, "note": "A délután a pihenésé és a kirándulásé." },
@@ -127,11 +127,13 @@
 			]
 		};
 		var notes_index = 0;
+		var xCenter=445;
+		var yCenter = 330;
 
 
 		// Activity to put in center of circle arrangement
 		var center_act = "Utazás | Vezetés",
-			center_pt = { "x": 435, "y": 320 };
+			center_pt = { "x": xCenter, "y": yCenter+15 };
 
 
 		// Coordinates for activities
@@ -141,7 +143,7 @@
 				foci[code.index] = center_pt;
 			} else {
 				var theta = 2 * Math.PI / (act_codes.length - 1);
-				foci[code.index] = { x: 280 * Math.cos(i * theta) + 430, y: 230 * Math.sin(i * theta) + 335 };
+				foci[code.index] = { x: 280 * Math.cos(i * theta) + xCenter, y: 230 * Math.sin(i * theta) + yCenter };
 			}
 		});
 
@@ -247,7 +249,7 @@
 						return center_pt.x;
 					} else {
 						var theta = 2 * Math.PI / (act_codes.length - 1);
-						return 350 * Math.cos(i * theta) + 430;
+						return 350 * Math.cos(i * theta) + xCenter;
 					}
 
 				})
@@ -256,7 +258,7 @@
 						return center_pt.y + 40;
 					} else {
 						var theta = 2 * Math.PI / (act_codes.length - 1);
-						return 290 * Math.sin(i * theta) + 330;
+						return 290 * Math.sin(i * theta) + yCenter;
 					}
 
 				});
@@ -352,7 +354,7 @@
 					d3.select("#note").transition()
 						.duration(1000)
 						.style("top", "300px")
-						.style("color", "#222");
+						.style("color", "rgba(0,0,0,0)");
 
 					notes_index += 1;
 					if (notes_index == time_notes.length) {
