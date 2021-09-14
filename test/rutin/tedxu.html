@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-	<link rel="stylesheet" href="ex/style/stylex.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 </head>
 <meta charset="utf-8">
 <meta name="description" content="SZÉKELYDATA | Időfelhasználási Vizualizáció" />
@@ -33,9 +33,9 @@
 				<div class="clr"></div>
 			</div>
 			<div id="week">
-				<a class="togglebutton2 hkoz" id="hkoz" href="#hkoz" onclick='location.reload();'
+				<a class="togglebutton2 hkoz" id="hkoz" 
 					data-val="hkoz">Hétköznap</a>
-				<a class="togglebutton2 hetv" id="hetv" href="#hetv" onclick='location.reload();'
+				<a class="togglebutton2 hetv" id="hetv"
 					data-val="hetv">Hétvége</a>
 				<div class="clr"></div>
 			</div>
@@ -52,8 +52,8 @@
 		<div class="clr"></div>
 	</div>
 	</div>
-	<script src="ex/js/d3-3-5-5.min.js"></script>
-	<script src="ex/js/d3plus.js"></script>
+	<script src="d3-3-5-5.min.js"></script>
+	<script src="d3plus.js"></script>
 	<script>
 		var USER_SPEED = "fast";
 
@@ -158,6 +158,9 @@
 
 		if (window.location.hash == "#hkoz") datalink = "hkoz";
 		if (window.location.hash == "#hetv") datalink = "hetv";
+		window.location.hash='#'+datalink;
+		d3.select('#hkoz').attr('href', window.location.href.slice(0, window.location.href.length-4)+'hkoz')
+		d3.select('#hetv').attr('href', window.location.href.slice(0, window.location.href.length - 4) + 'hetv')
 
 		var week = { "hkoz": "hétköznap", "hetv": "hétvég" }
 		d3.select("#cite").html('Rutin&nbsp;|&nbsp;<a href="https://szekelydata.csaladen.es/" target="_blank">székelydata</a>&nbsp;&nbsp;<a href="http://csaladenes.egologo.ro/?p=1157" target="_blank">leírás</a>&nbsp;|&nbsp;<a href="https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/" target="_blank">ihlet</a>&nbsp;|&nbsp;<a href="https://szekelydata.csaladen.es/kerdoiv/">kérdőív</a>')
@@ -182,7 +185,7 @@
 			.background("none")
 			.axes({ "background": { "color": "none", "stroke": { "color": "none" } }, "ticks": false })
 
-		d3.tsv(datalink + '3.csv', function (error, data) {
+		d3.tsv(datalink + '.csv', function (error, data) {
 
 			data.forEach(function (d) {
 				var day_array = d.day.split(",");
@@ -262,7 +265,7 @@
 				.attr("x", function () { return d3.select(this.parentNode).attr("x"); })
 				// .attr("dy", "1.3em")
 				.attr("text-anchor", "middle")
-				.attr("fill", "#888")
+				.attr("fill", "#ddd")
 				.attr("font-size", "18px")
 				.text(function (d) {
 					return d.short;
@@ -271,7 +274,7 @@
 				.attr("x", function () { return d3.select(this.parentNode).attr("x"); })
 				.attr("dy", "1.4em")
 				.attr("text-anchor", "middle")
-				.attr("fill", "#444")
+				.attr("fill", "#aaa")
 				.attr("font-size", "12px")
 				.text(function (d) {
 					return d.desc;
@@ -280,7 +283,7 @@
 				.attr("dy", "1.4em")
 				.attr("x", function () { return d3.select(this.parentNode).attr("x"); })
 				.attr("text-anchor", "middle")
-				.attr("fill", "#888")
+				.attr("fill", "#ddd")
 				.attr("class", "actpct")
 				.text(function (d) {
 					return act_counts[d.index] + "%";
@@ -339,7 +342,7 @@
 						.transition()
 						.duration(600)
 						.style("top", "20px")
-						.style("color", "#888")
+						.style("color", "#ddd")
 						.text(time_notes[notes_index].note);
 				}
 
