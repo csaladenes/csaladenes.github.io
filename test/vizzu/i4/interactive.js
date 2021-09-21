@@ -29,7 +29,7 @@ chart.initializing.then(() => {
             },
             title: 'These are all local authorities of England',
             // sort: 'none',
-            // split: true
+            // split: true //fuggoleges barchart chartnal
         },
         style: {
             paddingTop: 0,
@@ -41,7 +41,7 @@ chart.initializing.then(() => {
             fontWeight: 'bold',
             fontSize: 16,
             plot: {
-                axis: {
+                axis: { //yAxis
                     label: {
                         color: '' //only y axis?
                     }
@@ -50,7 +50,7 @@ chart.initializing.then(() => {
         }
     });
 }).then(() => {
-    return chart.animate({ // step2
+    return chart.animate({ // step2 //packed circles
         descriptor: {
             channels: {
                 x: {
@@ -75,7 +75,8 @@ chart.initializing.then(() => {
                     title: 'Rank by deprivation' //really kudos for y-label on top!
                 }
             },
-            title: 'And ranked by deprivation'
+            title: 'And ranked by deprivation',
+            // sort: 'experimental', //kategorian belul
         },
         style: {
             plot: {
@@ -88,13 +89,15 @@ chart.initializing.then(() => {
         }
     });
 }).then(() => {
-    return chart.animate({ // step4
+    return chart.animate({ // step4 //split/orientation
         descriptor: {
             geometry: 'circle',
             title: "It's a good match",
-            // size: 50
         },
         style: {
+            data: {
+                circleMinRadius: 5
+            },
             plot: {
                 marker: {
                     guides: {
@@ -109,7 +112,7 @@ chart.initializing.then(() => {
     return chart.animate({ // step5
         descriptor: {
             channels: {
-                label: {
+                shape: {
                     attach: ['local_authorities'] //check if deactivated
                 },
                 x: {
@@ -129,7 +132,7 @@ chart.initializing.then(() => {
                     label: {
                         fontSize: 0,
                         color: '',
-                        // position: 'below' | 'center' | 'above' //left right
+                        // position: 'below' | 'center' | 'above' //left right //dx, dy //textAlign: 'center, left, right',
                         // filter only on labels
                     }
                 }
@@ -138,22 +141,16 @@ chart.initializing.then(() => {
     })
 }).then(() => {
     return chart.animate({ // step6
-        data: {
-            filter: (d) => {
-                return d['label_2_highest_lowest'] == 'lab'; //filter only on label, not dataset?
-            }
-        },
+        // data: {
+        //     filter: (d) => {
+        //         return d['label_2_highest_lowest'] == 'lab'; //filter only on label, not dataset?
+        //     }
+        // },
         descriptor: {
             channels: {
                 label: {
-                    attach: ['local_authorities'] //check if deactivated
-                },
-                x: {
-                    detach: ['levelling_up_categorisation',
-                        'local_authorities'
-                    ],
-                    attach: ['y_axis_allcat_rank'],
-                    title: 'Rank by COVID economic impact'
+                    // detach: ['local_authorities'], //check 
+                    attach: ['lab'] //check if deactivated
                 }
             },
             title: "These are the hardest/lightest local authorities"
@@ -177,15 +174,24 @@ chart.initializing.then(() => {
             }
         },
         descriptor: {
+            channels:{
+                label: {
+                    attach: ['local_authorities'], //check 
+                    detach: ['lab'] //check if deactivated
+                },
+                shape: {
+                    attach: ['region']
+                },
+            },
             title: "London took the hardest hit" //opacity based on condition?
         },
         style: {
             plot: {
                 marker: {
+                    fillOpacity: 0.4, 
                     label: {
-                        // opacity: 0.9, 
-                        // lightness: 0.9
-                        // grayscale: 0.5
+                        // lightness: 0.9,
+                        // grayscale: 0.5,
                         color: '#ff7711', //no effect
                         fontSize: 15,
                         filter: 'color(#0000FF)' //makes everything blue
@@ -196,31 +202,40 @@ chart.initializing.then(() => {
     })
 }).then(() => {
     return chart.animate({ // step8 //gets Javascrpt error on setInterval
+        data: {
+            filter: null
+        },
+        // data: data,
+        descriptor: {
+            channels: {
+                y: {
+                    detach: ['x_axis_imd_rank'],
+                    attach: ['region', 'local_authorities']
+                },
+                x: {
+                    // detach: ['y_axis_allcat_rank'],
+                },
+                color: {
+                    detach: ['levelling_up_categorisation'],
+                    attach: ['region']
+                },
+                label: {
+                    detach: ['local_authorities']
+                },
+            },
+            geometry: 'circle',
+            title: "Some areas are clear outliers"
+        },
+    });
+}).then(() => {
+    return chart.animate({ // step8 //gets Javascrpt error on setInterval
         // data: {
-        //     filter: (d) => {
-        //         return d; //reset filter?
-        //     }
+        //     filter: null
         // },
         // data: data,
         descriptor: {
-            // channels: {
-            //     y: {
-            //         detach: ['x_axis_imd_rank'],
-            //         attach: ['region', 'local_authorities']
-            //     },
-            //     x: {
-            //         detach: ['y_axis_allcat_rank'],
-            //     },
-            //     color: {
-            //         detach: ['levelling_up_categorisation'],
-            //         attach: ['region']
-            //     },
-            //     label: {
-            //         // detach: ['local_authorities']
-            //     }
-            // },
-            // geometry: 'rectangle',
-            // title: "Some areas are clear outliers"
+            geometry: 'rectangle',
+            orientation:'vertical'
         },
     });
 })
