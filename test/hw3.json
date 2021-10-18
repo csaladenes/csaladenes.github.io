@@ -3,7 +3,7 @@
   
     "description": "Emissions data using satellite imagary",
     
-    "data": {"url": "https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=gb&begin=2010-02-01&end=2022-07-01"},
+    "data": {"url": "mydata.csv"},
   
     "mark":{
       "type": "circle",
