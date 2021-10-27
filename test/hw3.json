@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "Emissions data using satellite imagary",
+    
+    "data": {"url": "mydata.csv"},
+  
+    "mark":{
+      "type": "circle",
+      "color":"red",
+      "opacity":0.5
+    },
+     
+    "width":500,
+    
+    "encoding": {
+      
+      "x": {
+        "field": "end", 
+        "type": "temporal", 
+        "xxtimeUnit":"yearmonthdate",
+        "title":null
+        },
+  
+      "y": {
+        "field": "average", 
+        "type": "quantitative",
+        "scale": {"domain": [0.02, 0.045]},
+        "title":null
+        },
+  
+      "xxcolor":{
+        "field":"end", 
+        "timeUnit":"year", 
+        "scale": {"scheme": "inferno"}
+      }
+    }
+  }
+  
