@@ -124,8 +124,8 @@ def plot_kmeans_interactive(min_clusters=1, max_clusters=6):
     with warnings.catch_warnings():
         warnings.filterwarnings('ignore')
 
-        X, y = make_blobs(n_samples=300, centers=4,
-                          random_state=0, cluster_std=0.60)
+        X, y = make_blobs(n_samples=300, centers=8,
+                          cluster_std=2)
 
         def _kmeans_step(frame=0, n_clusters=4):
             rng = np.random.RandomState(2)
@@ -167,8 +167,8 @@ def plot_kmeans_interactive(min_clusters=1, max_clusters=6):
                 plt.scatter(centers[:, 0], centers[:, 1], marker='o',
                             c='black', s=50)
 
-            plt.xlim(-4, 4)
-            plt.ylim(-2, 10)
+#             plt.xlim(-4, 4)
+#             plt.ylim(-2, 10)
 
             if frame % 3 == 1:
                 plt.text(3.8, 9.5, "1. Reassign points to nearest centroid",
