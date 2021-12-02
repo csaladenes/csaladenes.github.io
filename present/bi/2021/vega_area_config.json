@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/csaladenes/csaladenes.github.io/master/present/bi/2021/vega_area_data.json"
+  },
+  "transform": [
+    {"calculate": "(datum.atlag_min+datum.atlag_max)/2", "as": "atlag"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "area", "opacity": 0.2},
+      "encoding": {
+        "x": {"field": "datum", "type": "temporal"},
+        "y": {"field": "rekord_min", "type": "quantitative"},
+        "y2": {"field": "rekord_max", "type": "quantitative"}
+      }
+    },
+    {
+      "mark": {"type": "area", "opacity": 0.2},
+      "encoding": {
+        "x": {"field": "datum", "type": "temporal"},
+        "y": {"field": "atlag_min", "type": "quantitative"},
+        "y2": {"field": "atlag_max", "type": "quantitative"}
+      }
+    },
+    {
+      "mark": {"type": "line", "opacity": 0.8},
+      "encoding": {
+        "x": {
+          "field": "datum",
+          "type": "temporal",
+          "axis": {"title": "", "format": "%b"}
+        },
+        "y": {
+          "field": "atlag",
+          "type": "quantitative",
+          "axis": {"title": "Hőmérséklet (C°)"}
+        }
+      }
+    }
+  ],
+  "config": {}
+}
