@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- Csala Dénes, BI 2021 -->
+
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+<head>
+
+<!--The next three lines allow the Vega embed-->
+<script src="https://cdn.jsdelivr.net/npm/vega"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+
+</head>
+
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+
+
+<!-- ///////////////////  BODY //////////////////////////////////// -->
+
+<body>
+
+<!--Vaga embed, with notes for what is going on -->
+  <div class="chart" id="firstChart">
+
+      <script>
+        // Following the script tag we are using Javascript.
+        // One way to tell is to see how comments work...
+        // First job is to set the chart as a JS variable:
+        var myChart1 = "vega_data_url.vl.json";
+        // Now we simply insert it, using Vega's embed code:
+        // The embed function needs to be told the location, and what to put there. 
+        vegaEmbed('#firstChart', myChart1);
+      </script>
+
+  </div>
+
+</body>
+
+<!-- ///////////////////  BODY //////////////////////////////////// -->
+
+</html>
