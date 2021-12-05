@@ -1,0 +1,53 @@
+<script src="https://cdn.jsdelivr.net/npm/vega"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+<div class="chart" id="firstChart"></div>
+<script>
+    var url = 'https://api.carbonintensity.org.uk/intensity/' + new Date(Date.now()).toISOString().slice(0, 10) + '/fw48h';
+    console.log(url)
+
+    var spec = {
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "description": "A simple bar chart with embedded data.",
+        "data": {
+            "url": url,
+            "format": {
+                "property": "data"
+            }
+        },
+        "layer": [{
+            "mark": {
+                "type": "point",
+                "fill": "crimson",
+                "color": "crimson",
+                "size": 3
+            },
+            "encoding": {
+                "x": {
+                    "field": "to",
+                    "type": "temporal"
+                },
+                "y": {
+                    "field": "intensity.actual",
+                    "type": "quantitative"
+                }
+            }
+        }, {
+            "mark": {
+                "type": "line",
+                "color": "royalBlue"
+            },
+            "encoding": {
+                "x": {
+                    "field": "to",
+                    "type": "temporal"
+                },
+                "y": {
+                    "field": "intensity.forecast",
+                    "type": "quantitative"
+                }
+            }
+        }]
+    }
+    vegaEmbed('#firstChart', spec)
+</script>
