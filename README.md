@@ -12,5 +12,5 @@ This is the code running my personal website. It is a horizontally scrolling "on
 Try: http://csaladen.es
 
 # Credit
-Dénes Csala, 2017  
+Dénes Csala, 2021   
 http://csaladen.es
