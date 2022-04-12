@@ -82,16 +82,18 @@
     .aggs({'Out Directorate Any':'mean','Diameter':'mean','Nr. of individuals Directorate':'sum'})
     .x({
       "value": 'Out Directorate Any',
-      'label': { 'value': 'Out Directorate Any', 'padding': 20 },
+      'label': { 'value': 'Silo: Out-communication fraction', 'padding': 20 },
       'grid': { 'color': (theme == 'dark') ? dark : light },
       'ticks': { 'color': (theme == 'dark') ? dark : light },
+      "range": [0, 1],
       'axis': { 'color': (theme == 'dark') ? dark : light }
     })         // key name to size bubbles
     .y({
       "value": 'Diameter',
-      'label': { 'value': 'Diameter', 'padding': 30 },
+      'label': { 'value': 'Flatness: Diameter', 'padding': 30 },
       'grid': { 'color': (theme == 'dark') ? dark : light },
-      'ticks': { 'color': (theme == 'dark') ? dark : light },
+      'ticks': { 'color': (theme == 'dark') ? dark : light},
+      "range":[0,0.3],
       'axis': { 'color': (theme == 'dark') ? axdark : axlight },
       'callback': function (d) {
         visualization
