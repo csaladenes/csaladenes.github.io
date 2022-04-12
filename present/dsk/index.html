@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- load D3js -->
+  <script src="d3.min.js"></script>
+
+  <!-- load D3plus after D3js -->
+  <script src="d3plus.js"></script>
+
+  <style>
+    @import url(//fonts.googleapis.com/css?family=Coda:400,700);
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: none;
+    }
+
+    div,
+    text {
+      font-family: "Coda" !important;
+      /*             font-size:12px !important; */
+    }
+
+    .d3plus_tooltip_data_container .d3plus_tooltip_data_block:nth-child(7) {
+      display: none;
+    }
+
+    .d3plus_node {
+      font-size: 12px !important;
+      border-color: grey !important;
+      color: black !important;
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+    }
+
+    .d3plus_tooltip_description,
+    .d3plus_tooltip_header {
+      font-weight: bold;
+    }
+
+    :root {
+      --bg: #6495ed;
+      --font: #faf0e6;
+    }
+
+    .d3plus_tooltip_data_block {
+      color: var(--font) !important;
+    }
+
+    .d3plus_tooltip_data_block a {
+      color: var(--font) !important;
+    }
+  </style>
+</head>
+
+<div id="viz"></div>
+<script>
+
+  var dark = '#243b55';
+  var light = '#abcaee';
+  var axdark = 'lightGray';
+  var axlight = '#52545c';
+  var theme = 'light';
+  document.documentElement.style.setProperty("--bg", (theme == 'dark') ? dark : light);
+  document.documentElement.style.setProperty("--font", (theme == 'dark') ? axdark : axlight);
+  
+  d3plus.viz()
+    .container("#viz")     // container DIV to hold the visualization
+    .data("silo.json",function(d){
+      console.log(d)
+      return(d)
+    })     // data to use with the visualization
+    .type("scatter")       // visualization type
+    .background('none')
+    .axes({ 'background': { 'color': 'none', 'stroke': 'none' }, 'ticks': false })
+    .id(["Division",'Directorate']) // nesting keys
+    .labels({ 'padding': -10 })
+    .depth(0)
+    .aggs({'Out Directorate Any':'mean','Diameter':'mean','Nr. of individuals Directorate':'sum'})
+    .x({
+      "value": 'Out Directorate Any',
+      'label': { 'value': 'Out Directorate Any', 'padding': 20 },
+      'grid': { 'color': (theme == 'dark') ? dark : light },
+      'ticks': { 'color': (theme == 'dark') ? dark : light },
+      'axis': { 'color': (theme == 'dark') ? dark : light }
+    })         // key name to size bubbles
+    .y({
+      "value": 'Diameter',
+      'label': { 'value': 'Diameter', 'padding': 30 },
+      'grid': { 'color': (theme == 'dark') ? dark : light },
+      'ticks': { 'color': (theme == 'dark') ? dark : light },
+      'axis': { 'color': (theme == 'dark') ? axdark : axlight },
+      'callback': function (d) {
+        visualization
+          .color('c' + d.slice(-1))
+      }
+    })         // key name to size bubbles
+    .color('Division')        // color by each group
+    //                 .mouse({'click':function(d){
+    //                     console.log(d)
+    //                 }})
+    .format({
+      'number': function (d) {
+        return (d*100)/100.0 + '';
+      }
+    })
+    .size('Nr. of individuals Directorate')
+    .font({ "family": "Coda", "size": 14, "align": "center", "secondary": { "family": "Coda" }, 'color': (theme == 'dark') ? axdark : axlight })
+    // .legend(false)
+    // .tooltip({'value':[x, 'q2','q3'],'background':(theme=='dark')?dark:light,'font':{'color':(theme=='dark')?axdark:axlight}})
+    .messages({ 'background': 'none', 'font': { 'color': (theme == 'dark') ? axdark : axlight }, 'value': false })
+    //                 .draw(clicker)                // finally, draw the visualization!
+    .draw()
+
+</script>
+
+</html>
