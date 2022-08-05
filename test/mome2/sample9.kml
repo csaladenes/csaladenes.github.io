@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="feat_1">
+        <Style id="stylesel_0">
+            <LabelStyle id="substyle_0">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+            </LabelStyle>
+        </Style>
+        <Placemark id="feat_2">
+            <name>point</name>
+            <description/>
+            <TimeStamp id="time_0">
+                <when/>
+            </TimeStamp>
+            <styleUrl>#stylesel_0</styleUrl>
+            <Point id="geom_0">
+                <coordinates>18.333868,-34.038274,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

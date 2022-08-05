@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+text {
+  font-family:inherit;
+  font-size: 11px;
+}
+
+#overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 420px;
+}
+
+@media only screen and (max-width: 500px) {
+  #overlay {
+    bottom:0;
+    left:0;
+    width: 100%;
+  }
+}
+
+.x.axis line {
+  stroke: #ddd;
+}
+
+.x.axis path {
+  fill: none;
+  stroke: #ddd;
+}
+
+input[type=range] {
+    background: steelblue;
+    margin-top: -16px;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #437aa1;
+  stroke-width: 3;
+  cursor: col-resize;
+}
+
+.draggy {
+  fill: #7cbad1;
+}
+
+.indicator {
+  cursor: col-resize;
+  stroke: #437aa1;
+  stroke-width: 5;
+}
+
+.ice { stroke: #5c98b7; }
+.fill-ice { background-color: #5c98b7; }
+
+.temp { stroke: #de965b; }
+.fill-temp { background-color: #de965b; }
+
+
+.line {
+    fill: none;
+    stroke-width: 1.5px;
+    stroke-dashoffset: 5000;
+    stroke-dasharray: 10000;
+    -webkit-transition: all 6s ease-in;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    border-radius: 5px;
+}
+
+.mapbox-maplogo {
+    pointer-events: auto;
+    position: absolute;
+    display: block;
+    height: 26px;
+    width: 87px;
+    left: 10px;
+    bottom: 10px;
+    text-indent: -9999px;
+    z-index: 99999;
+    overflow: hidden;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAAAoCAMAAAAFWtJHAAAAwFBMV…H/gecURPlN9vdQpeD47yhIFNX0U0QgvID9nENm+yxk/xb+AGAjNfRZuk9qAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 87px 27px;
+}

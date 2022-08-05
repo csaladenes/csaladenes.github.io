@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="feat_3">
+        <Style id="stylesel_1">
+            <LabelStyle id="substyle_1">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="stylesel_2">
+            <LabelStyle id="substyle_2">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="stylesel_3">
+            <LabelStyle id="substyle_3">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="stylesel_4">
+            <LabelStyle id="substyle_4">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+            </LabelStyle>
+        </Style>
+        <Style id="stylesel_5">
+            <LabelStyle id="substyle_5">
+                <color>ff0000ff</color>
+                <colorMode>normal</colorMode>
+                <scale>1</scale>
+            </LabelStyle>
+        </Style>
+        <Placemark id="feat_4">
+            <name>point</name>
+            <description/>
+            <TimeStamp id="time_1">
+                <when/>
+            </TimeStamp>
+            <styleUrl>#stylesel_1</styleUrl>
+            <Point id="geom_1">
+                <coordinates>43.1725,-77.6192,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_5">
+            <name>point</name>
+            <description/>
+            <TimeStamp id="time_2">
+                <when/>
+            </TimeStamp>
+            <styleUrl>#stylesel_2</styleUrl>
+            <Point id="geom_2">
+                <coordinates>43.1728,-77.6195,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_6">
+            <name>point</name>
+            <description/>
+            <TimeStamp id="time_3">
+                <when/>
+            </TimeStamp>
+            <styleUrl>#stylesel_3</styleUrl>
+            <Point id="geom_3">
+                <coordinates>43.173,-77.6198,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_7">
+            <name>point</name>
+            <description/>
+            <TimeStamp id="time_4">
+                <when/>
+            </TimeStamp>
+            <styleUrl>#stylesel_4</styleUrl>
+            <Point id="geom_4">
+                <coordinates>43.1725,-77.6208,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_8">
+            <name>point</name>
+            <description/>
+            <TimeStamp id="time_5">
+                <when/>
+            </TimeStamp>
+            <styleUrl>#stylesel_5</styleUrl>
+            <Point id="geom_5">
+                <coordinates>43.1719,-77.6216,0.0</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

@@ -70,7 +70,7 @@
   d3plus.viz()
     .container("#viz")     // container DIV to hold the visualization
     .data("silo.json",function(d){
-      console.log(d)
+      // console.log(d)
       return(d)
     })     // data to use with the visualization
     .type("scatter")       // visualization type
@@ -79,21 +79,25 @@
     .id(["Division",'Directorate']) // nesting keys
     .labels({ 'padding': -10 })
     .depth(1)
-    .aggs({'Out Directorate Any':'mean','Diameter':'mean','Nr. of individuals Directorate':'sum'})
+    .aggs({'Out Directorate within Division':'mean','Diameter':'mean','Nr. of individuals Directorate':'sum'})
     .x({
-      "value": 'Out Directorate Any',
-      'label': { 'value': 'Silo: Out-communication fraction', 'padding': 20 },
+      "value": 'Out Directorate within Division',
+      'label': { 'value': 'Silo: Out Directorate within Division fraction', 'padding': 20 },
       'grid': { 'color': (theme == 'dark') ? dark : light },
       'ticks': { 'color': (theme == 'dark') ? dark : light },
       "range": [0, 1],
       'axis': { 'color': (theme == 'dark') ? dark : light }
     })         // key name to size bubbles
+    // .ui([{
+    //   "method":"x",
+    //   "values":["a","b"]
+    // }])
     .y({
-      "value": 'Diameter',
-      'label': { 'value': 'Flatness: Diameter', 'padding': 30 },
+      "value": 'Out Directorate Any',
+      'label': { 'value': 'Out Directorate Any', 'padding': 30 },
       'grid': { 'color': (theme == 'dark') ? dark : light },
       'ticks': { 'color': (theme == 'dark') ? dark : light},
-      "range":[0,0.3],
+      "range":[0,1],
       'axis': { 'color': (theme == 'dark') ? axdark : axlight },
       'callback': function (d) {
         visualization
@@ -109,9 +113,9 @@
         return (d*100)/100.0 + '';
       }
     })
-    .size('Nr. of individuals Directorate')
+    .size('Nr. of individuals')
     .font({ "family": "Coda", "size": 14, "align": "center", "secondary": { "family": "Coda" }, 'color': (theme == 'dark') ? axdark : axlight })
-    .legend(false)
+    // .legend(false)
     // .tooltip({'value':[x, 'q2','q3'],'background':(theme=='dark')?dark:light,'font':{'color':(theme=='dark')?axdark:axlight}})
     .messages({ 'background': 'none', 'font': { 'color': (theme == 'dark') ? axdark : axlight }, 'value': false })
     //                 .draw(clicker)                // finally, draw the visualization!

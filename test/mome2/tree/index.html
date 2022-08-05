@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<script src="d3.js"></script>
+<script src="d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script>
+  d3.json("../antarctica.json",function(rawdata){
+  var data=[]
+  Object.keys(rawdata).forEach(function(d){
+    c=rawdata[d]["country"]
+    data.push({"country":c,"summer":rawdata[d]["summer"]})
+  })
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .data(data)
+    .type("tree_map")
+    .id("country")
+    .size("summer")
+    .labels({"align": "left", "valign": "top"})
+    .draw()
+    })
+</script>

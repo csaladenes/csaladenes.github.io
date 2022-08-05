@@ -1,0 +1,26 @@
+ <!DOCTYPE>
+ <html>
+ <head>
+     <meta charset="UTF-8" />
+     <title>Maptalks Quick Start</title>
+     <!-- or link to your downloaded files -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.css">
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/maptalks/dist/maptalks.min.js"></script>
+ </head>
+ <body>
+ <div style="width:800px;height:600px;" id="map"></div>
+ <script type="text/javascript">
+   // create map in div 'map'
+   var map = new maptalks.Map('map', {
+     center: [0, 0],
+     zoom: 2,
+     baseLayer: new maptalks.TileLayer('base', {
+       'urlTemplate' : 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+       'subdomains'  : ['a','b','c','d'],
+       'attribution'  : '&copy; <a href="https://www.osm.org/copyright">OSM</a> contributors, '+
+       '&copy; <a href="https://carto.com/attributions">CARTO</a>'
+     })
+   });
+ </script>
+ </body>
+ </html>

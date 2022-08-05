@@ -70,7 +70,7 @@
   d3plus.viz()
     .container("#viz")     // container DIV to hold the visualization
     .data("silo.json",function(d){
-      console.log(d)
+      // console.log(d)
       return(d)
     })     // data to use with the visualization
     .type("scatter")       // visualization type
@@ -109,9 +109,9 @@
         return (d*100)/100.0 + '';
       }
     })
-    .size('Nr. of individuals Directorate')
+    .size('Nr. of individuals')
     .font({ "family": "Coda", "size": 14, "align": "center", "secondary": { "family": "Coda" }, 'color': (theme == 'dark') ? axdark : axlight })
-    .legend(false)
+    // .legend(false)
     // .tooltip({'value':[x, 'q2','q3'],'background':(theme=='dark')?dark:light,'font':{'color':(theme=='dark')?axdark:axlight}})
     .messages({ 'background': 'none', 'font': { 'color': (theme == 'dark') ? axdark : axlight }, 'value': false })
     //                 .draw(clicker)                // finally, draw the visualization!
