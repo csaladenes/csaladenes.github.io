@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/csaladenes/csaladenes.github.io/master/present/bi/2021/vega_export.json"
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "datum", "type": "temporal", "axis": {"labelAngle": 0}},
+    "y": {"field": "ertek", "type": "quantitative"},
+    "color": {"field": "homerseklet", "type": "nominal"}
+  },
+  "config": {}
+}
