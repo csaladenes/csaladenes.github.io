@@ -102,7 +102,7 @@ div.tooltip {
 					var svg = d3.select("#chart").append("svg")
 								.attr("width", colsize * 7 * 4 + rowsize*2)
 								.attr("height", rowsize*(data.length+4+2))
-								.style("border", "solid")
+								// .style("border", "solid")
 								.append("g")
 					
 					var ev=["IX","X","XI","XII"];
@@ -129,7 +129,7 @@ div.tooltip {
 							.attr("x", (i+4)*colsize+colsize*0.1+rowsize)
 							.attr("y", rowsize*3)
 							.style("font-size",colsize*0.7)
-							.style("fill","#222")
+							.style("fill","#f1c232")
 							.text(ev[i%4])
 					}
 					for (var i=0;i<7;i++) {
@@ -187,7 +187,8 @@ div.tooltip {
 											.attr("r",rr[my["szint"]])
 											.attr("class","vers veri"+ee[tan]+" helyezi"+hh[my["hely"]]+" szinti"+(rr[my["szint"]]/2-2))
 											.style("fill",color[ee[tan]*4+hh[my["hely"]]])
-											.style("opacity",0.45)
+											.style("opacity",0.55)
+											.style("filter", "brightness(1.3)")
 											.datum([my,ev,osztaly,year,tan])
 											.on("mouseover", function(e) {
 													tiptext = e;
