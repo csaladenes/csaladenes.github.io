@@ -14,3 +14,6 @@ Try: http://csaladen.es
 # Credit
 Dénes Csala, 2021   
 http://csaladen.es
+
+## 💫 Stars over time
+[![Stargazers over time](https://starchart.cc/csaladenes/csaladenes.github.io.svg?variant=adaptive)](https://starchart.cc/csaladenes/csaladenes.github.io)
