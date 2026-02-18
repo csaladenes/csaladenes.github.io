@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BI 2025 - Student Data Visualization Projects</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh}
+  header{background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);border-bottom:1px solid #1e293b;padding:2.5rem 2rem 2rem;text-align:center}
+  header h1{font-size:1.8rem;font-weight:700;color:#f8fafc;letter-spacing:-0.02em}
+  header p{color:#94a3b8;margin-top:.5rem;font-size:.95rem}
+  .stats{display:flex;gap:2rem;justify-content:center;margin-top:1.2rem;flex-wrap:wrap}
+  .stat{text-align:center}
+  .stat .num{font-size:1.5rem;font-weight:700;color:#38bdf8}
+  .stat .label{font-size:.75rem;color:#64748b;text-transform:uppercase;letter-spacing:.05em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;padding:2rem;max-width:1400px;margin:0 auto}
+  .tile{background:#1e293b;border:1px solid #334155;border-radius:12px;overflow:hidden;transition:all .25s ease;position:relative;display:flex;flex-direction:column}
+  .tile:hover{transform:translateY(-4px);border-color:#38bdf8;box-shadow:0 8px 32px rgba(56,189,248,.12)}
+  .tile a{text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%}
+  .tile-preview{height:180px;background:#0f172a;position:relative;overflow:hidden}
+  .tile-preview iframe{width:100%;height:100%;border:none;pointer-events:none;transform:scale(0.5);transform-origin:0 0;width:200%;height:200%}
+  .tile-preview .fallback{display:flex;align-items:center;justify-content:center;height:100%;color:#475569;font-size:.85rem}
+  .tile-body{padding:1rem 1.25rem 1.25rem;flex:1;display:flex;flex-direction:column}
+  .tile-name{font-size:1.05rem;font-weight:600;color:#f1f5f9;margin-bottom:.5rem}
+  .tile-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.75rem}
+  .tag{font-size:.65rem;padding:.2rem .55rem;border-radius:100px;font-weight:500;letter-spacing:.02em}
+  .tag-d3{background:#7c3aed22;color:#a78bfa;border:1px solid #7c3aed44}
+  .tag-vega{background:#2563eb22;color:#60a5fa;border:1px solid #2563eb44}
+  .tag-chart{background:#0891b222;color:#22d3ee;border:1px solid #0891b244}
+  .tag-echarts{background:#d9731522;color:#fb923c;border:1px solid #d9731544}
+  .tag-leaflet{background:#16a34a22;color:#4ade80;border:1px solid #16a34a44}
+  .tag-react{background:#0ea5e922;color:#38bdf8;border:1px solid #0ea5e944}
+  .tag-default{background:#47556922;color:#94a3b8;border:1px solid #47556944}
+  .tile-meta{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
+  .tile-url{font-size:.7rem;color:#64748b;font-family:'Cascadia Code','Fira Code',monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:70%}
+  .tile-grade{font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:100px}
+  .grade-5{background:#16a34a22;color:#4ade80;border:1px solid #16a34a44}
+  .grade-4{background:#ca8a0422;color:#fbbf24;border:1px solid #ca8a0444}
+  .grade-low{background:#dc262622;color:#f87171;border:1px solid #dc262644}
+  .tile.unavailable{opacity:.45}
+  .tile.unavailable:hover{transform:none;border-color:#334155;box-shadow:none}
+  @media(max-width:680px){.grid{grid-template-columns:1fr;padding:1rem}header{padding:1.5rem 1rem}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Business Intelligence 2024/2025</h1>
+  <p>Interactive Data Visualization Projects -- GitHub Pages</p>
+  <div class="stats">
+    <div class="stat"><div class="num" id="total">0</div><div class="label">Projects</div></div>
+    <div class="stat"><div class="num" id="live">0</div><div class="label">Live sites</div></div>
+    <div class="stat"><div class="num" id="libs">0</div><div class="label">Unique libraries</div></div>
+  </div>
+</header>
+<div class="grid" id="grid"></div>
+
+<script>
+const projects = [
+  {name:"Havazás — Románia fókusz",user:"balazseniko",url:"https://balazseniko.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Data Breach Intelligence Dashboard",user:"beke-tibor-roland",url:"https://beke-tibor-roland.github.io/",libs:["Vega-Lite","Chart.js","Leaflet"],grade:5},
+  {name:"Repülőjegy Elemző Dashboard",user:"bendeheni",url:"https://bendeheni.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Hópárduc Vizualizáció",user:"LauraBors03",url:"https://LauraBors03.github.io/",libs:["D3.js","Vega-Lite"],grade:5},
+  {name:"Az okostelefon piac 2025-ben",user:"bunajanos",url:"https://bunajanos.github.io/",libs:["Chart.js"],grade:5},
+  {name:"Szabadúszó Piaci Elemzés",user:"lorandcs",url:"https://lorandcs.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Premier League Big 6 Dashboard",user:"Derzsi12",url:"https://Derzsi12.github.io/",libs:["Chart.js"],grade:5},
+  {name:"Turisztikai Szezonalitás Elemzés",user:"doroothy",url:"https://doroothy.github.io/",libs:["D3.js","Vega-Lite"],grade:5},
+  {name:"Hollywood Analytics",user:"denesbianka",url:"https://denesbianka.github.io/",libs:["Chart.js"],grade:5},
+  {name:"Globális fenntarthatóság: CO₂ és e-hulladék",user:"FazakasBogi",url:"https://FazakasBogi.github.io/",libs:["D3.js","Vega-Lite","Chart.js"],grade:5},
+  {name:"Alexander Ovechkin: Career Dashboard",user:"GZoltan89",url:"https://GZoltan89.github.io/",libs:["D3.js","Vega-Lite"],grade:5},
+  {name:"Foltos Szalamandra Populáció",user:"goropeti",url:"https://goropeti.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Automotive Aftermarket Visualizations",user:"hajdobogi",url:"https://hajdobogi.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Zenehallgatási trendek 2018–2025",user:"xenafir42",url:"https://xenafir42.github.io/",libs:["Chart.js"],grade:5},
+  {name:"Játék Központ - Videójáték Statisztikák",user:"kriszta29",url:"https://kriszta29.github.io/",libs:["Vega-Lite","Chart.js","ECharts"],grade:5},
+  {name:"Premier League – Sport Adatvizualizáció",user:"chromil9",url:"https://chromil9.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"USA Gazdasági Mutatók",user:"Zalan241",url:"https://Zalan241.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Social Media Analytics Dashboard",user:"samartako1",url:"https://samartako1.github.io/",libs:["D3.js","Chart.js"],grade:5},
+  {name:"Reading Insights – Irodalmi elemzés",user:"laczandrea",url:"https://laczandrea.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"(Nem elérhető)",user:"brigitta01",url:"https://brigitta01.github.io/",libs:[],grade:1},
+  {name:"(Nem elérhető)",user:"",url:"",libs:[],grade:1},
+  {name:"Adatok a Zaj Mögött: Zeneipar",user:"lukszil",url:"https://lukszil.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Australian Vehicle Prices",user:"lazarakos16",url:"https://lazarakos16.github.io/",libs:["React","Recharts"],grade:5},
+  {name:"Cinema Analytics Dashboard",user:"madagota",url:"https://madagota.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Kávéfogyasztás és Egészség",user:"reni-siegel",url:"https://reni-siegel.github.io/",libs:["D3.js","Vega-Lite"],grade:5},
+  {name:"Portfólió",user:"SKrstof",url:"https://SKrstof.github.io/",libs:["Vega-Lite"],grade:4.5},
+  {name:"Mobilhasználati Elemzés",user:"dorottya111",url:"https://dorottya111.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"IMDb Stealth Dashboard",user:"szekelylaszlotamas",url:"https://szekelylaszlotamas.github.io/",libs:["D3.js","Vega-Lite"],grade:5},
+  {name:"Interaktív diagramok",user:"szekelymelinda03",url:"https://szekelymelinda03.github.io/",libs:["D3.js","Chart.js"],grade:5},
+  {name:"F1 2025 Vizualizáció",user:"SZTAMAS02",url:"https://SZTAMAS02.github.io/",libs:["D3.js","Vega-Lite","Chart.js"],grade:5},
+  {name:"Kiberfenyegetések és anyagi veszteségek",user:"tdeni04",url:"https://tdeni04.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Zenei Adat Vizualizáció",user:"andras-ubb",url:"https://andras-ubb.github.io/",libs:["D3.js","Vega-Lite","Chart.js"],grade:5},
+  {name:"Chart Gallery",user:"lorand-ubb",url:"https://lorand-ubb.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"SecurCorp Intelligence Report 2026",user:"arthurvasinc",url:"https://arthurvasinc.github.io/",libs:["Vega-Lite"],grade:5},
+  {name:"Pro Market Terminal",user:"vecsii",url:"https://vecsii.github.io/",libs:["ECharts"],grade:5},
+];
+
+const tagClass = lib => {
+  const l = lib.toLowerCase();
+  if (l.includes('d3')) return 'tag-d3';
+  if (l.includes('vega')) return 'tag-vega';
+  if (l.includes('chart')) return 'tag-chart';
+  if (l.includes('echart')) return 'tag-echarts';
+  if (l.includes('leaflet')) return 'tag-leaflet';
+  if (l.includes('react') || l.includes('rechart')) return 'tag-react';
+  return 'tag-default';
+};
+
+const gradeClass = g => g >= 5 ? 'grade-5' : g >= 4 ? 'grade-4' : 'grade-low';
+
+const grid = document.getElementById('grid');
+const allLibs = new Set();
+
+projects.sort((a, b) => a.name.localeCompare(b.name, 'hu'));
+
+projects.forEach(p => {
+  p.libs.forEach(l => allLibs.add(l));
+  const available = p.url && p.grade > 1;
+  const tile = document.createElement('div');
+  tile.className = 'tile' + (available ? '' : ' unavailable');
+
+  const preview = available
+    ? `<iframe src="${p.url}" loading="lazy" sandbox="allow-scripts allow-same-origin" title="${p.name}"></iframe>`
+    : `<div class="fallback">No live preview</div>`;
+
+  const tags = p.libs.map(l => `<span class="tag ${tagClass(l)}">${l}</span>`).join('');
+  const gradeLabel = p.grade >= 5 ? 'Kiváló' : p.grade >= 4 ? 'Jó' : p.grade > 1 ? '' : 'N/A';
+
+  tile.innerHTML = `
+    <a href="${available ? p.url : '#'}" target="_blank" rel="noopener">
+      <div class="tile-preview">${preview}</div>
+      <div class="tile-body">
+        <div class="tile-name">${p.name}</div>
+        <div class="tile-tags">${tags || '<span class="tag tag-default">--</span>'}</div>
+        <div class="tile-meta">
+          <span class="tile-url">${p.user ? p.user + '.github.io' : 'unavailable'}</span>
+          <span class="tile-grade ${gradeClass(p.grade)}">${p.grade}/5</span>
+        </div>
+      </div>
+    </a>`;
+  grid.appendChild(tile);
+});
+
+document.getElementById('total').textContent = projects.length;
+document.getElementById('live').textContent = projects.filter(p => p.url && p.grade > 1).length;
+document.getElementById('libs').textContent = allLibs.size;
+</script>
+</body>
+</html>
