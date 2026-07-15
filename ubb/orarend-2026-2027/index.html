@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UBB Órarend 2026–2027 — Csala Dénes</title>
+<style>
+  :root{
+    --bg:#0f1220; --card:#171b2e; --card2:#1e2338; --txt:#e8eaf2; --mut:#9aa0bd;
+    --bi:#6aa9ff; --mi:#7bd88f; --iir:#c792ea; --adv:#ffcb6b; --wrk:#ff7a90; --ip:#5ad1ff;
+    --line:#2a3050;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
+  header{padding:34px 20px 18px;text-align:center;border-bottom:1px solid var(--line)}
+  header h1{margin:0;font-size:1.5rem;font-weight:600;letter-spacing:.3px}
+  header p{color:var(--mut);margin:6px 0 0;font-size:.92rem}
+  .wrap{max-width:880px;margin:0 auto;padding:22px 16px 60px}
+  .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0 8px}
+  .actions a{background:var(--card2);color:var(--txt);text-decoration:none;padding:10px 16px;border-radius:10px;border:1px solid var(--line);font-size:.9rem;font-weight:500}
+  .actions a:hover{border-color:var(--ip)}
+  .legend{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:10px 0 26px;font-size:.8rem;color:var(--mut)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+  .month{margin:22px 0 8px;color:var(--mut);font-size:.82rem;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+  .ev{display:flex;gap:14px;align-items:stretch;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:10px 0;transition:border-color .15s}
+  .ev:hover{border-color:var(--c)}
+  .bar{width:4px;border-radius:4px;background:var(--c);flex:0 0 4px}
+  .date{flex:0 0 96px;font-variant-numeric:tabular-nums}
+  .date .d{font-size:1.15rem;font-weight:600}
+  .date .wd{color:var(--mut);font-size:.78rem}
+  .body{flex:1}
+  .body .t{font-weight:600;font-size:1rem}
+  .body .desc{color:var(--mut);font-size:.85rem;margin-top:3px}
+  .body .meta{font-size:.74rem;color:var(--c);margin-top:6px;font-weight:600;letter-spacing:.4px}
+  .allday{align-items:center;background:linear-gradient(90deg,rgba(255,122,144,.12),transparent)}
+  footer{text-align:center;color:var(--mut);font-size:.78rem;padding:24px 0 10px;border-top:1px solid var(--line);margin-top:30px}
+  @media(max-width:560px){.date{flex:0 0 70px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>UBB Órarend · 2026–2027</h1>
+  <p>Gazdasági informatika · Csala Dénes · BI (ősz) · IIR / MI / ADV (tavasz)</p>
+  <div class="actions">
+    <a href="orarend-2026-2027.ics" download>⬇ .ics letöltése</a>
+    <a href="#" id="gcal" target="_blank" rel="noopener">↗ Google Naptár (webcal)</a>
+  </div>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--bi)"></i>BI</span>
+    <span><i class="dot" style="background:var(--mi)"></i>MI</span>
+    <span><i class="dot" style="background:var(--iir)"></i>IIR</span>
+    <span><i class="dot" style="background:var(--adv)"></i>ADV</span>
+    <span><i class="dot" style="background:var(--ip)"></i>Élő (in-person)</span>
+    <span><i class="dot" style="background:var(--wrk)"></i>Workshop</span>
+  </div>
+</header>
+<div class="wrap" id="list"></div>
+<footer>Készült az egyetemi naptari adatok alapján · utolsó frissítés: 2026-07-15</footer>
+
+<script>
+const E=[
+ {d:"2026-10-02",t:"BI — online (Zoom)",c:"bi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2026-10-16",t:"BI — online (Zoom)",c:"bi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2026-10-30",t:"BI — online (Zoom)",c:"bi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2026-11-10",t:"BI — in-person Day 1",c:"bi",loc:"Kolozsvár — UBB",desc:"Adatviz alapok (Bertin/Mackinlay) + Vega-Lite · délután: GitHub Pages + HTML/CSS/JS · 08:00–17:10",m:"ÉLŐ NAP 1/2"},
+ {d:"2026-11-11",t:"BI — in-person Day 2",c:"bi",loc:"Kolozsvár — UBB",desc:"API-k + Python adatletöltés · délután: interaktív viz + scraping + projekt Q&A · 08:00–17:10",m:"ÉLŐ NAP 2/2"},
+ {d:"2026-11-20",t:"BI — online (Zoom)",c:"bi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2026-12-04",t:"BI — online (Zoom)",c:"bi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2026-12-18",t:"BI — online (Zoom)",c:"bi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-01-08",t:"BI — online (Zoom)",c:"bi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-02-26",t:"MI — online (Zoom)",c:"mi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-03-05",t:"IIR — online (Zoom)",c:"iir",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-03-12",t:"MI — online (Zoom)",c:"mi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-03-19",t:"IIR — online (Zoom)",c:"iir",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-03-23",t:"MI — in-person Day 1",c:"mi",loc:"Kolozsvár — UBB",desc:"ML intro + adatelőkészítés + felügyeletlen (K-means, PCA) · délután: felügyelt (SVM, döntési fa, RF, regresszió) · 08:00–17:10",m:"ÉLŐ NAP 1/3"},
+ {d:"2027-03-24",t:"MI/IIR — in-person Day 2",c:"iir",loc:"Kolozsvár — UBB",desc:"MI modellelllenőrzés + pipeline/feature eng. · délután: IIR Docker + docker-compose alapok · 08:00–17:10",m:"ÉLŐ NAP 2/3"},
+ {d:"2027-04-02",t:"MI — online (Zoom)",c:"mi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-04-09",t:"IIR — online (Zoom)",c:"iir",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-04-16",t:"MI — online (Zoom)",c:"mi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-04-20",t:"IIR/ADV — in-person Day 3",c:"adv",loc:"Kolozsvár — UBB",desc:"IIR AWS EC2 + Grafana/InfluxDB monitoring · délután: ADV mesteri pair-coding workshop (2-fős) · 08:00–17:10",m:"ÉLŐ NAP 3/3"},
+ {d:"2027-04-21",t:"Q&A + Államvizsgázók workshop",c:"wrk",loc:"Kolozsvár — UBB",desc:"Egész napos nyílt esemény: általános Q&A + Államvizsgázók workshop. Nem számonkérő.",m:"ALL-DAY"},
+ {d:"2027-05-14",t:"IIR — online (Zoom)",c:"iir",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-05-21",t:"MI — online (Zoom)",c:"mi",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-05-28",t:"IIR — online (Zoom)",c:"iir",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
+ {d:"2027-06-04",t:"MI — online zárás (Zoom)",c:"mi",loc:"Zoom",desc:"Utolsó online alkalom / zárás · 14:00–15:30",m:"ZÁRÁS"},
+];
+const COL={bi:"var(--bi)",mi:"var(--mi)",iir:"var(--iir)",adv:"var(--adv)",wrk:"var(--wrk)"};
+const WD=["Vasárnap","Hétfő","Kedd","Szerda","Csütörtök","Péntek","Szombat"];
+const MON=["Január","Február","Március","Április","Május","Június","Július","Augusztus","Szeptember","Október","November","December"];
+const list=document.getElementById("list");
+let last="";
+E.forEach(e=>{
+  const dt=new Date(e.d+"T00:00:00");
+  const m=MON[dt.getMonth()]+" "+dt.getFullYear();
+  if(m!==last){const h=document.createElement("div");h.className="month";h.textContent=m;list.appendChild(h);last=m;}
+  const day=dt.getDate(), wd=WD[dt.getDay()];
+  const allday=e.m==="ALL-DAY";
+  const el=document.createElement("div");
+  el.className="ev"+(allday?" allday":"");
+  el.style.setProperty("--c",COL[e.c]);
+  el.innerHTML=`<div class="bar"></div>
+    <div class="date"><div class="d">${day}</div><div class="wd">${wd}</div></div>
+    <div class="body"><div class="t">${e.t}</div><div class="desc">${e.desc}</div><div class="meta">${e.m} · ${e.loc}</div></div>`;
+  list.appendChild(el);
+});
+document.getElementById("gcal").href="https://calendar.google.com/calendar/render?cid="+encodeURIComponent("webcal://"+location.origin+location.pathname.replace(/index\.html.*/,"")+"orarend-2026-2027.ics");
+</script>
+</body>
+</html>
