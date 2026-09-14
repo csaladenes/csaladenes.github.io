@@ -8,7 +8,7 @@
   :root{
     --bg:#0f1220; --card:#171b2e; --card2:#1e2338; --txt:#e8eaf2; --mut:#9aa0bd;
     --bi:#6aa9ff; --mi:#7bd88f; --iir:#c792ea; --adv:#ffcb6b; --wrk:#ff7a90; --ip:#5ad1ff;
-    --line:#2a3050;
+    --week:#8b92b0; --line:#2a3050;
   }
   *{box-sizing:border-box}
   body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
@@ -34,7 +34,10 @@
   .body .desc{color:var(--mut);font-size:.85rem;margin-top:3px}
   .body .meta{font-size:.74rem;color:var(--c);margin-top:6px;font-weight:600;letter-spacing:.4px}
   .allday{align-items:center;background:linear-gradient(90deg,rgba(255,122,144,.12),transparent)}
+  .week{align-items:center;opacity:.72;background:linear-gradient(90deg,rgba(139,146,176,.1),transparent)}
+  .week .date .d{font-size:.95rem}
   footer{text-align:center;color:var(--mut);font-size:.78rem;padding:24px 0 10px;border-top:1px solid var(--line);margin-top:30px}
+  footer a{color:var(--ip);text-decoration:none}
   @media(max-width:560px){.date{flex:0 0 70px}}
 </style>
 </head>
@@ -43,8 +46,10 @@
   <h1>UBB Órarend · 2026–2027</h1>
   <p>Gazdasági informatika · Csala Dénes · BI (ősz) · IIR / MI / ADV (tavasz)</p>
   <div class="actions">
-    <a href="orarend-2026-2027.ics" download>⬇ .ics letöltése</a>
-    <a href="#" id="gcal" target="_blank" rel="noopener">↗ Google Naptár (webcal)</a>
+    <a href="orarend-2026-2027.ics" download>⬇ Órarend .ics</a>
+    <a href="tanev-2026-2027.ics" download>⬇ Tanév .ics</a>
+    <a href="#" id="gcal" target="_blank" rel="noopener">↗ Órarend Google</a>
+    <a href="#" id="gcal-tanev" target="_blank" rel="noopener">↗ Tanév Google</a>
   </div>
   <div class="legend">
     <span><i class="dot" style="background:var(--bi)"></i>BI (Business Intelligence)</span>
@@ -53,10 +58,11 @@
     <span><i class="dot" style="background:var(--adv)"></i>ADV (Adatelemzés és Vizualizáció)</span>
     <span><i class="dot" style="background:var(--ip)"></i>Élő (in-person)</span>
     <span><i class="dot" style="background:var(--wrk)"></i>Workshop</span>
+    <span><i class="dot" style="background:var(--week)"></i>Tanév (week / szünet)</span>
   </div>
 </header>
 <div class="wrap" id="list"></div>
-<footer>Készült az egyetemi naptari adatok alapján · utolsó frissítés: 2026-07-15</footer>
+<footer>Tanévstruktúra: <a href="https://www.cs.ubbcluj.ro/invatamant/structura-anului-universitar/" target="_blank" rel="noopener">FMI UBB</a> (ró/en) · utolsó frissítés: 2026-09-14</footer>
 
 <script>
 const E=[
@@ -85,26 +91,73 @@ const E=[
  {d:"2027-05-28",t:"IIR — online (Zoom)",c:"iir",loc:"Zoom",desc:"Rendszeres online óra · 14:00–15:30",m:"ONLINE"},
  {d:"2027-06-04",t:"MI — online zárás (Zoom)",c:"mi",loc:"Zoom",desc:"Utolsó online alkalom / zárás · 14:00–15:30",m:"ZÁRÁS"},
 ];
-const COL={bi:"var(--bi)",mi:"var(--mi)",iir:"var(--iir)",adv:"var(--adv)",wrk:"var(--wrk)"};
+/* Tanév (ró/en) — all-day markers shown alongside teaching */
+const W=[
+ {d:"2026-09-24",t:"UBB - Tanév előkészítése",desc:"24–25 szept.",m:"TANÉV"},
+ {d:"2026-09-28",t:"UBB - week 1",desc:"1. félév · 28 szept – 4 okt.",m:"WEEK"},
+ {d:"2026-10-05",t:"UBB - week 2",desc:"1. félév · 5–11 okt.",m:"WEEK"},
+ {d:"2026-10-12",t:"UBB - week 3",desc:"1. félév · 12–18 okt.",m:"WEEK"},
+ {d:"2026-10-19",t:"UBB - week 4",desc:"1. félév · 19–25 okt.",m:"WEEK"},
+ {d:"2026-10-26",t:"UBB - week 5",desc:"1. félév · 26 okt – 1 nov.",m:"WEEK"},
+ {d:"2026-11-02",t:"UBB - week 6",desc:"1. félév · 2–8 nov.",m:"WEEK"},
+ {d:"2026-11-09",t:"UBB - week 7",desc:"1. félév · 9–15 nov.",m:"WEEK"},
+ {d:"2026-11-16",t:"UBB - week 8",desc:"1. félév · 16–22 nov.",m:"WEEK"},
+ {d:"2026-11-23",t:"UBB - week 9",desc:"1. félév · 23–29 nov.",m:"WEEK"},
+ {d:"2026-11-30",t:"UBB - week 10",desc:"1. félév · 30 nov – 6 dec.",m:"WEEK"},
+ {d:"2026-12-07",t:"UBB - week 11",desc:"1. félév · 7–13 dec.",m:"WEEK"},
+ {d:"2026-12-14",t:"UBB - week 12",desc:"1. félév · 14–20 dec.",m:"WEEK"},
+ {d:"2026-12-21",t:"UBB - Karácsonyi szünet",desc:"21 dec – 2 jan.",m:"TANÉV"},
+ {d:"2027-01-04",t:"UBB - week 13",desc:"1. félév · 4–10 jan.",m:"WEEK"},
+ {d:"2027-01-11",t:"UBB - week 14",desc:"1. félév · 11–17 jan.",m:"WEEK"},
+ {d:"2027-01-18",t:"UBB - Vizsgaidőszak",desc:"1. félév · 18 jan – 7 feb.",m:"TANÉV"},
+ {d:"2027-02-08",t:"UBB - Szünet",desc:"8–14 feb.",m:"TANÉV"},
+ {d:"2027-02-15",t:"UBB - Pótvizsga-időszak",desc:"1. félév · 15–21 feb.",m:"TANÉV"},
+ {d:"2027-02-22",t:"UBB - week 1",desc:"2. félév · 22–28 feb.",m:"WEEK"},
+ {d:"2027-03-01",t:"UBB - week 2",desc:"2. félév · 1–7 márc.",m:"WEEK"},
+ {d:"2027-03-08",t:"UBB - week 3",desc:"2. félév · 8–14 márc.",m:"WEEK"},
+ {d:"2027-03-15",t:"UBB - week 4",desc:"2. félév · 15–21 márc.",m:"WEEK"},
+ {d:"2027-03-22",t:"UBB - week 5",desc:"2. félév · 22–28 márc.",m:"WEEK"},
+ {d:"2027-03-29",t:"UBB - week 6",desc:"2. félév · 29 márc – 4 ápr.",m:"WEEK"},
+ {d:"2027-04-05",t:"UBB - week 7",desc:"2. félév · 5–11 ápr.",m:"WEEK"},
+ {d:"2027-04-12",t:"UBB - week 8",desc:"2. félév · 12–18 ápr.",m:"WEEK"},
+ {d:"2027-04-19",t:"UBB - week 9",desc:"2. félév · 19–25 ápr.",m:"WEEK"},
+ {d:"2027-04-26",t:"UBB - week 10",desc:"2. félév · 26 ápr – 2 máj.",m:"WEEK"},
+ {d:"2027-05-03",t:"UBB - Húsvéti szünet",desc:"3–9 máj.",m:"TANÉV"},
+ {d:"2027-05-10",t:"UBB - week 11",desc:"2. félév · 10–16 máj.",m:"WEEK"},
+ {d:"2027-05-17",t:"UBB - week 12",desc:"2. félév · 17–23 máj.",m:"WEEK"},
+ {d:"2027-05-24",t:"UBB - week 13",desc:"2. félév · 24–30 máj.",m:"WEEK"},
+ {d:"2027-05-31",t:"UBB - week 14",desc:"2. félév · 31 máj – 6 jún.",m:"WEEK"},
+ {d:"2027-06-07",t:"UBB - Vizsgaidőszak",desc:"2. félév · 7–27 jún.",m:"TANÉV"},
+ {d:"2027-06-28",t:"UBB - Szünet",desc:"28 jún – 4 júl.",m:"TANÉV"},
+ {d:"2027-07-05",t:"UBB - Pótvizsga-időszak",desc:"2. félév · 5–11 júl.",m:"TANÉV"},
+];
+const COL={bi:"var(--bi)",mi:"var(--mi)",iir:"var(--iir)",adv:"var(--adv)",wrk:"var(--wrk)",week:"var(--week)"};
 const WD=["Vasárnap","Hétfő","Kedd","Szerda","Csütörtök","Péntek","Szombat"];
 const MON=["Január","Február","Március","Április","Május","Június","Július","Augusztus","Szeptember","Október","November","December"];
 const list=document.getElementById("list");
+const ALL=[
+  ...W.map(e=>({...e,c:"week",loc:"UBB"})),
+  ...E
+].sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:(a.c==="week"?-1:1));
 let last="";
-E.forEach(e=>{
+ALL.forEach(e=>{
   const dt=new Date(e.d+"T00:00:00");
   const m=MON[dt.getMonth()]+" "+dt.getFullYear();
   if(m!==last){const h=document.createElement("div");h.className="month";h.textContent=m;list.appendChild(h);last=m;}
   const day=dt.getDate(), wd=WD[dt.getDay()];
   const allday=e.m==="ALL-DAY";
+  const isWeek=e.c==="week";
   const el=document.createElement("div");
-  el.className="ev"+(allday?" allday":"");
+  el.className="ev"+(allday?" allday":"")+(isWeek?" week":"");
   el.style.setProperty("--c",COL[e.c]);
   el.innerHTML=`<div class="bar"></div>
     <div class="date"><div class="d">${day}</div><div class="wd">${wd}</div></div>
     <div class="body"><div class="t">${e.t}</div><div class="desc">${e.desc}</div><div class="meta">${e.m} · ${e.loc}</div></div>`;
   list.appendChild(el);
 });
-document.getElementById("gcal").href="https://calendar.google.com/calendar/render?cid="+encodeURIComponent("webcal://"+location.origin+location.pathname.replace(/index\.html.*/,"")+"orarend-2026-2027.ics");
+const base=location.origin+location.pathname.replace(/index\.html.*/,"");
+document.getElementById("gcal").href="https://calendar.google.com/calendar/render?cid="+encodeURIComponent("webcal://"+base+"orarend-2026-2027.ics");
+document.getElementById("gcal-tanev").href="https://calendar.google.com/calendar/render?cid="+encodeURIComponent("webcal://"+base+"tanev-2026-2027.ics");
 </script>
 </body>
 </html>
